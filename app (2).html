@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="pl" id="html-root">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+
+<!-- ═══ PRIMARY SEO ═══ -->
+<title>RaiseWithMe — Free Preflop GTO Advisor | Texas Hold'em Strategy</title>
+<meta name="description" content="Free preflop GTO advisor for Texas Hold'em. Get instant raise/fold recommendations based on position, stack depth and hole cards. Interactive RFI charts, 100+ term poker glossary. No registration needed."/>
+<meta name="keywords" content="preflop GTO, poker advisor, Texas Holdem strategy, RFI charts, poker ranges, push fold chart, poker GTO free, preflop ranges, poker strategy tool, GTO poker, poker hand ranges, preflop strategy, poker calculator, poker odds, tournament poker strategy, cash game poker strategy"/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="RaiseWithMe"/>
+<link rel="canonical" href="https://raisewith.me/"/>
+<meta name="theme-color" content="#071810"/>
+
+<!-- ═══ OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ═══ -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://raisewith.me/"/>
+<meta property="og:title" content="RaiseWithMe — Free Preflop GTO Poker Advisor"/>
+<meta property="og:description" content="Instant preflop recommendations based on your position, stack size and hole cards. Free GTO charts for every position. No sign-up required."/>
+<meta property="og:image" content="https://raisewith.me/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:site_name" content="RaiseWithMe"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:locale:alternate" content="pl_PL"/>
+
+<!-- ═══ TWITTER / X CARD ═══ -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@raisewithme"/>
+<meta name="twitter:title" content="RaiseWithMe — Free Preflop GTO Poker Advisor"/>
+<meta name="twitter:description" content="Instant preflop GTO recommendations by position and stack. Free, no registration. RFI charts + poker glossary."/>
+<meta name="twitter:image" content="https://raisewith.me/og-image.png"/>
+
+<!-- ═══ STRUCTURED DATA — WebApplication ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "RaiseWithMe",
+  "url": "https://raisewith.me/",
+  "description": "Free preflop GTO advisor for Texas Hold'em poker. Provides raise/fold recommendations based on position, stack depth and hole cards.",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Preflop GTO recommendations",
+    "RFI opening range charts for all positions",
+    "Push/fold strategy for short stacks",
+    "100+ term poker glossary in Polish and English",
+    "Stack depth analysis"
+  ],
+  "inLanguage": ["en", "pl"],
+  "screenshot": "https://raisewith.me/og-image.png",
+  "author": {
+    "@type": "Organization",
+    "name": "RaiseWithMe"
+  }
+}
+</script>
+
+<!-- ═══ STRUCTURED DATA — FAQPage ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a preflop GTO advisor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A preflop GTO (Game Theory Optimal) advisor tells you the mathematically correct action — raise, call or fold — before the flop, based on your position at the table, stack size and hole cards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is RaiseWithMe free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, RaiseWithMe is completely free. No registration or account required. Simply open the app and start getting preflop recommendations instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is RFI in poker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RFI stands for Raise First In — opening with a raise when no one has entered the pot before you. RaiseWithMe shows the correct RFI range for every position from UTG to Small Blind."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is push/fold strategy in poker tournaments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Push/fold is the correct strategy when your stack falls below 15 big blinds in a tournament. Instead of raising and folding to a 3-bet, you either shove all-in or fold. RaiseWithMe automatically detects short stack situations and recommends push/fold play."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="alternate" hreflang="en" href="https://raisewith.me/?lang=en"/>
+<link rel="alternate" hreflang="pl" href="https://raisewith.me/?lang=pl"/>
+<link rel="alternate" hreflang="x-default" href="https://raisewith.me/"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#071810;--bg2:#0a1f0f;--bg3:rgba(255,255,255,0.03);
+  --border:#1e3a22;--border2:#2a4a2a;
+  --gold:#d4af37;--gold2:#b8940b;--gold-dim:#c8b070;
+  --text:#f0e0b0;--text2:#dcc88a;--text3:#d0e4c8;--text4:#c0ceb8;
+  --green:#2ed573;--orange:#ffa502;--red:#ff4757;--blue:#1e90ff;--purple:#a29bfe;
+  --font-display:'Cinzel',serif;--font-body:'Lora','Georgia',serif;
+}
+html,body{height:100%;overflow-x:hidden}
+body{background:var(--bg);background-image:radial-gradient(ellipse at 50% 0%,#0d2e1a 0%,var(--bg) 70%);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6}
+input,select,button{font-family:inherit}
+button{cursor:pointer;border:none;background:transparent}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#2a4a2a;border-radius:2px}
+
+/* HEADER */
+.header{background:rgba(0,0,0,.4);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.header-title{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--gold);letter-spacing:3px;text-shadow:0 0 20px rgba(212,175,55,.3)}
+.header-sub{font-family:var(--font-display);font-size:8px;letter-spacing:4px;color:#dcc880;margin-top:2px}
+.header-hand{text-align:right}
+.header-hand-name{font-family:var(--font-display);font-size:18px;color:var(--gold);letter-spacing:2px}
+.badge{display:inline-block;padding:2px 9px;border-radius:10px;font-family:var(--font-display);font-size:9px;letter-spacing:1px;margin-top:2px}
+
+/* TABS */
+.tabs{display:flex;border-bottom:1px solid var(--border);background:rgba(7,24,16,.97);backdrop-filter:blur(12px);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tabs::-webkit-scrollbar{height:0}
+.tab-btn{flex-shrink:0;padding:11px 13px;border-bottom:2px solid transparent;font-family:var(--font-display);font-size:9px;letter-spacing:2px;color:#ddeedd;transition:all .2s;white-space:nowrap;background:transparent;border-left:none;border-right:none;border-top:none}
+.tab-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* CONTAINER */
+.main{max-width:700px;margin:0 auto;padding:16px 14px 80px}
+
+/* CARDS (sections) */
+.card{background:var(--bg3);border-radius:12px;border:1px solid var(--border);padding:16px;margin-bottom:14px}
+.card-title{font-family:var(--font-display);font-size:12px;letter-spacing:2px;color:#e0c080;margin-bottom:14px;text-transform:uppercase}
+
+/* INPUTS */
+.input-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px}
+.input-group label{display:block;font-family:var(--font-display);font-size:10px;letter-spacing:2px;color:#f0cc88;text-transform:uppercase;margin-bottom:6px}
+.input-group input{width:100%;background:#0f2415;color:var(--text);border:1px solid var(--border2);border-radius:7px;padding:8px 10px;font-size:14px;font-family:'Georgia',serif;outline:none;transition:border-color .2s}
+.input-group input::placeholder{color:#7aaa80;font-style:italic}
+.input-group input:focus{border-color:var(--gold)}
+
+/* PLAYERS */
+.players-row{display:flex;gap:7px;margin-bottom:12px}
+.player-btn{flex:1;padding:9px 0;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:#c8d8c8;font-family:var(--font-display);font-size:13px;font-weight:700;transition:all .2s;text-align:center;line-height:1}
+.player-btn.active{background:rgba(212,175,55,.2);border-color:var(--gold);color:var(--gold);box-shadow:0 0 10px rgba(212,175,55,.2)}
+.player-btn small{display:block;font-size:8px;margin-top:1px;opacity:.7}
+
+/* POSITIONS */
+.pos-grid{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.pos-btn{padding:8px 12px;border-radius:7px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:#d0c090;font-family:var(--font-display);font-size:11px;font-weight:700;transition:all .2s}
+.pos-info{padding:10px 12px;border-radius:8px;margin-bottom:0}
+.pos-info-title{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.pos-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.pos-info-name{font-family:var(--font-display);font-size:11px;font-weight:700}
+.pos-info-label{font-family:var(--font-display);font-size:9px;padding:2px 8px;border-radius:10px;margin-left:auto}
+.pos-info-desc{font-family:var(--font-body);font-size:12px;line-height:1.65;color:#eaf6ea}
+
+/* STACK GAUGE */
+.stack-gauge{padding:14px 16px;background:rgba(255,255,255,.06);border-radius:10px;border:1px solid rgba(255,255,255,.12)}
+.gauge-row{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:8px}
+.gauge-bb{font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--gold)}
+.gauge-ratio{font-family:var(--font-display);font-size:18px;font-weight:700}
+.gauge-track{background:rgba(255,255,255,.14);border-radius:4px;height:8px;overflow:hidden;position:relative}
+.gauge-fill{height:100%;background:linear-gradient(90deg,var(--red),var(--orange),var(--green));border-radius:4px;transition:width .5s}
+
+/* CARDS PICKER */
+.cards-row{display:flex;justify-content:center;align-items:flex-start;gap:28px}
+.card-pick-wrap{display:flex;flex-direction:column;align-items:center;gap:7px}
+.card-pick-label{font-family:var(--font-display);font-size:12px;letter-spacing:3px;color:#e0bc80}
+.card-visual{width:76px;height:104px;border-radius:10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#0d2418;border:2px dashed var(--border2);box-shadow:0 4px 12px rgba(0,0,0,.4);transition:all .2s;user-select:none}
+.card-visual.filled{background:#faf4e8;border:2px solid var(--gold);box-shadow:0 0 18px rgba(212,175,55,.4),0 6px 20px rgba(0,0,0,.5)}
+.card-visual-rank{font-family:'Georgia',serif;font-size:28px;font-weight:700;line-height:1}
+.card-visual-suit{font-size:24px;line-height:1;margin-top:2px}
+.card-visual-plus{font-size:30px;color:var(--border2);opacity:.6}
+.card-remove{background:transparent;border:none;color:#b0c0b0;font-size:10px;font-family:var(--font-display);cursor:pointer;padding:2px}
+.cards-sep{padding-top:40px;font-family:var(--font-display);font-size:14px;color:#8ac88a}
+.hand-display{margin-top:14px;display:flex;align-items:center;justify-content:center;gap:10px}
+.hand-notation{font-family:var(--font-display);font-size:20px;color:var(--gold);letter-spacing:2px}
+
+/* CARD MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999;display:none}
+.modal-overlay.open{display:block}
+.modal-box{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#0a1f0f;border:1px solid var(--border2);border-radius:14px;padding:16px;z-index:1000;box-shadow:0 20px 60px rgba(0,0,0,.8);max-width:95vw;display:none}
+.modal-box.open{display:block}
+.modal-title{font-family:var(--font-display);font-size:11px;letter-spacing:3px;color:#d8b878;margin-bottom:12px;text-align:center}
+.modal-suit-row{display:flex;gap:4px;margin-bottom:4px}
+.modal-suit-icon{width:22px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:bold}
+.modal-rank-btn{width:34px;height:40px;border-radius:5px;border:1px solid #ccc;background:#faf4e8;font-size:12px;font-weight:700;font-family:'Georgia',serif;cursor:pointer;transition:all .1s}
+.modal-rank-btn.selected{background:var(--gold);border-color:var(--gold2);color:#1a1a1a}
+.modal-rank-btn.taken{background:#1a1a1a;border-color:#333;cursor:not-allowed;opacity:.3}
+.modal-close{margin-top:10px;width:100%;padding:8px;background:transparent;border:1px solid var(--border2);border-radius:7px;color:var(--gold-dim);font-family:var(--font-display);font-size:11px;letter-spacing:2px}
+
+/* RECOMMENDATION */
+.rec-card{border-radius:12px;padding:20px;margin-bottom:14px}
+.rec-action{font-family:var(--font-display);font-size:30px;font-weight:700;letter-spacing:3px;margin-bottom:14px}
+.rec-block{padding:12px 14px;background:rgba(255,255,255,.05);border-radius:8px;margin-bottom:8px;border:1px solid rgba(255,255,255,.07)}
+.rec-block-title{font-family:var(--font-display);font-size:10px;letter-spacing:2px;color:#f0cc80;margin-bottom:6px}
+.rec-block-text{font-family:var(--font-body);font-size:12px;line-height:1.7}
+.rec-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.rec-tag{font-size:10px;padding:3px 10px;border-radius:10px;background:rgba(255,255,255,.09);color:#d8ecd8;border:1px solid rgba(255,255,255,.15);font-family:var(--font-display);letter-spacing:1px}
+
+/* SCENARIO SELECTOR */
+.scenario-label{font-family:var(--font-display);font-size:10px;letter-spacing:2px;color:#f0cc80;margin-bottom:10px;text-transform:uppercase}
+.scenario-btns{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.scenario-btn{padding:7px 13px;border-radius:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);color:#e8d8a8;font-family:var(--font-display);font-size:9px;letter-spacing:1px;transition:all .15s}
+.scenario-btn.active{background:rgba(212,175,55,.2);border-color:var(--gold);color:var(--gold)}
+
+/* RANGE MATRIX */
+.matrix-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:10px}
+.matrix-grid{display:grid;gap:2px;min-width:340px}
+.matrix-cell{aspect-ratio:1;border-radius:2px;transition:opacity .1s;cursor:default;position:relative}
+
+.matrix-corner{font-family:var(--font-display);font-size:9px;color:#c8a870;display:flex;align-items:center;justify-content:center}
+.matrix-legend{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.legend-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+.legend-item{display:flex;align-items:center;gap:5px;padding:3px 10px;border-radius:12px}
+.legend-text{font-family:var(--font-display);font-size:9px;letter-spacing:1px}
+.range-info-box{padding:10px 12px;border-radius:8px;margin-top:12px}
+.info-box-title{font-family:var(--font-display);font-size:9px;letter-spacing:2px;color:var(--gold-dim);margin-bottom:6px}
+.info-box-text{font-family:var(--font-body);font-size:11px;line-height:1.6;color:#d8c8a0}
+
+/* RANGE BARS */
+.range-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.range-bar-label{font-family:var(--font-display);font-size:11px;color:var(--text);width:50px;flex-shrink:0}
+.range-bar-track{flex:1;background:rgba(255,255,255,.10);border-radius:3px;height:11px;overflow:hidden}
+.range-bar-fill{height:100%;border-radius:3px;transition:width .3s}
+.range-bar-pct{font-family:var(--font-display);font-size:11px;font-weight:700;color:#4ef880;width:42px;text-align:right}
+
+/* GLOSSARY */
+.gloss-search-wrap{position:relative;margin-bottom:14px}
+.gloss-search{width:100%;background:#0f2415;color:var(--text);border:1px solid var(--border2);border-radius:9px;padding:10px 14px 10px 38px;font-size:14px;font-family:'Georgia',serif;outline:none;transition:border-color .2s}
+.gloss-search:focus{border-color:var(--gold)}
+.gloss-search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--gold-dim);font-size:14px;pointer-events:none}
+.gloss-filter-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.gloss-filter-btn{padding:5px 12px;border-radius:16px;font-family:var(--font-display);font-size:9px;letter-spacing:1px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:#d0c090;transition:all .15s}
+.gloss-filter-btn.active{border-color:var(--gold);background:rgba(212,175,55,.15);color:var(--gold)}
+.gloss-list{display:flex;flex-direction:column;gap:8px}
+.gloss-item{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .2s}
+.gloss-item:hover{border-color:rgba(212,175,55,.3)}
+.gloss-header{padding:12px 14px;display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none}
+.gloss-term{font-family:var(--font-display);font-size:13px;color:var(--gold);letter-spacing:1px}
+.gloss-en{font-family:var(--font-display);font-size:10px;color:#b0c0b0;letter-spacing:1px}
+.gloss-cat{font-size:9px;padding:2px 8px;border-radius:10px;font-family:var(--font-display);letter-spacing:1px;margin-left:auto;flex-shrink:0}
+.gloss-arrow{color:var(--gold-dim);font-size:12px;margin-left:4px;transition:transform .2s;flex-shrink:0}
+.gloss-body{padding:0 14px 14px;display:none}
+.gloss-body.open{display:block}
+.gloss-def{font-family:var(--font-body);font-size:13px;line-height:1.7;color:var(--text2);margin-bottom:8px}
+.gloss-example{font-family:var(--font-body);font-size:12px;line-height:1.6;color:#c0d4c0;font-style:italic;padding:8px 12px;border-left:3px solid rgba(212,175,55,.3);border-radius:0 6px 6px 0;background:rgba(212,175,55,.04)}
+.gloss-related{margin-top:8px;font-family:var(--font-display);font-size:9px;color:#c8a870;letter-spacing:1px}
+.gloss-related a{color:var(--gold);cursor:pointer;text-decoration:none}
+.gloss-related a:hover{text-decoration:underline}
+.gloss-empty{padding:32px;text-align:center;font-family:var(--font-display);font-size:11px;color:#8abf8a;letter-spacing:2px}
+.gloss-count{font-family:var(--font-display);font-size:9px;color:#c0dcc0;letter-spacing:2px;margin-bottom:10px}
+
+/* PUSH/FOLD table */
+.pf-table{width:100%;border-collapse:collapse;font-family:'Georgia',serif;font-size:12px}
+.pf-table th{padding:6px 10px;text-align:left;font-family:var(--font-display);font-size:9px;letter-spacing:2px;color:var(--gold-dim);border-bottom:1px solid var(--border)}
+.pf-table td{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.04)}
+.pf-bb{font-family:var(--font-display);font-size:13px;font-weight:700}
+.pf-range{color:var(--text2);line-height:1.5}
+
+/* PLACEHOLDER */
+.placeholder{background:rgba(255,255,255,.04);border-radius:12px;border:1px dashed rgba(255,255,255,.15);padding:24px;text-align:center;color:#b8ccb0;font-family:var(--font-display);font-size:13px;letter-spacing:2px;margin-bottom:14px}
+.placeholder small{display:block;font-size:12px;opacity:.9;margin-top:7px;letter-spacing:1px}
+
+/* UTILITY */
+.hint{padding:10px 12px;border-radius:8px;margin-top:12px}
+.hint-title{font-family:var(--font-display);font-size:9px;letter-spacing:2px;color:var(--gold-dim);margin-bottom:5px}
+.hint-text{font-family:var(--font-body);font-size:11px;line-height:1.6;color:#d8c8a0}
+.sep{height:1px;background:rgba(255,255,255,.05);margin:12px 0}
+
+/* LANG SWITCHER */
+.lang-switcher{display:flex;align-items:center;gap:5px}
+.lang-btn{background:transparent;border:1px solid var(--border2);border-radius:6px;padding:3px 9px;font-family:var(--font-display);font-size:9px;letter-spacing:1px;color:#b0c0b0;cursor:pointer;transition:all .2s;white-space:nowrap}
+.lang-btn.active{border-color:var(--gold);color:var(--gold);background:rgba(212,175,55,.12)}
+.header-right{display:flex;align-items:center;gap:12px}
+
+/* FOOTER */
+.footer{text-align:center;padding:22px 16px 32px;border-top:1px solid var(--border);margin-top:16px}
+.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:8px}
+.footer-link{font-family:var(--font-display);font-size:9px;letter-spacing:1px;color:var(--gold-dim);cursor:pointer;text-decoration:none;background:none;border:none;padding:0}
+.footer-link:hover{color:var(--gold)}
+.footer-copy{font-family:var(--font-display);font-size:8px;letter-spacing:2px;color:#7a9a7a}
+
+/* LEGAL MODAL */
+.legal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:1001;display:none;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.legal-box{max-width:680px;margin:30px auto 60px;background:#0a1f0f;border:1px solid var(--border2);border-radius:14px;padding:24px 22px;position:relative}
+.legal-close-btn{position:absolute;top:14px;right:14px;background:transparent;border:1px solid var(--border2);color:var(--gold-dim);font-family:var(--font-display);font-size:9px;letter-spacing:1px;padding:5px 11px;border-radius:6px;cursor:pointer}
+.legal-close-btn:hover{border-color:var(--gold);color:var(--gold)}
+.legal-modal-title{font-family:var(--font-display);font-size:13px;color:var(--gold);letter-spacing:2px;margin-bottom:14px;padding-right:80px}
+.legal-tabs{display:flex;gap:6px;margin-bottom:18px;border-bottom:1px solid var(--border);padding-bottom:10px;flex-wrap:wrap}
+.legal-tab-btn{font-family:var(--font-display);font-size:9px;letter-spacing:1px;padding:5px 12px;border-radius:6px;background:transparent;border:1px solid var(--border);color:#b8c8b0;cursor:pointer;transition:all .2s}
+.legal-tab-btn.active{border-color:var(--gold);color:var(--gold);background:rgba(212,175,55,.1)}
+.legal-content{font-family:var(--font-body);font-size:13px;line-height:1.8;color:#d4e8cc}
+.legal-content h3{font-family:var(--font-display);font-size:10px;letter-spacing:2px;color:#d8b060;margin:14px 0 7px;text-transform:uppercase}
+.legal-content p{margin-bottom:9px}
+.legal-content ul{margin:6px 0 10px 18px}
+.legal-content li{margin-bottom:4px}
+
+/* ABOUT TAB */
+.about-hero{background:linear-gradient(135deg,rgba(212,175,55,.07) 0%,rgba(46,213,115,.04) 100%);border:1px solid rgba(212,175,55,.18);border-radius:12px;padding:20px 18px;margin-bottom:14px;text-align:center}
+.about-title{font-family:var(--font-display);font-size:17px;color:var(--gold);letter-spacing:2px;margin-bottom:5px}
+.about-sub{font-family:var(--font-display);font-size:9px;letter-spacing:3px;color:var(--gold-dim);margin-bottom:10px}
+.about-hero-text{font-family:var(--font-body);font-size:13px;color:#d0e4cc;line-height:1.7}
+.about-feature{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--border)}
+.about-feature:last-child{border-bottom:none}
+.about-icon{font-size:22px;flex-shrink:0;width:32px;text-align:center;margin-top:1px}
+.about-feat-title{font-family:var(--font-display);font-size:10px;letter-spacing:2px;color:var(--gold);margin-bottom:4px}
+.about-feat-desc{font-family:var(--font-body);font-size:12px;color:#cce0c4;line-height:1.65}
+.about-coming{background:rgba(46,213,115,.04);border:1px solid rgba(46,213,115,.18);border-radius:10px;padding:14px 16px;margin-top:4px}
+.about-coming-title{font-family:var(--font-display);font-size:9px;letter-spacing:3px;color:#4ef880;margin-bottom:12px}
+.about-coming-item{font-family:var(--font-body);font-size:12px;color:#b8d8b0;margin-bottom:7px;padding-left:14px;position:relative}
+.about-coming-item::before{content:'›';position:absolute;left:0;color:#2ed573;font-weight:700}
+.about-coming-item strong{color:#c0d8b8;font-weight:600}
+.about-ai{background:rgba(162,155,254,.05);border:1px solid rgba(162,155,254,.18);border-radius:10px;padding:14px 16px;margin-top:12px;text-align:center}
+.about-ai p{font-family:var(--font-body);font-size:12px;color:#d8d0f4;line-height:1.7}
+.about-ai a{color:var(--gold);text-decoration:none}
+
+
+/* MATRIX TOOLTIP */
+#matrix-tip{position:fixed;background:#0a1f0f;border:1px solid #2a4a2a;border-radius:5px;padding:4px 10px;font-size:10px;font-family:'Cinzel',serif;color:#d4af37;white-space:nowrap;z-index:9999;pointer-events:none;display:none;transform:translate(-50%,-110%)}
+</style>
+</head>
+<body>
+
+<!-- MATRIX TOOLTIP -->
+<div id="matrix-tip"></div>
+
+<!-- CARD MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
+<div class="modal-box" id="modal-box">
+  <div class="modal-title" id="modal-title-txt">WYBIERZ KARTĘ</div>
+  <div id="modal-suits"></div>
+  <button class="modal-close" id="modal-close-txt" onclick="closeModal()">ZAMKNIJ</button>
+</div>
+
+<!-- STICKY WRAPPER: header + tabs -->
+<div style="position:sticky;top:0;z-index:100;background:#071810">
+
+<!-- HEADER -->
+<div class="header">
+  <div>
+    <div class="header-title">♠ RaiseWithMe</div>
+    <div class="header-sub" id="header-sub-txt">TEXAS HOLD'EM · PREFLOP GTO</div>
+  </div>
+  <div class="header-right">
+    <div class="header-hand" id="header-hand" style="display:none">
+      <div class="header-hand-name" id="header-hand-name"></div>
+      <span class="badge" id="header-tier-badge"></span>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" id="lang-pl-btn" onclick="setLang('pl')">🇵🇱 PL</button>
+      <button class="lang-btn" id="lang-en-btn" onclick="setLang('en')">🇬🇧 EN</button>
+    </div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab-btn active" onclick="switchTab('advisor',this)" id="tab-btn-advisor">DORADCA</button>
+  <button class="tab-btn" onclick="switchTab('rfi',this)" id="tab-btn-rfi">OTWARCIA RFI</button>
+  <button class="tab-btn" onclick="switchTab('glossary',this)" id="tab-btn-glossary">📖 SŁOWNIK</button>
+  <button class="tab-btn" onclick="switchTab('about',this)" id="tab-btn-about">O NAS</button>
+</div>
+
+</div><!-- /sticky wrapper -->
+
+<div class="main">
+
+<!-- ==================== ADVISOR TAB ==================== -->
+<div id="tab-advisor">
+
+  <!-- Players + Position -->
+  <div class="card">
+    <div class="card-title" id="sec-table-title">♠ Stół i Pozycja</div>
+    <div style="font-family:var(--font-display);font-size:9px;letter-spacing:2px;color:#d4aa70;margin-bottom:8px" id="lbl-players">LICZBA GRACZY</div>
+    <div class="players-row">
+      <button class="player-btn" onclick="setPlayers(6,this)">6<small>6-MAX</small></button>
+      <button class="player-btn" onclick="setPlayers(7,this)">7</button>
+      <button class="player-btn" onclick="setPlayers(8,this)">8</button>
+      <button class="player-btn active" onclick="setPlayers(9,this)">9<small>FULL</small></button>
+    </div>
+    <div style="font-family:var(--font-display);font-size:9px;letter-spacing:2px;color:#d4aa70;margin-bottom:8px" id="lbl-position">TWOJA POZYCJA</div>
+    <div class="pos-grid" id="pos-grid"></div>
+    <div class="pos-info" id="pos-info-box"></div>
+  </div>
+
+  <!-- Stack -->
+  <div class="card">
+    <div class="card-title" id="sec-stack-title">♠ Analiza Stosu</div>
+    <div class="input-grid-3">
+      <div class="input-group"><label id="lbl-inp-stack">Twój stos</label><input type="number" id="inp-stack" placeholder="np. 25000" min="1" inputmode="numeric" oninput="render()"/></div>
+      <div class="input-group"><label id="lbl-inp-bb">Big Blind</label><input type="number" id="inp-bb" placeholder="np. 400" min="1" inputmode="numeric" oninput="render()"/></div>
+      <div class="input-group"><label id="lbl-inp-avg">Śr. stos</label><input type="number" id="inp-avg" placeholder="np. 40000" min="1" inputmode="numeric" oninput="render()"/></div>
+    </div>
+    <div id="stack-gauge-wrap" style="display:none">
+      <div class="stack-gauge">
+        <div class="gauge-row">
+          <div>
+            <div style="font-family:var(--font-display);font-size:9px;letter-spacing:2px;color:#c0a060;margin-bottom:2px" id="lbl-stack">TWOJE BB</div>
+            <div class="gauge-bb" id="gauge-bb-val">—</div>
+          </div>
+          <div style="text-align:right" id="gauge-ratio-wrap">
+            <div style="font-family:var(--font-display);font-size:9px;color:#c0a060;margin-bottom:2px" id="lbl-avg">VS ŚREDNIA</div>
+            <div class="gauge-ratio" id="gauge-ratio-val">—</div>
+          </div>
+          <div class="badge" id="gauge-zone-badge"></div>
+        </div>
+        <div class="gauge-track"><div class="gauge-fill" id="gauge-fill" style="width:0%"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="card">
+    <div class="card-title" id="sec-cards-title">♠ Twoje Karty</div>
+    <div class="cards-row">
+      <div class="card-pick-wrap">
+        <div class="card-pick-label" id="lbl-card1">KARTA 1</div>
+        <div class="card-visual" id="cv1" onclick="openModal(1)"><span class="card-visual-plus">+</span></div>
+        <button class="card-remove" id="cr1" style="display:none" onclick="removeCard(1)">usuń</button>
+      </div>
+      <div class="cards-sep">·</div>
+      <div class="card-pick-wrap">
+        <div class="card-pick-label" id="lbl-card2">KARTA 2</div>
+        <div class="card-visual" id="cv2" onclick="openModal(2)"><span class="card-visual-plus">+</span></div>
+        <button class="card-remove" id="cr2" style="display:none" onclick="removeCard(2)">usuń</button>
+      </div>
+    </div>
+    <div class="hand-display" id="hand-display" style="display:none">
+      <span class="hand-notation" id="hand-notation-text"></span>
+      <span class="badge" id="hand-tier-badge"></span>
+    </div>
+    <div style="text-align:center;margin-top:10px;font-family:var(--font-display);font-size:12px;color:#b8e0b0;letter-spacing:2px" id="lbl-card-hint">Kliknij + aby wybrać kartę</div>
+  </div>
+
+  <!-- Recommendation -->
+  <div id="rec-placeholder" class="placeholder">Wybierz stos, pozycję i karty<small>aby otrzymać pełną analizę preflop</small></div>
+  <div id="rec-card" class="rec-card" style="display:none">
+    <div class="card-title" id="rec-title-txt">♠ Rekomendacja Preflop</div>
+    <div class="rec-action" id="rec-action-text"></div>
+    <div id="rec-blocks"></div>
+    <div class="rec-tags" id="rec-tags"></div>
+  </div>
+
+</div><!-- /tab-advisor -->
+
+<!-- ==================== RFI TAB ==================== -->
+<div id="tab-rfi" style="display:none">
+  <div class="card">
+    <div class="card-title" id="rfi-title-txt">♠ Zakresy Otwarcia (RFI — Raise First In)</div>
+    <p id="rfi-desc-txt" style="font-family:var(--font-body);font-size:12px;color:#c8d8b8;line-height:1.65;margin-bottom:10px">Zakresy gdy nikt nie wszedł przed Tobą. Górny prawy trójkąt = suited, dolny lewy = offsuit, przekątna = pary. <span id="rfi-hand-note" style="color:var(--gold)"></span></p><div id="rfi-disclaimer-txt" style="background:rgba(212,175,55,.10);border:1px solid rgba(212,175,55,.35);border-radius:8px;padding:12px 15px;margin-bottom:14px;font-family:var(--font-body);font-size:12px;color:#d8c888;line-height:1.7">⚠️ <strong style="color:#d4b870">Uwaga o dokładności:</strong> Zakresy bazują na szeroko publikowanych przybliżeniach GTO. Kierunkowe zasady są pewne — UTG gra ciasno (~13%), BTN szeroko (~43%). Dokładne granice poszczególnych rąk to uproszczenia binarne (graj / nie graj), podczas gdy prawdziwy solver generuje częstotliwości mieszane. Traktuj te tablice jako solidny punkt startowy, nie perfekcyjny GTO.</div>
+    <div class="scenario-label" id="rfi-pos-label-txt">Wybierz pozycję</div>
+    <div class="scenario-btns" id="rfi-btns"></div>
+    <div id="rfi-matrix"></div>
+    <div class="sep"></div>
+    <div style="font-family:var(--font-display);font-size:9px;letter-spacing:2px;color:var(--gold-dim);margin-bottom:10px" id="rfi-width-label-txt">SZEROKOŚĆ RANGE WG POZYCJI</div>
+    <div id="rfi-bars"></div>
+  </div>
+</div>
+
+
+
+
+<!-- ==================== GLOSSARY TAB ==================== -->
+<div id="tab-glossary" style="display:none">
+  <div class="card">
+    <div class="card-title" id="gloss-title-txt">♠ Słownik Pokerowy</div>
+    <div class="gloss-search-wrap">
+      <span class="gloss-search-icon">🔍</span>
+      <input class="gloss-search" id="gloss-search" type="text" placeholder="Szukaj pojęcia... (np. blind, equity, range)" oninput="filterGloss()"/>
+    </div>
+    <div class="gloss-filter-row" id="gloss-filters"></div>
+    <div class="gloss-count" id="gloss-count"></div>
+    <div class="gloss-list" id="gloss-list"></div>
+  </div>
+</div>
+
+<!-- ==================== ABOUT TAB ==================== -->
+<div id="tab-about" style="display:none">
+  <div id="about-content"></div>
+</div>
+
+</div><!-- /main -->
+
+<script>
+// ═══════════════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════════════
+const RANKS=['A','K','Q','J','T','9','8','7','6','5','4','3','2'];
+const SUITS=['♠','♥','♦','♣'];
+const rankIdx=r=>RANKS.indexOf(r);
+const isRed=s=>s==='♥'||s==='♦';
+
+const POS_ALL=[
+  {id:'UTG', l:'UTG',   f:'Under the Gun',    t:'early'},
+  {id:'UTG1',l:'UTG+1', f:'Early Position',   t:'early'},
+  {id:'UTG2',l:'UTG+2', f:'Early-Mid',        t:'early'},
+  {id:'LJ',  l:'LJ',    f:'Lojack',           t:'mid'},
+  {id:'HJ',  l:'HJ',    f:'Hijack',           t:'mid'},
+  {id:'CO',  l:'CO',    f:'Cutoff',           t:'late'},
+  {id:'BTN', l:'BTN',   f:'Button',           t:'late'},
+  {id:'SB',  l:'SB',    f:'Small Blind',      t:'blind'},
+  {id:'BB',  l:'BB',    f:'Big Blind',        t:'blind'},
+];
+const POS_BY_SIZE={
+  6:['UTG','HJ','CO','BTN','SB','BB'],
+  7:['UTG','LJ','HJ','CO','BTN','SB','BB'],
+  8:['UTG','UTG1','HJ','CO','BTN','SB','BB'],  // fixed: removed LJ from 8 and use UTG1
+  9:['UTG','UTG1','UTG2','LJ','HJ','CO','BTN','SB','BB'],
+};
+
+// Fix 8-player to use correct positions
+POS_BY_SIZE[8]=['UTG','UTG1','LJ','HJ','CO','BTN','SB','BB'];
+
+const POS_TYPES={
+  early:{c:'#ff6b6b',l:'Wczesna pozycja',desc:'Działasz przed większością graczy. Twój range jest widoczny dla wszystkich. Graj tylko najsilniejsze ręce — zakładaj, że ktoś za Tobą ma dobrego handa.'},
+  mid:  {c:'#ffa502',l:'Środkowa pozycja',desc:'Widzisz już kilka foldów. Możesz rozszerzyć range o silne ręce suited i connectors. Wciąż jednak jesteś w niekorzystnej pozycji postflop.'},
+  late: {c:'#2ed573',l:'Późna pozycja',desc:'Działasz po większości graczy. Masz pełną informację o ich akcjach. Możesz grać szeroki range, kradnąć blindy i izolować limperów.'},
+  blind:{c:'#74b9ff',l:'Blind',desc:'SB jest najgorsza pozycją postflop — zawsze działasz pierwszy. BB ma dobrą cenę do obrony ale bez inicjatywy. Graj defensywnie.'},
+};
+
+const TIER_INFO={1:{l:'MONSTER',c:'#ff4757'},2:{l:'PREMIUM',c:'#ffa502'},3:{l:'STRONG',c:'#2ed573'},4:{l:'PLAYABLE',c:'#1e90ff'},5:{l:'SPECULATIVE',c:'#a29bfe'},6:{l:'WEAK',c:'#636e72'}};
+
+// ─── RFI DATA ───────────────────────────────────────
+const RFI_DATA={
+  'UTG': {pct:'13',raise:['AA','KK','QQ','JJ','TT','99','AKs','AQs','AJs','ATs','KQs','AKo','AQo']},
+  'UTG+1':{pct:'15',raise:['AA','KK','QQ','JJ','TT','99','88','AKs','AQs','AJs','ATs','KQs','KJs','QJs','AKo','AQo','AJo','KQo']},
+  'UTG+2':{pct:'17',raise:['AA','KK','QQ','JJ','TT','99','88','77','AKs','AQs','AJs','ATs','A9s','KQs','KJs','KTs','QJs','JTs','T9s','AKo','AQo','AJo','KQo','KJo']},
+  'LJ':   {pct:'20',raise:['AA','KK','QQ','JJ','TT','99','88','77','66','AKs','AQs','AJs','ATs','A9s','A8s','KQs','KJs','KTs','QJs','QTs','JTs','T9s','98s','AKo','AQo','AJo','ATo','KQo','KJo','QJo']},
+  'HJ':   {pct:'24',raise:['AA','KK','QQ','JJ','TT','99','88','77','66','55','AKs','AQs','AJs','ATs','A9s','A8s','A7s','KQs','KJs','KTs','K9s','QJs','QTs','Q9s','JTs','J9s','T9s','98s','87s','AKo','AQo','AJo','ATo','KQo','KJo','KTo','QJo','JTo']},
+  'CO':   {pct:'29',raise:['AA','KK','QQ','JJ','TT','99','88','77','66','55','44','AKs','AQs','AJs','ATs','A9s','A8s','A7s','A6s','A5s','A4s','A3s','KQs','KJs','KTs','K9s','K8s','QJs','QTs','Q9s','Q8s','JTs','J9s','J8s','T9s','T8s','98s','97s','87s','86s','76s','75s','65s','AKo','AQo','AJo','ATo','A9o','KQo','KJo','KTo','QJo','QTo','JTo','T9o']},
+  'BTN':  {pct:'43',raise:['AA','KK','QQ','JJ','TT','99','88','77','66','55','44','33','22','AKs','AQs','AJs','ATs','A9s','A8s','A7s','A6s','A5s','A4s','A3s','A2s','KQs','KJs','KTs','K9s','K8s','K7s','K6s','K5s','QJs','QTs','Q9s','Q8s','Q7s','JTs','J9s','J8s','J7s','T9s','T8s','T7s','98s','97s','96s','87s','86s','85s','76s','75s','65s','64s','54s','53s','AKo','AQo','AJo','ATo','A9o','A8o','A7o','KQo','KJo','KTo','K9o','QJo','QTo','Q9o','JTo','J9o','T9o','T8o','98o','97o','87o']},
+  'SB':   {pct:'38',raise:['AA','KK','QQ','JJ','TT','99','88','77','66','55','44','33','AKs','AQs','AJs','ATs','A9s','A8s','A7s','A6s','A5s','A4s','A3s','A2s','KQs','KJs','KTs','K9s','K8s','K7s','QJs','QTs','Q9s','Q8s','JTs','J9s','J8s','T9s','T8s','98s','97s','87s','86s','76s','65s','64s','54s','AKo','AQo','AJo','ATo','A9o','A8o','KQo','KJo','KTo','K9o','QJo','QTo','JTo','T9o','98o']},
+};
+
+// ─── GLOSSARY DATA ───────────────────────────────────
+const GLOSSARY=[
+  {term:'Preflop',en:'Preflop',cat:'Podstawy',def:'Pierwsza faza każdej ręki — zanim na stole pojawią się jakiekolwiek wspólne karty. Każdy gracz ma już swoje dwie prywatne karty i musi zdecydować: spasować (fold), wyrównać (call) lub podbić (raise). To najważniejszy moment w grze — błędna decyzja preflop rujnuje całą rękę.',ex:'Mam Asa i Króla przed flopem — podbijam do 3x Big Blinda.',related:['Postflop','Hole Cards','Big Blind (BB)']},
+  {term:'Postflop',en:'Postflop',cat:'Podstawy',def:'Wszystkie rundy licytacji po wyłożeniu pierwszych wspólnych kart: flop (3 karty), turn (4. karta) i river (5. karta). Gra postflop jest zwykle bardziej skomplikowana niż preflop, bo zależy od konkretnego układu kart na stole.',ex:'Grałem ostrożnie preflop, ale postflop trafiłem trójkę i grałem agresywnie.',related:['Flop','Turn','River']},
+  {term:'Hole Cards',en:'Hole Cards',cat:'Podstawy',def:'Twoje dwie prywatne karty rozdane na początku każdej ręki. Tylko Ty je widzisz. Na końcu ręki (showdown) wszyscy odkrywają swoje karty i porównują ręce.',ex:'Moje prywatne karty (hole cards) to As i Król — bardzo silna ręka.',related:['Preflop','Showdown']},
+  {term:'Flop',en:'Flop',cat:'Podstawy',def:'Trzy pierwsze karty wspólne odkrywane jednocześnie na środku stołu. Wszyscy gracze mogą ich używać do budowania najlepszej ręki pięciokartowej. Po flopie odbywa się druga runda licytacji.',ex:'Flop: As Król Siódemka — trafiam dwie pary z ręką AK.',related:['Postflop','Turn','Community Cards']},
+  {term:'Turn',en:'Turn',cat:'Podstawy',def:'Czwarta karta wspólna odkrywana po rundzie licytacji na flopie. Może zmienić układ sił przy stole — na przykład dopełnić czyjś kolor lub strit.',ex:'Na turnie wyszedł As — teraz mam trójkę asów!',related:['Flop','River']},
+  {term:'River',en:'River',cat:'Podstawy',def:'Piąta i ostatnia karta wspólna. Po jej odkryciu odbywa się ostatnia runda licytacji, a następnie showdown — odkrycie kart i wyłonienie zwycięzcy. Gracze mówią że "river zabił rękę" gdy ta karta psuje wygraną kombinację.',ex:'Na riverze wyszedł kolor dla oponenta — przegrałem silną rękę.',related:['Turn','Showdown']},
+  {term:'Community Cards',en:'Community Cards',cat:'Podstawy',def:'Pięć kart wspólnych (flop + turn + river) wyłożonych na środku stołu, które wszyscy gracze przy stole mogą wykorzystywać. Razem z dwoma prywatnymi kartami każdy gracz buduje swoją najlepszą rękę pięciokartową.',ex:'Na stole leżą wspólne karty: A-K-Q-J-T — ktoś może mieć stritas.',related:['Flop','Turn','River']},
+  {term:'Blind',en:'Blind',cat:'Podstawy',def:'Obowiązkowy zakład wpłacany przez dwóch graczy siedzących po lewej stronie dealera PRZED rozdaniem kart — niezależnie od siły ręki. Dzięki blindom w każdej rundzie jest coś do wygrania i gra nie zatrzymuje się.',ex:'Muszę wpłacić blind zanim zobaczę karty — to obowiązkowy zakład niezależny od ręki.',related:['Small Blind','Big Blind (BB)']},
+  {term:'Big Blind (BB)',en:'Big Blind',cat:'Podstawy',def:'Pełny obowiązkowy zakład wpłacany przez gracza dwie miejsca po lewej od dealera. Służy też jako jednostka miary głębokości stosu — np. stos 10 000 żetonów przy BB 400 to 25 BB. Głębokość stosu w BB jest kluczowa dla strategii.',ex:'Mój stos to 20 BB — jestem przy granicy strefy push/fold.',related:['Blind','Stos (Stack)','Push/Fold']},
+  {term:'Small Blind',en:'Small Blind',cat:'Podstawy',def:'Mniejszy obowiązkowy zakład (zwykle połowa Big Blinda) wpłacany przez gracza bezpośrednio po lewej od dealera. To najgorsza pozycja w grze — gracz na Small Blindzie musi działać PRZED wszystkimi innymi graczami po wyłożeniu karty flopie.',ex:'Jestem na Small Blindzie — nawet z silną ręką gram ostrożnie, bo zawsze działam przed oponentami.',related:['Big Blind (BB)','Blind','OOP (Out of Position)']},
+  {term:'Pot',en:'Pot',cat:'Podstawy',def:'Pula — suma wszystkich zakładów złożonych przez graczy w trwającej ręce. Leży na środku stołu. Gracz który wygra rękę (najsilniejsza ręka na showdownie lub jako ostatni gdy wszyscy inni spasowali) zabiera cały pot.',ex:'W puli jest 1200 żetonów — stawiam 600, czyli połowę puli.',related:['Pot Odds','Showdown']},
+  {term:'Showdown',en:'Showdown',cat:'Podstawy',def:'Moment odkrycia kart przez graczy na końcu ręki, gdy dwie lub więcej osób doszły do końca ostatniej rundy licytacji. Gracz z najlepszą ręką pięciokartową wygrywa pulę. Showdownu można uniknąć, jeśli wszyscy inni gracze wcześniej spasują.',ex:'Obaj dobrnęliśmy do showdownu — on pokazał parę królów, ja miałem dwie pary i wygrałem.',related:['River','Hole Cards']},
+  {term:'Stos (Stack)',en:'Stack',cat:'Podstawy',def:'Ilość żetonów, które posiadasz przy stole. Wyraża się go w jednostkach Big Blind (BB) dla łatwego porównania z innymi graczami. Głębokość stosu decyduje o dostępnych strategiach — z głębokim stosem (50+ BB) masz dużo opcji postflop, przy krótkim (poniżej 20 BB) gra się bardziej mechanicznie.',ex:'Mam 40 BB — normalny stos, gram standardową strategię.',related:['Big Blind (BB)','Push/Fold','Shallow Stack']},
+  {term:'Pozycja',en:'Position',cat:'Pozycje',def:'Miejsce siedzenia względem dealera. Gracze działający PÓŹNIEJ w rundzie licytacji mają przewagę — widzą co zrobili inni gracze przed podjęciem własnej decyzji. To jedna z najważniejszych koncepcji w pokerze: im później działasz, tym lepiej.',ex:'Z Buttona (ostatnia pozycja) widzę co zrobili wszyscy — to ogromna przewaga strategiczna.',related:['BTN (Button)','IP (In Position)','OOP (Out of Position)']},
+  {term:'BTN (Button)',en:'Button',cat:'Pozycje',def:'Najlepsza pozycja przy stole — gracz z żetonem dealera. Działa OSTATNI w każdej rundzie po flopie, widząc decyzje wszystkich innych przed podjęciem własnej. Z Buttona można grać najszerszy zakres rąk (~43%).',ex:'Z Buttona otwieram zakład z szerokim zakresem — mam pełną informację o akcjach wszystkich.',related:['IP (In Position)','Steal','Pozycja']},
+  {term:'UTG (Under the Gun)',en:'Under the Gun',cat:'Pozycje',def:'Pierwsza pozycja do działania preflop — gracz siedzący bezpośrednio po lewej od Big Blinda. Najgorsza pozycja preflop, bo musisz podjąć decyzję zanim cokolwiek zrobili inni. Oznacza to konieczność grania tylko naprawdę silnych rąk (~13%).',ex:'Z UTG otwieram tylko top 13% rąk — żadnych ryzykownych rąk spekulatywnych.',related:['Pozycja','RFI (Raise First In)']},
+  {term:'CO (Cutoff)',en:'Cutoff',cat:'Pozycje',def:'Pozycja bezpośrednio po prawej od Buttona — druga najlepsza pozycja. Działasz przed Buttonem i blindami, więc widzisz dużą część decyzji. Pozwala to na szeroki zakres otwarć (~29% rąk).',ex:'Z Cutoffa otwieram szeroko — po mnie zostały tylko Button i blindy.',related:['BTN (Button)','Steal','Pozycja']},
+  {term:'HJ (Hijack)',en:'Hijack',cat:'Pozycje',def:'Pozycja dwa miejsca przed Buttonem. Dobra pozycja z zakresem otwarć ~24% rąk. Nazwa nawiązuje do "porwania" akcji przed Buttonem.',ex:'Z Hijacka otwieram ~24% rąk — dość szeroko, ale wciąż selektywnie.',related:['CO (Cutoff)','Pozycja']},
+  {term:'LJ (Lojack)',en:'Lojack',cat:'Pozycje',def:'Pozycja trzy miejsca przed Buttonem. Środkowa-późna pozycja, zakres otwarć ~20% rąk.',ex:'Z Lojacka gram ~20% rąk — dopiero zaczynamy poszerzać zakres.',related:['HJ (Hijack)','Pozycja']},
+  {term:'IP (In Position)',en:'In Position',cat:'Pozycje',def:'Grasz "w pozycji" gdy działasz PO swoim przeciwniku w każdej rundzie po flopie. To ogromna przewaga — widzisz co robi oponent zanim sam zdecydujesz. Właśnie dlatego Button jest tak cenną pozycją.',ex:'Jestem IP (gram po przeciwniku) — widzę jego sprawdzenie zanim zdecyduję czy postawić.',related:['BTN (Button)','OOP (Out of Position)','Pozycja']},
+  {term:'OOP (Out of Position)',en:'Out of Position',cat:'Pozycje',def:'Grasz "poza pozycją" gdy działasz PRZED swoim przeciwnikiem — musisz podjąć decyzję bez wiedzy co zrobi oponent. Small Blind zawsze gra poza pozycją postflop. To poważna wada strategiczna.',ex:'Jestem poza pozycją (OOP) z Small Blinda — zawsze działam przed oponentem, co jest trudne.',related:['Small Blind','IP (In Position)','Pozycja']},
+  {term:'RFI (Raise First In)',en:'Raise First In',cat:'Preflop',def:'Pierwsze podbicie w rundzie preflop gdy nikt przed Tobą jeszcze nie podbił ani nie wyrównał. Standard: zamiast samego wyrównania (limp), otwierasz grę podbiciem. Daje Ci inicjatywę i szansę wygrania puli zanim oponent trafi flop.',ex:'Nikt przede mną nic nie zrobił — moje pierwsze otwarcie to podbicie do 2.5x Big Blinda (RFI).',related:['Open Raise','Steal','Limp']},
+  {term:'Open Raise',en:'Open Raise',cat:'Preflop',def:'Pierwsze podbicie stawki preflop kiedy nikt inny jeszcze nie wszedł do gry. Standardowy rozmiar: 2.5x do 3x Big Blinda. Podbicie daje inicjatywę — jesteś "agresorem" i inni muszą reagować na Twój zakład.',ex:'Otwieram podbiciem do 2.5x BB z Królem i Damą tej samej maści.',related:['RFI (Raise First In)','3-Bet','Steal']},
+  {term:'Fold',en:'Fold',cat:'Preflop',def:'Pas — odrzucenie kart i rezygnacja z udziału w ręce. Tracisz wpłacone zakłady, ale nie ryzykujesz więcej. Profesjonalni gracze pasują ok. 70-75% rąk preflop — fold jest często najlepszą decyzją.',ex:'Z dwójką i siódemką różnego koloru z pierwszej pozycji — pas (fold).',related:['Range','RFI (Raise First In)']},
+  {term:'Call',en:'Call',cat:'Preflop',def:'Wyrównanie — dopasowanie obecnej stawki bez podbijania. Mówi się też "wejście" lub "wyrównanie". Wyrównanie jest uzasadnione gdy masz dobre szanse wygrania i cena wejścia jest atrakcyjna w stosunku do puli.',ex:'Poprzedni gracz podbił do 300, ja wyrównuję (call) — też płacę 300.',related:['Pot Odds','3-Bet','Fold']},
+  {term:'Limp',en:'Limp',cat:'Preflop',def:'Wejście do puli jedynie przez zapłacenie Big Blinda, bez żadnego podbicia. Generalnie jest to słaba strategia — nie dajesz sobie inicjatywy i pozwalasz wielu graczom wejść tanio. Prawie zawsze lepiej albo podbić, albo spasować.',ex:'Wejście za samo wyrównanie (limp) z małą parą to błąd — lepiej albo podbij, albo spasuj.',related:['Open Raise','RFI (Raise First In)']},
+  {term:'3-Bet',en:'3-Bet',cat:'Preflop',def:'Re-raise — podbicie po czyimś podbicu. Gdy gracz A otworzył zakład (2-bet), a gracz B ponownie podnosi, to właśnie jest 3-bet. Standardowy rozmiar: 3x otwarcia gdy grasz po oponencie, 3.5-4x gdy grasz przed oponentem. Wyraża bardzo silną rękę lub jest bluffem.',ex:'Gracz otworzył do 300, ja ponownie podbijam do 900 — to jest re-raise, czyli 3-bet.',related:['Open Raise','4-Bet','Squeeze']},
+  {term:'4-Bet',en:'4-Bet',cat:'Preflop',def:'Podbicie po re-raise (3-becie) — czwarta kolejna agresywna akcja preflop. Bardzo silny sygnał. Zakres 4-betowy powinien być polarny: albo ręce premium (AA, KK, QQ) albo ręce-bluff z blokerami (np. As-Piątka tej samej maści). Ręce środkowe (JJ, TT, AK) lepiej wyrównać niż 4-betować.',ex:'Oponent zrobił re-raise, ja odpowiadam kolejnym podbiciem (4-bet) z parą Asów — buduję duży pot.',related:['3-Bet','Polarny Zakres','Bloker']},
+  {term:'Steal',en:'Steal',cat:'Preflop',def:'Podbicie z późnej pozycji (Cutoff, Button lub Small Blind) z zamiarem wygrania blindów bez walki. Gdy wszystko przed Tobą spasowało, gracze na blindach pasują ok. 65-70% czasu — więc "kradzież blindów" jest opłacalna nawet ze słabszą ręką.',ex:'Z Buttona podbijam z K-7 — jeśli obaj gracze na blindach spasują, wygrywam 1.5 BB bez walki.',related:['BTN (Button)','Fold Equity','Blind']},
+  {term:'Squeeze',en:'Squeeze',cat:'Preflop',def:'Re-raise (3-bet) w sytuacji gdy jeden gracz otworzył, a przynajmniej jedna osoba już wyrównała (zamiast spasować lub podbić). "Wyciskasz" (squeeze) obu graczy — obaj muszą spasować, żebyś wygrał pulę. To silniejsza taktyka niż zwykły 3-bet, bo jest więcej graczy do pokonania i więcej żetonów w puli do wygrania.',ex:'Gracz z CO otworzył, gracz z Buttona wyrównał (nie podbił) — ja re-raisuj z Big Blinda, zmuszając obu do decyzji. To squeeze.',related:['3-Bet','Fold Equity','Bluff']},
+  {term:'Fold Equity',en:'Fold Equity',cat:'Strategia',def:'Wartość podbicia lub re-raise wynikająca z szansy, że przeciwnik spasuje. Im większe prawdopodobieństwo że oponent złoży karty (spasuje), tym wyższe fold equity. Przy krótkim stosie samo podbicie all-in może wystarczyć, żeby wygrać pulę bez showdownu.',ex:'Z 8 BB idę all-in z Asem-Damą. Nawet jeśli oponent spasuje, wygrywam blindy. Ta wartość to fold equity.',related:['Push/Fold','Bluff','Steal']},
+  {term:'Equity',en:'Equity',cat:'Strategia',def:'Twój procentowy udział w puli oparty na matematycznym prawdopodobieństwie wygrania ręki. Para Asów (AA) kontra para Królów (KK) przed flopem ma ok. 82% equity. Equity × pot = Twoja oczekiwana wygrana.',ex:'Mam cztery karty do koloru — moja equity (szansa wygrania) vs gotowej pary to ok. 35%.',related:['EV (Expected Value)','Pot Odds','Outs']},
+  {term:'EV (Expected Value)',en:'Expected Value',cat:'Strategia',def:'Oczekiwana wartość akcji w długiej perspektywie — średni wynik gdy powtórzysz tę samą decyzję tysiące razy. +EV = decyzja opłacalna długoterminowo. -EV = decyzja przynoszącą straty. Cel w pokerze: zawsze podejmować decyzje +EV, nawet jeśli przegrasz konkretną rękę.',ex:'Ten call jest +EV — statystycznie zarobię na nim w długim terminie, nawet jeśli teraz przegram.',related:['Equity','Pot Odds']},
+  {term:'Pot Odds',en:'Pot Odds',cat:'Matematyka',def:'Stosunek ceny wyrównania (call) do całkowitej wielkości puli po wyrównaniu. Pokazuje minimalne szanse wygrania (equity) potrzebne, by wyrównanie było opłacalne. Wzór: koszt calla ÷ (pot + call) = minimalne equity. Np. pula 200, call 50 → 50÷250 = 20% potrzebnego equity.',ex:'W puli jest 200, muszę dopłacić 50. Potrzebuję min. 20% szans na wygraną. Mam cztery karty do koloru z ~35% — wyrównuję.',related:['Equity','Implied Odds','Outs']},
+  {term:'Implied Odds',en:'Implied Odds',cat:'Matematyka',def:'Rozszerzone pot odds uwzględniające pieniądze, które możesz DODATKOWO wygrać w kolejnych rundach, jeśli trafisz swoją rękę. Ważne przy małych parach i suited connectorach — nawet jeśli aktualne pot odds nie uzasadniają wyrównania, przyszłe wygrane mogą to zmienić.',ex:'Wyrównuję z parą Piątek. Aktualne pot odds są słabe, ale jeśli trafię trójkę na flopie, wygram duży pot — to dobre implied odds.',related:['Pot Odds','Speculative Hand','Set']},
+  {term:'Range',en:'Range',cat:'Strategia',def:'Zakres — zestaw wszystkich możliwych rąk, które gracz może trzymać w danej sytuacji. Zamiast próbować zgadnąć dokładne dwie karty oponenta, myślisz o całym zestawie możliwych rąk na podstawie jego akcji. Np. "zakres UTG to ok. 13%" oznacza że z tej pozycji gra się tylko najsilniejsze 13% kombinacji.',ex:'Na jego re-raise z early pozycji jego zakres to prawdopodobnie JJ+, AKs, AQs — bardzo silne ręce.',related:['GTO (Game Theory Optimal)','Polarny Zakres','RFI (Raise First In)']},
+  {term:'GTO (Game Theory Optimal)',en:'GTO',cat:'Strategia',def:'Strategia matematycznie optymalna — taka, której nikt nie może regularnie pokonywać nawet znając Twój plan gry. GTO gracze mieszają akcje z określonymi proporcjami, żeby być nieprzewidywalnymi. To teoretyczny ideał — w praktyce gra się przybliżeniami GTO.',ex:'Gram GTO: z tą ręką re-raisuj w 60% przypadków, a wyrównuję w 40% — żeby być nieprzewidywalnym.',related:['Range','EV (Expected Value)','Polarny Zakres']},
+  {term:'Polarny Zakres',en:'Polar Range',cat:'Strategia',def:'Zakres składający się TYLKO z bardzo silnych rąk i rąk-bluffów — bez rąk "średnich". Z silnymi rękami budujesz duży pot. Z rąk-bluffów możesz spasować gdy ktoś odpowie agresją. Ręce środkowe (JJ, TT) nie nadają się ani na agresywny bluff, ani na spokojne wyrównanie.',ex:'Mój zakres re-raise to AA/KK/QQ (silne) + A5s/A4s jako bluff (mam blokera do AA) — klasyczny zakres polarny.',related:['3-Bet','4-Bet','Bloker']},
+  {term:'Bloker',en:'Blocker',cat:'Strategia',def:'Karta w Twojej ręce która zmniejsza liczbę silnych kombinacji możliwych u przeciwnika. Np. jeśli masz Asa, oponent może mieć AA tylko na 3 sposoby zamiast 6 (jeden As jest u Ciebie). Bloker jest ważny przy budowaniu bluffów — blufujesz kartami, które utrudniają oponentowi posiadanie bardzo silnej ręki.',ex:'Blefuję z As-Piątką tej samej maści — mam Asa, więc blokuję parę Asów. Oponent rzadziej ma najsilniejszą rękę.',related:['Polarny Zakres','3-Bet','4-Bet']},
+  {term:'Bluff',en:'Bluff',cat:'Strategia',def:'Zakład lub podbicie ze słabą ręką z zamiarem zmuszenia przeciwnika do spasowania. Dobry bluff jest matematycznie uzasadniony — musisz mieć wystarczającą szansę na spasowanie oponenta. Bluff bez żadnych szans na poprawę ręki to "pure bluff", z szansami na poprawę to semi-bluff.',ex:'Blefuję z czterema kartami do koloru — nawet jeśli oponent nie spasuje, mogę trafić kolor.',related:['Semi-Bluff','Fold Equity','Bloker']},
+  {term:'Semi-Bluff',en:'Semi-Bluff',cat:'Strategia',def:'Zakład ze słabą ręką, która ma szansę na poprawę do silnej ręki. Możesz wygrać na dwa sposoby: albo oponent spasuje natychmiast, albo trafiasz swoją rękę (kolor, strit, trójkę). To najsilniejsza forma bluffu.',ex:'Stawiam zakład z czterema kartami do koloru — to semi-bluff. Jeśli nie spasuje, mogę trafić kolor na następnej karcie.',related:['Bluff','Outs','Draw']},
+  {term:'Value Bet',en:'Value Bet',cat:'Strategia',def:'Zakład ze SILNĄ ręką w celu wyciągnięcia pieniędzy od gorszych rąk. Chcesz żeby przeciwnik wyrównał (zapłacił). Rozmiar value betu dobierasz tak, żeby oponent z gorszą ręką uznał wyrównanie za opłacalne.',ex:'Trafiam pełnego na riverze i stawiam duży zakład (value bet) — chcę żeby oponent z samym kolorem zapłacił.',related:['Bluff','Equity']},
+  {term:'C-Bet (Continuation Bet)',en:'Continuation Bet',cat:'Strategia',def:'Zakład na flopie od gracza który otworzył zakład preflop. "Kontynuacja" agresji z preflopa — przed flopem pokazałeś silną rękę (podbijając), teraz kontynuujesz ten przekaz. Większość c-betów robi się nie dlatego, że trafiło się flop, ale żeby wygrać pulę zanim oponent cokolwiek trafi.',ex:'Otworzyłem zakład preflop z AK, flop wyszedł J-7-2. Stawiam c-bet (kontynuację) ⅓ puli — kontynuuję reprezentację silnej ręki.',related:['Value Bet','Bluff','Postflop']},
+  {term:'Sizing',en:'Sizing',cat:'Strategia',def:'Rozmiar zakładu wyrażony jako procent puli lub wielokrotność Big Blinda. Preflop standardowo: 2.5x–3x BB. Po flopie: ⅓ puli, ½ puli, ¾ puli lub "pot" (100%). Dobór rozmiaru zakładu komunikuje siłę Twojego zakresu i wpływa na decyzję oponenta.',ex:'Stawiam c-bet ⅓ puli — mały rozmiar zakładu, który pasuje do szerokiego zakresu na tym flopie.',related:['C-Bet (Continuation Bet)','Value Bet','Bluff']},
+  {term:'Stack-off',en:'Stack-off',cat:'Strategia',def:'Zaangażowanie CAŁEGO stosu w rękę. "Stack-off range" to ręce, z którymi jesteś gotowy wejść all-in. Przy 20 BB na re-raise masz za dużo żetonów zaangażowanych żeby sensownie spasować — jesteś w "strefie stack-off".',ex:'Z JJ przy stosie 15 BB gdy ktoś mi robi re-raise — jestem w strefie stack-off, wchodzę all-in.',related:['Push/Fold','Shallow Stack']},
+  {term:'SPR (Stack-to-Pot Ratio)',en:'SPR',cat:'Strategia',def:'Stosunek efektywnego stosu (mniejszy ze stosów obu graczy) do wielkości puli na flopie. Niski SPR (poniżej 4) = łatwo zaangażować cały stos. Wysoki SPR (powyżej 10) = dużo miejsca na grę po flopie.',ex:'W podbijanej puli (3-bet pot) SPR wynosi 2.5 — mam za mało żetonów by sensownie spasować z dobrą ręką. Idę all-in.',related:['3-Bet','Pot']},
+  {term:'Check-Raise (C/R)',en:'Check-Raise',cat:'Strategia',def:'Sprawdzenie (nie stawiam zakładu), a po zakładzie oponenta — podbicie (raise). Potężna taktyka zarówno z silną ręką (chcesz wyciągnąć pieniądze) jak i z bluffem. Gracz bez pozycji (działający przed oponentem) często używa check-raise żeby "ochronić" swój zakres.',ex:'Sprawdzam z nutowym flushem, czekam aż oponent postawi zakład, a następnie podbijam — to check-raise.',related:['OOP (Out of Position)','Value Bet','Bluff']},
+  {term:'Donk Bet',en:'Donk Bet',cat:'Strategia',def:'Zakład gracza bez inicjatywy, postawiony przed graczem który miał inicjatywę (otwierał zakład preflop). Uważany za niekonwencjonalny ruch — "donk" to slangowe określenie słabego gracza. Może jednak być skuteczny na specyficznych flopach i pozycjach.',ex:'Jestem na Big Blindzie, oponent otworzył preflop. Na flopie ja betuje jako pierwszy zamiast sprawdzić — to donk bet.',related:['C-Bet (Continuation Bet)','OOP (Out of Position)']},
+  {term:'Multiway Pot',en:'Multiway Pot',cat:'Strategia',def:'Pula z trzema lub więcej aktywnymi graczami. Im więcej graczy, tym trudniej skutecznie bluffować (ktoś prawie na pewno coś trafi) i tym silniejsza ręka jest potrzebna do wygrania showdownu.',ex:'W puli gra 4 graczy (multiway) — bleffuję rzadko, szukam mocnych rąk.',related:['Pot','Bluff','Equity']},
+  {term:'Speculative Hand',en:'Speculative Hand',cat:'Ręce',def:'Ręka o niskiej wartości samej w sobie preflop, ale z dużym potencjałem trafienia silnej kombinacji postflop. Przykłady: małe pary (22–66), suited connectors (J♠T♠, 8♥7♥). Wymagają głębokiego stosu i dobrej pozycji.',ex:'Gram 7♥6♥ z późnej pozycji przy głębokim stosie — to ręka spekulatywna. Czekam na kolor lub strita.',related:['Implied Odds','Suited Connector','IP (In Position)']},
+  {term:'Suited Connector',en:'Suited Connector',cat:'Ręce',def:'Dwie karty tego samego koloru (np. obydwa kara) z kolejnymi rangami (np. 8♦7♦ lub J♣T♣). Mają szansę na trafienie koloru (flush) i stritu (straight). Klasyczna ręka spekulatywna wymagająca dobrej pozycji i głębokiego stosu.',ex:'Mam J♠T♠ — dwie karty pikowe z kolejnymi rangami. Trafię strit lub kolor i wygram duży pot.',related:['Speculative Hand','Implied Odds','Draw']},
+  {term:'Pocket Pair',en:'Pocket Pair',cat:'Ręce',def:'Para w dwóch prywatnych kartach — obie karty tej samej rangi (np. AA, KK, 77, 22). Pary wysokie (10+) gra się agresywnie. Pary małe (2–6) gra się spekulatywnie — masz ok. 12% szans na trafienie trójki (seta) na flopie.',ex:'Mam 5♠5♦ — para piątek. Wyrównuję licząc na trafienie trójki (set) na flopie.',related:['Set','Speculative Hand','Implied Odds']},
+  {term:'Set',en:'Set',cat:'Ręce',def:'Trójka (trips) zbudowana z pary prywatnej i jednej karty na stole. Np. masz 77 w ręce, na stole wychodzi 7. Bardzo silna i ukryta ręka — oponent nie wie że masz trójkę. "Set mining" to strategia wyrównywania z małą parą licząc na trafienie seta.',ex:'Mam 99, na flopie wychodzi 9♠A♦K♣ — trafiam set (trójkę dziewiątek)! Teraz gram powoli żeby wyciągnąć pieniądze.',related:['Pocket Pair','Implied Odds','Value Bet']},
+  {term:'Nuts',en:'Nuts',cat:'Ręce',def:'Najlepsza możliwa ręka na danym układzie kart na stole. Mając "nutsy" wiesz, że nikt nie może Cię pobić. "Nut flush" = najwyższy możliwy kolor (z Asem). Z nutsami zawsze staw maksymalnie.',ex:'Na stole Q♠J♠T♠ mam A♠K♠ — to royal flush, absolutnie najlepsza ręka. Nikt mnie nie pobije.',related:['Value Bet','Showdown']},
+  {term:'Draw',en:'Draw',cat:'Ręce',def:'Niekompletna ręka czekająca na konkretną kartę żeby stać się silną. Flush draw = 4 karty do koloru, potrzeba 5. Straight draw = 4 karty do stritu. Ręka na draw przegrywa aktualnie gotowej ręce, ale ma szansę na poprawę.',ex:'Mam 4 karty do koloru po flopie — jestem na flush draw (draw koloru). Szansa trafienia do końca: ok. 35%.',related:['Outs','Semi-Bluff','Equity']},
+  {term:'Outs',en:'Outs',cat:'Matematyka',def:'Karty, które poprawią Twoją rękę do wygrywającej. Np. flush draw = 9 outów (13 kart koloru w talii minus 4 które masz = 9 pozostałych). Szybka reguła: liczba outów × 2 ≈ procent trafienia na następnej karcie. Liczba outów × 4 ≈ procent trafienia do końca ręki.',ex:'Mam 8 outów do stritu. 8×2 = 16% szans trafienia na riverze. 8×4 = 32% szans na trafienie do końca.',related:['Draw','Equity','Pot Odds']},
+  {term:'Push/Fold',en:'Push/Fold',cat:'Strategia turniejowa',def:'Strategia stosowana przy krótkim stosie (ok. 10–15 Big Blindów) — jedyna decyzja to albo wejście all-in (push), albo pas (fold). Dlaczego? Przy tak krótkim stosie nie ma sensu otwierać zakładem 2.5x — to angażuje za dużo żetonów bez wyraźnej strategii. All-in daje maksymalną presję i szansę na wygranie blindów bez walki.',ex:'Mam 12 BB, jestem w późnej pozycji z Asem-Damą. Idę all-in (push) — albo kradnę blindy, albo gram z dobrą ręką.',related:['Fold Equity','ICM (Independent Chip Model)','Stos (Stack)']},
+  {term:'ICM (Independent Chip Model)',en:'ICM',cat:'Strategia turniejowa',def:'Model matematyczny przeliczający wartość żetonów turniejowych na realne pieniądze w oparciu o strukturę nagród. Im bliżej bańki (granicy wypłat) lub finału, tym bardziej ICM modyfikuje optymalne decyzje — czasem lepiej spasować silną rękę, bo samo przeżycie ma realną wartość.',ex:'Jestem przy bańce turnieju z 20 BB. Pasuję nawet z Asem-Damą — ICM mówi że awans do strefy wypłat jest wart więcej niż ryzyko wyjścia.',related:['Bańka (Bubble)','Push/Fold']},
+  {term:'Bańka (Bubble)',en:'Bubble',cat:'Strategia turniejowa',def:'Moment w turnieju gdy do strefy wypłat brakuje kilku wyeliminowań. Np. płatne 100 miejsc, zostało 103 graczy — jesteś "w bańce". Gracze z krótkim stosem grają bardzo ostrożnie licząc na wyeliminowanie innych. Gracze z dużym stosem mogą atakować.',ex:'Jestem 101. miejscu przy 100 płatnych. Pasuję prawie wszystko — jeden błąd i wypadam bez nagrody.',related:['ICM (Independent Chip Model)','Push/Fold']},
+  {term:'Shallow Stack',en:'Shallow Stack',cat:'Strategia turniejowa',def:'Krótki stos — zazwyczaj poniżej 30 Big Blindów. Im krótszy stos, tym mniej opcji w grze po flopie i tym ważniejsze stają się proste strategie jak push/fold. Przy 15 BB lub mniej większość rąk kończy się all-inem preflop.',ex:'Z 14 BB gram prawie wyłącznie push/fold — nie ma sensu otwierać zakładem 2.5x.',related:['Push/Fold','Stos (Stack)','Big Blind (BB)']},
+  {term:'Late Registration',en:'Late Registration',cat:'Strategia turniejowa',def:'Możliwość dołączenia do turnieju po jego oficjalnym starcie. Wchodzisz z pełnym startowym stosem żetonów niezależnie od aktualnego poziomu blindów — co może dawać różną głębokość stosu (BB) w zależności od momentu rejestracji.',ex:'Dołączyłem do turnieju po 2 godzinach — wchodzę z 100 BB gdy średnia to 50 BB.',related:['Big Blind (BB)','Stos (Stack)']},
+  {term:'Cooler',en:'Cooler',cat:'Różne',def:'Sytuacja gdy dwie bardzo silne ręce spotykają się i przegrywający praktycznie nie mógł tego uniknąć. Np. para dam (QQ) kontra para królów (KK), albo jeden set kontra wyższy set. Nie jest to błąd strategiczny — to po prostu pech. Gracze mówią "to był cooler" odróżniając to od przegranej z własnego błędu.',ex:'Mój set Dziewiątek przegrał z setem Króli — obaj zagraliśmy dobrze, to był cooler.',related:['Variance','Bad Beat']},
+  {term:'Bad Beat',en:'Bad Beat',cat:'Różne',def:'Przegrana bardzo silnej ręki z ręką, która miała statystycznie dużo mniejsze szanse wygrania. Np. para Asów (82% przed flopem) przegrywa z 7-2 (18%) gdy tamten trafi full house na riverze. To normalny element gry wynikający z losowości.',ex:'Mój As-As na pewno wygrywał od flopa. On miał 7-2 z 5% szans. Na riverze trafił full house — klasyczny bad beat.',related:['Cooler','Variance']},
+  {term:'Variance',en:'Variance',cat:'Różne',def:'Naturalne, krótkoterminowe wahania wyników wynikające z losowości gry. Nawet gdy podejmujesz poprawne decyzje, możesz przegrywać przez wiele sesji z rzędu z powodu pecha. Dobry poker to minimalizowanie błędów — wyniki wyrównają się w długim terminie.',ex:'Gram dobrze od tygodnia, ale przegrywam — to variance (losowość). W dłuższym terminie dobre decyzje przyniosą zyski.',related:['EV (Expected Value)','Bad Beat','Cooler']},
+
+  // ── NOWE: UKŁADY RĄK ──────────────────────────────────────────────────────
+  {term:'Royal Flush',en:'Royal Flush',cat:'Ręce',def:'Najsilniejszy możliwy układ w Texas Hold\'em — As, Król, Dama, Walet i Dziesiątka tego samego koloru. Niepokonany w żadnym showdownie. Szansa trafienia Royal Flushu to ok. 1 na 30 000 rąk.',ex:'Mam A♠K♠ na boardzie Q♠J♠T♠ — Royal Flush w pikach! Absolutne nutsy.',related:['Nuts','Straight Flush','Flush']},
+  {term:'Straight Flush',en:'Straight Flush',cat:'Ręce',def:'Pięć kart tego samego koloru ułożonych kolejno (np. 8♥7♥6♥5♥4♥). Drugi najsilniejszy układ po Royal Flushu. Praktycznie niepokonany — jedyną rzeczą, która go bije, jest wyższy Straight Flush lub Royal Flush.',ex:'Mam 6♣5♣ na boardzie 9♣8♣7♣ — Straight Flush do dziewiątki.',related:['Royal Flush','Flush','Straight']},
+  {term:'Czwórka (Quads)',en:'Four of a Kind',cat:'Ręce',def:'Cztery karty tej samej rangi — np. cztery Asy lub cztery Siódemki. Jeden z najsilniejszych układów. Praktycznie zawsze wygrasz showdown z Quadsami, chyba że ktoś ma Straight Flusha lub Royal Flusha.',ex:'Mam 77, na boardzie wyszły 7♠7♦A♣ — trafiam Quady (cztery siódemki)!',related:['Full House','Set','Nuts']},
+  {term:'Full House',en:'Full House',cat:'Ręce',def:'Kombinacja tróki i pary — np. trzy Asy i dwa Królowe (AAA-KK). Przy porównaniu Full Houseów wyższy full wygrywa: AAA-22 bije KKK-AA. Silny układ, który jednak może przegrać z Czwórką lub Straight Flushem.',ex:'Mam AA, na boardzie K-K-A — mam Full House (trzy Asy i para Króli).',related:['Czwórka (Quads)','Set','Pocket Pair']},
+  {term:'Flush',en:'Flush',cat:'Ręce',def:'Pięć kart tego samego koloru (np. pięć karów), niekoniecznie kolejnych. Przy porównaniu Flushów wygrywa ten z wyższą kartą. Nut Flush = najwyższy możliwy flush z Asem. Flush przegrywa tylko z Full Housem, Quadsami, Straight Flushem i Royal Flushem.',ex:'Mam A♦K♦, na boardzie leżą trzy karty karo — trafiłem Nut Flush.',related:['Flush Draw','Suited Connector','Nuts']},
+  {term:'Straight',en:'Straight',cat:'Ręce',def:'Pięć kart o kolejnych rangach, niekoniecznie tego samego koloru (np. T-9-8-7-6). As może być i najwyższy (A-K-Q-J-T = Broadway) i najniższy (A-2-3-4-5 = Wheel). Straight przegrywa z Flushem, Full Housem, Quadsami, Straight Flushem.',ex:'Mam J♠T♣ na boardzie K♦Q♥A♦ — trafiam Broadway Straight (As do Króla).',related:['Straight Draw','Nuts','Flush']},
+  {term:'Trójka (Trips / Set)',en:'Three of a Kind',cat:'Ręce',def:'Trzy karty tej samej rangi. "Set" = para w ręce + jedna karta na stole (silniejszy i bardziej ukryty). "Trips" = jedna karta w ręce + para na stole (słabszy, bo boardowa para jest widoczna dla wszystkich). Oba układy to trójka, ale set jest znacznie cenniejszy strategicznie.',ex:'Mam 88, na flopie wychodzi 8 — mam Set (trójkę ósemek z ręki). To ukryta siła.',related:['Set','Full House','Pocket Pair']},
+  {term:'Dwie Pary',en:'Two Pair',cat:'Ręce',def:'Dwie różne pary jednocześnie — np. para Asów i para Królów. Przy porównaniu dwóch par wygrywa ta z wyższą pierwszą parą. Dwie pary to solidna ręka, ale może przegrać z Trójką, Straightem, Flushem etc.',ex:'Mam AK, flop wychodzi A-K-7 — trafiam dwie pary (para Asów i para Króli).',related:['Pocket Pair','Trójka (Trips / Set)','Showdown']},
+  {term:'Para',en:'Pair',cat:'Ręce',def:'Dwie karty tej samej rangi. "Top pair" = para z najwyższą kartą na boardzie. "Overpair" = para z ręki wyższa niż wszystkie karty na stole (np. masz KK, flop J-8-2). Para to najczęściej spotykany układ w showdownach.',ex:'Mam A♠J♦, flop wychodzi J♥-7♣-2♦ — trafiam Top Pair (para Waletów) z Top Kickerem (As).',related:['Pocket Pair','Dwie Pary','Kicker']},
+  {term:'High Card',en:'High Card',cat:'Ręce',def:'Najsłabszy układ — żadna kombinacja (brak pary, stritu, koloru). Wygrywa ten z wyższą kartą. Rzadko wygrywa showdown, chyba że wszyscy inni mają też tylko high card.',ex:'Mam A♠K♦ na boardzie 2-5-8-J-Q różnych kolorów — gram High Card (Asa).',related:['Showdown','Fold','Bluff']},
+
+  // ── NOWE: POJĘCIA POSTFLOP ───────────────────────────────────────────────
+  {term:'Kicker',en:'Kicker',cat:'Postflop',def:'Karta używana do rozstrzygnięcia remisu gdy dwaj gracze mają ten sam podstawowy układ. Np. obaj mają parę Asów — wygrywa ten z wyższym kickerem. "Top kicker" = najwyższy możliwy kicker do danej pary. Kicker jest kluczowy przy parach na boardzie.',ex:'Obaj mamy parę Asów, ale ja mam A-K, on A-Q — mój Król jako kicker wygrywa.',related:['Para','High Card','Showdown']},
+  {term:'Overpair',en:'Overpair',cat:'Postflop',def:'Para z ręki (pocket pair) wyższa niż wszystkie karty na stole. Np. masz KK, flop wychodzi J-8-2 — Twoje Króle to overpair. Silna ręka, ale narażona na sety i dwie pary oponenta.',ex:'Mam QQ, flop 9-6-2 — mam overpair. Żadna karta na boardzie nie zagraża mojej parze Dam.',related:['Pocket Pair','Set','Trójka (Trips / Set)']},
+  {term:'Top Pair',en:'Top Pair',cat:'Postflop',def:'Para zbudowana z jednej karty z ręki i najwyższej karty na flopie. Np. masz A-J, flop wychodzi J-7-2 — masz Top Pair (para Waletów). To jedna z najczęstszych "trafionych" rąk na flopie.',ex:'Mam A♠J♦, flop J♥-7-2 — trafiam Top Pair (Walety) z Top Kickerem (As). Solidna ręka.',related:['Kicker','Overpair','Para']},
+  {term:'Dry Board',en:'Dry Board',cat:'Postflop',def:'Flop/board bez spójnych kart — mało możliwości na draw (kolor, strit). Np. A♠-7♣-2♦ to dry board: trzy różne kolory, brak kolejnych rangami. Na dry boardach c-bety są bardziej skuteczne, bo oponent rzadko trafił draw.',ex:'Flop A♠-7♣-2♦ — dry board. Stawiam duże c-bet, bo nie ma żadnych drawów.',related:['C-Bet (Continuation Bet)','Wet Board','Bluff']},
+  {term:'Wet Board',en:'Wet Board',cat:'Postflop',def:'Flop/board z wieloma możliwościami na draw — kolor, strit lub oba. Np. J♠-T♠-9♦ to bardzo wet board: możliwe flushe i straighty. Na wet boardach trzeba grać szybciej z gotowymi rękami, bo oponent może trafić draw.',ex:'Flop J♠-T♠-9♦ — wet board. Stawiam natychmiast z setem, bo draw karty mogą mnie dobić.',related:['Dry Board','Draw','Flush Draw']},
+  {term:'Flush Draw',en:'Flush Draw',cat:'Ręce',def:'Cztery karty tego samego koloru — jedna karta brakuje do Flushu. Masz 9 outów (13 kart danego koloru w talii minus 4 które widzisz). Flush Draw to jeden z najsilniejszych drawów — szansa trafienia do końca ręki to ok. 35%.',ex:'Mam A♠K♠, flop 7♠-4♠-J♦ — mam Nut Flush Draw (As pik). 9 outów do Flushu.',related:['Flush','Draw','Outs','Semi-Bluff']},
+  {term:'Straight Draw',en:'Straight Draw',cat:'Ręce',def:'Cztery karty potrzebujące jednej do Stritu. "Open-ended straight draw" (OESD) = możesz trafić z obu stron, masz 8 outów (np. 8-7-6-5, potrzeba 9 lub 4). "Gutshot" = możesz trafić tylko z jednej strony, 4 outy (np. 8-7-5-4, potrzeba 6). OESD jest dwa razy silniejszy niż Gutshot.',ex:'Mam 8-7, flop 6-5-A — mam OESD (Open-Ended Straight Draw). 9 lub 4 dopełni strita. 8 outów.',related:['Straight','Draw','Outs','Gutshot']},
+  {term:'Gutshot',en:'Gutshot',cat:'Ręce',def:'Tzw. "strit wewnętrzny" — draw do Stritu gdzie brakuje karty wewnątrz sekwencji, a nie z jej końca. Np. masz 9-7 i na boardzie 8-6 — potrzebujesz 5 żeby trafić strit (tylko 4 outy). Gutshot jest dwa razy słabszy niż Open-Ended Straight Draw.',ex:'Mam J-9 na boardzie T-8-2 — gutshot. Potrzebuję Q żeby trafić Straight. Tylko 4 outy.',related:['Straight Draw','Outs','Draw']},
+  {term:'3-Bet Pot',en:'3-Bet Pot',cat:'Postflop',def:'Pula po akcji 3-bet preflop — zwykle 2-3x większa od standardowej puli. Wymaga innej strategii postflop: wyższe sizingi c-betów, więcej commitment z mocnymi rękami, mniej spekulowania. SPR (stosunek stosu do puli) jest niski.',ex:'W 3-bet pocie gram agresywnie z każdą parą lub lepiej — niski SPR sprawia że commitment jest prawie zawsze poprawny.',related:['3-Bet','SPR (Stack-to-Pot Ratio)','C-Bet (Continuation Bet)']},
+  {term:'Float',en:'Float',cat:'Postflop',def:'Wyrównanie calla na flopie ze słabą ręką z zamiarem przejęcia inicjatywy na turnie lub riverze gdy oponent sprawdzi. "Floatujesz" licząc na to, że oponent zrezygnuje z dalszej reprezentacji silnej ręki.',ex:'Wyrównuję c-bet na flopie z Middle Pair, zamierzając podbić gdy oponent sprawdzi na turnie — klasyczny float.',related:['C-Bet (Continuation Bet)','Bluff','IP (In Position)']},
+  {term:'Barrel',en:'Barrel',cat:'Postflop',def:'Zakład stawiany w kolejnych rundach — "second barrel" to bet na turnie, "third barrel" to bet na riverze. "Triple barrel bluff" = bluff na wszystkich trzech ulicach. Skuteczny barrel wymaga przekonującej narracji — Twoje karty muszą pasować do całego board texture.',ex:'Stawiam c-bet na flopie, then second barrel na turnie — reprezentuję silną rękę przez dwie ulice.',related:['C-Bet (Continuation Bet)','Bluff','Value Bet']},
+  {term:'Range Advantage',en:'Range Advantage',cat:'Strategia',def:'Przewaga zakresu — jeden gracz ma więcej silnych rąk na danym boardzie niż drugi. Np. gracz który otworzył z UTG ma Range Advantage na flopie A-K-Q, bo częściej ma AK, AA, KK, QQ. Gracz z Range Advantage może betować częściej i agresywniej.',ex:'Otwierałem preflop, więc mam Range Advantage na wysokim boardzie A-K-Q. Stawiam c-bet szeroko.',related:['Range','GTO (Game Theory Optimal)','C-Bet (Continuation Bet)']},
+  {term:'Nuts na Turnie',en:'Nut Turn',cat:'Postflop',def:'Najlepsza możliwa ręka po wyłożeniu czwartej karty wspólnej (turn). Ważne pojęcie przy budowaniu narracji zakładów — jeśli masz nutsy na turnie, Twój cel to zagrać tak, żeby wyciągnąć maksimum pieniędzy do riveru.',ex:'Na turnie trafiam Straight Flush Draw + Para — praktycznie nutsy. Slow play lub raise dla wartości?',related:['Nuts','Turn','Value Bet']},
+  {term:'Protect',en:'Protect',cat:'Postflop',def:'Ochrona ręki przez zakład lub raise — chodzi o zmuszenie drawów do płacenia za poprawę lub do spasowania. Np. masz Top Pair na Wet Boardzie — bet chroni Twoją rękę przed darmowymi kartami dla oponenta na Flush Draw.',ex:'Mam Top Pair na boardzie J♠-T♠-7♦ — stawiam duże żeby oponent na Flush Draw płacił za darmową kartę.',related:['Wet Board','Draw','Value Bet']},
+
+  // ── NOWE: POJĘCIA TURNIEJOWE ─────────────────────────────────────────────
+  {term:'MTT (Multi-Table Tournament)',en:'MTT',cat:'Strategia turniejowa',def:'Turniej wielostołowy — format gdzie setki lub tysiące graczy startuje jednocześnie przy wielu stołach. Gracze są przenoszeni między stołami w miarę eliminacji. Zwycięzca to ostatni gracz z żetonami. MTT wymaga innej strategii niż cash game — stos jest wszystkim.',ex:'Gram MTT online z 500 graczami. Start z 10 000 żetonów, blind-levele co 15 minut.',related:['ICM (Independent Chip Model)','Bańka (Bubble)','Push/Fold']},
+  {term:'Sit & Go (SnG)',en:'Sit & Go',cat:'Strategia turniejowa',def:'Turniej startujący automatycznie gdy odpowiednia liczba graczy się zarejestruje (najczęściej 9 lub 6). Nie ma ustalonej godziny startu. Krótszy format niż MTT — zazwyczaj trwa 30-90 minut. Idealne do nauki matematyki turnejowej i ICM.',ex:'Gram 9-max SnG. Zaczyna się gdy 9 graczy dołączy. Płatne miejsca 1-3.',related:['ICM (Independent Chip Model)','Push/Fold','Bańka (Bubble)']},
+  {term:'Chip EV vs \$EV',en:'Chip EV vs Dollar EV',cat:'Strategia turniejowa',def:'W turniejach wartość żetonów (Chip EV) nie jest równa wartości pieniężnej ($EV). Zdwojenie stosu nie zdwaja Twoich wygranych — bo nagrody są skoncentralrowane na szczycie. ICM przelicza Chip EV na $EV. Decyzje poprawne w Chip EV mogą być błędne w $EV (przy bańce lub FT).',ex:'Idę all-in z 55/45 Chip EV — ale jestem przy bańce, więc $EV może być ujemne. ICM mówi spasuj.',related:['ICM (Independent Chip Model)','EV (Expected Value)','Bańka (Bubble)']},
+  {term:'Final Table',en:'Final Table',cat:'Strategia turniejowa',def:'Ostatni stół turnieju — zazwyczaj 9 lub 6 graczy. Nagrody rosną dramatycznie od bańki do 1. miejsca. Strategia na Final Table uwzględnia silny efekt ICM: krótkie stosy mogą być bardzo ostrożne, chip leader może atakować.',ex:'Dobrnąłem do Final Table! Jestem 7. z 9 graczy — gram push/fold i czekam na słabsze stosy.',related:['ICM (Independent Chip Model)','MTT (Multi-Table Tournament)','Push/Fold']},
+  {term:'Re-entry',en:'Re-entry',cat:'Strategia turniejowa',def:'Możliwość ponownego wejścia do turnieju po eliminacji za dodatkową opłatą (buy-in). W odróżnieniu od Re-buy możesz re-entryować dopiero po wyburowaniu, a nie w trakcie gry. Re-entry turnieje mają często głębsze pola i większe prize poole.',ex:'Zostałem wyeliminowany w pierwszej godzinie — korzystam z re-entry opcji i gram drugi bullet.',related:['MTT (Multi-Table Tournament)','Stos (Stack)']},
+
+  // ── NOWE: ZAAWANSOWANE POJĘCIA STRATEGICZNE ───────────────────────────────
+  {term:'Polaryzacja',en:'Polarization',cat:'Strategia',def:'Strategia mieszania bardzo silnych rąk (value) z rękoma-bluffami w jednym zakresie — bez rąk "średnich". Polarny gracz bet/raise z mocnymi rękami i bluffami, ale checkuje/wywołuje z rękami środkowymi. Trudny do exploitowania bo nigdy nie wiesz czy ma nutsy czy blefuje.',ex:'Mój range 3-bet jest polarny: AA/KK (value) + A5s (bluff). Nie mam TT lub JJ w tym zakresie.',related:['Polarny Zakres','3-Bet','Bloker']},
+  {term:'Merged Range',en:'Merged Range',cat:'Strategia',def:'Zakres przeciwny do polarnego — zawiera głównie ręce "środkowe" o zbliżonej wartości, bez skrajności. Używany gdy oponent wywołuje szeroko i bluff nie jest skuteczny. Merged range generuje stały zysk z wielu rąk zamiast dużych pul z małą częstotliwością.',ex:'Vs calling station gram merged range na riverze — tylko value, żadnych bluffów.',related:['Polaryzacja','Value Bet','Range']},
+  {term:'Slowplay',en:'Slowplay',cat:'Strategia',def:'Granie silnej ręki pasywnie (sprawdzanie lub wyrównywanie zamiast podbijania) z zamiarem ukrycia jej siły i budowania puli w późniejszych ulicach. Ryzyko: dasz oponentowi darmową kartę, która może dobić Twoją rękę.',ex:'Trafiam Set na flopie i tylko sprawdzam — slowplay. Chcę żeby oponent pobił flop i wpłacił pieniądze na turnie.',related:['Value Bet','Trap','Set']},
+  {term:'Trap (Pułapka)',en:'Trap',cat:'Strategia',def:'Celowe granie pasywne z bardzo silną ręką żeby zwabić oponenta do zainwestowania pieniędzy. Np. masz AA przed flopem i tylko wyrównujesz cudzą 3-bet zamiast 4-betować — to pułapka. Ryzyko: oponent może trafić draw i pobić Twoje Asy.',ex:'Ktoś blefuje agresywnie, ja mam Fulla — tylko sprawdzam i wyrównuję. Pułapka zastawiona.',related:['Slowplay','Value Bet','Check-Raise (C/R)']},
+  {term:'Exploitation',en:'Exploitation',cat:'Strategia',def:'Odejście od strategii GTO w celu maksymalnego wykorzystania konkretnych błędów oponenta. Np. jeśli gracz nigdy nie blufuje na riverze — folduj wszystko bez mocnej ręki. Exploitation może przynosić więcej zysku niż GTO, ale jest ryzykowne gdy oponent się dostosuje.',ex:'Ten gracz nigdy nie blefuje trzecim barelem — folduję wszystko poniżej dwóch par na riverze. Pure exploitation.',related:['GTO (Game Theory Optimal)','EV (Expected Value)','Range']},
+  {term:'Thin Value Bet',en:'Thin Value Bet',cat:'Strategia',def:'Zakład z ręką, która jest nieznacznie lepsza od zakresu wywołań oponenta — "cienka" wartość. Ryzykowny ruch, bo można łatwo mieć gorszą rękę niż myślisz. Thin value bet jest poprawny gdy jesteś pewien że oponent wywołuje z wystarczającą liczbą gorszych rąk.',ex:'Stawiam Thin Value z środkową parą na niskim riverze — myślę że oponent ma słabszą parę lub wysoką kartę.',related:['Value Bet','Bluff','Showdown']},
+  {term:'Airball',en:'Airball',cat:'Strategia',def:'Kompletny miss na flopie — żadnej pary, żadnego drawa, nic. "Mam air" = mam zupełnie nic. Bluff z kompletnym miss to Pure Bluff i wymaga wysokiej szansy na spasowanie oponenta żeby być opłacalny.',ex:'Otworzyłem z K♠Q♦, flop 7♣-4♥-2♠ — mam kompletny airball. Stawiam c-bet licząc na fold.',related:['Bluff','C-Bet (Continuation Bet)','Fold Equity']},
+
+  // ── NOWE: POJĘCIA CASH GAME ───────────────────────────────────────────────
+  {term:'Cash Game',en:'Cash Game',cat:'Podstawy',def:'Format gry gdzie żetony mają bezpośrednią wartość pieniężną — możesz wejść i wyjść ze stołu w dowolnym momencie. W odróżnieniu od turniejów nie ma eliminacji ani struktury nagród. Gra się normalnie głębokimi stosami (100+ BB). Win rate mierzy się w BB/100 rąk.',ex:'Gram cash game $1/$2 — BB to $2. Wchodzę z $200 (100 BB). Mogę opuścić stół w każdej chwili.',related:['Big Blind (BB)','Stos (Stack)','Win Rate']},
+  {term:'Win Rate',en:'Win Rate',cat:'Podstawy',def:'Wskaźnik zysku w pokerze wyrażony w Big Blindach na 100 rąk (bb/100). Pozytywny win rate oznacza że grasz na zysk. Np. win rate 5 bb/100 oznacza że zarabiasz średnio 5 BB na każde 100 rozegranych rąk. Wymaga dużej próbki (min. 50 000-100 000 rąk) dla statystycznej wiarygodności.',ex:'Mój win rate po 100 000 rąk to 4 bb/100 — jestem winningowym graczem na tym levelu.',related:['EV (Expected Value)','Variance','Cash Game']},
+  {term:'Stake',en:'Stake',cat:'Podstawy',def:'Poziom stawek przy stole, definiowany przez wartość Small Blind/Big Blind. Np. $1/$2, $2/$5, $5/$10. Wyższe stake = większe pieniądze w grze i zwykle silniejsi gracze przy stole. "Moving up in stakes" = przejście na wyższy poziom.',ex:'Gram na stakach $1/$2. Mój bankroll to $600 (300 BB) — odpowiedni na ten poziom.',related:['Cash Game','Big Blind (BB)','Bankroll Management']},
+  {term:'Bankroll Management',en:'Bankroll Management',cat:'Strategia',def:'Zarządzanie budżetem pokerowym — strategia doboru stawek względem posiadanego bankrollu, żeby zminimalizować ryzyko ruiny. Ogólna zasada dla cash game: miej 20-30 buy-inów na danym poziomie. Dla turniejów: 50-100 buy-inów. Bankroll management chroni przed utratą wszystkiego w złej serii.',ex:'Mam $1000 bankrollu — nie wchodzę na $1/$2 z pełnym buy-inem ($200), bo to tylko 5 buy-inów. Zacznę od $0.25/$0.50.',related:['Variance','Stake','Win Rate']},
+  {term:'3-Bet Pot (postflop)',en:'3-Bet Pot Postflop',cat:'Postflop',def:'Gra w puli po 3-becie preflop jest fundamentalnie inna od gry w standardowej puli — pula jest 3-4x większa, a SPR (stosunek stosu do puli) niski. Wymaga agresywnej gry z szerokim zakresem strong hands i mniej "slow play".',ex:'Jestem w 3-bet pocie z JJ na flopie 9-6-2. Niski SPR — stawiam dużo i nie kombinuję.',related:['3-Bet','SPR (Stack-to-Pot Ratio)','C-Bet (Continuation Bet)']},
+
+  // ── NOWE: CZYTANIE GRACZY ─────────────────────────────────────────────────
+  {term:'Tell',en:'Tell',cat:'Różne',def:'Podświadomy gest, zachowanie lub wzorzec który zdradza siłę ręki gracza. W pokerze online "tell" to statystyczny wzorzec (np. zawsze bet-size X z bluffem, Y z value). W pokerze na żywo to fizyczne sygnały: trzęsące się ręce, dotykanie żetonów, tempa działania.',ex:'Zauważam że ten gracz zawsze długo myśli przed bluffem — to jego tell. Wywołuję szybciej.',related:['Exploitation','Range','Read']},
+  {term:'Read',en:'Read',cat:'Różne',def:'Ocena siły ręki oponenta na podstawie jego akcji, historii i zachowania. Dobry "read" pozwala zawęzić zakres oponenta do konkretnych rąk. Im dokładniejszy read, tym bardziej możesz odejść od GTO w stronę eksploitacji.',ex:'Mój read: oponent ma AK lub KK — zawsze re-raise preflop, a teraz sprawdził na flopie z Asem. Bet.',related:['Range','Tell','Exploitation']},
+  {term:'Reg',en:'Regular',cat:'Różne',def:'Reg (od "regular") — regularny gracz przy stołach, zwykle winningowy lub co najmniej breakeven. Regy znają podstawy strategii i są trudniejsi do eksploitowania niż rekreacyjni gracze. "Reg war" = trudna gra między dwoma winnigowymi graczami.',ex:'Stół z samymi Regami jest trudny — lepiej poszukać "fishy" stołu z kilkoma rekreacyjnymi graczami.',related:['Fish','Win Rate','Exploitation']},
+  {term:'Fish',en:'Fish',cat:'Różne',def:'Slangowe określenie słabego, rekreacyjnego gracza popełniającego wiele błędów. Nie obraźliwe w środowisku pokerowym — każdy był kiedyś Fish. Fish to źródło zysku przy stole. Unikaj siedzenia po lewej stronie Fisha (wtedy to on ma pozycję na Ciebie).',ex:'Jest Fish przy stole — siadam po jego lewej stronie żeby mieć na niego pozycję.',related:['Reg','Exploitation','Pozycja']},
+];
+
+const GLOSS_CATS=['Wszystkie','Podstawy','Pozycje','Preflop','Postflop','Strategia','Ręce','Matematyka','Strategia turniejowa','Różne'];
+
+// ═══════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════
+let state={
+  players:9,
+  posIdx:6,
+  card1:null, card2:null,
+  activeModal:null,
+  rfiPos:'BTN',
+  glossFilter:'All',
+  glossOpen:{},
+  lang: (localStorage.getItem('raisewithme_lang')||'pl'),
+  legalSection:'terms',
+};
+
+// ═══════════════════════════════════════════════════
+// HAND EVAL
+// ═══════════════════════════════════════════════════
+function evalHand(r1,s1,r2,s2){
+  if(!r1||!r2)return null;
+  const i1=rankIdx(r1),i2=rankIdx(r2);
+  const[hi,lo]=i1<=i2?[r1,r2]:[r2,r1];
+  const hiI=rankIdx(hi),loI=rankIdx(lo);
+  const isPair=r1===r2,suited=s1===s2,gap=hiI-loI;
+  if(isPair&&hiI<=2)return 1;
+  if(hi==='A'&&lo==='K')return 1;
+  if(isPair&&(hiI===3||hiI===4))return 2;
+  if(hi==='A'&&lo==='Q')return 2;
+  if(hi==='A'&&(lo==='J'||lo==='T')&&suited)return 2;
+  if(hi==='K'&&lo==='Q'&&suited)return 2;
+  if(isPair&&(hiI===5||hiI===6))return 3;
+  if(hi==='A'&&(lo==='J'||lo==='T'))return 3;
+  if(hi==='K'&&lo==='Q')return 3;
+  if(((hi==='K'&&lo==='J')||(hi==='Q'&&lo==='J')||(hi==='J'&&lo==='T'))&&suited)return 3;
+  if(hi==='A'&&lo==='9'&&suited)return 3;
+  if(hi==='K'&&lo==='T'&&suited)return 3;
+  if(isPair&&hiI>=7)return 4;
+  if(hi==='A'&&suited)return 4;
+  if((hi==='K'&&lo==='J')||(hi==='K'&&lo==='T')||(hi==='Q'&&lo==='J'))return 4;
+  if(hi==='Q'&&lo==='T'&&suited)return 4;
+  if(suited&&gap===1&&hiI>=5)return 4;
+  if(suited&&gap===2&&hiI>=7)return 4;
+  if(hi==='A'&&loI>=6)return 4;
+  if(isPair)return 5;
+  if(hi==='A')return 5;
+  if(suited&&gap<=3&&hiI>=4)return 5;
+  if(suited&&hiI>=9)return 5;
+  return 6;
+}
+function getHandNotation(c1,c2){
+  if(!c1||!c2)return null;
+  const i1=rankIdx(c1.rank),i2=rankIdx(c2.rank);
+  const[hi,lo]=i1<=i2?[c1,c2]:[c2,c1];
+  if(c1.rank===c2.rank)return hi.rank+lo.rank;
+  return c1.suit===c2.suit?hi.rank+lo.rank+'s':hi.rank+lo.rank+'o';
+}
+
+// ═══════════════════════════════════════════════════
+// RECOMMENDATION ENGINE
+// ═══════════════════════════════════════════════════
+function getRec(tier,stackBBs,avgBBs,pos){
+  if(!tier||!stackBBs||!pos)return null;
+  const en=state.lang==='en';
+  const t=pos.t,avg=avgBBs||stackBBs;
+  const isL=t==='late',isB=t==='blind',isE=t==='early';
+  const zone=stackBBs<=10?'c':stackBBs<=15?'s':stackBBs<=20?'m':stackBBs<=35?'n':'d';
+  const R=(action,type,mpl,wpl,men,wen)=>({action,type,main:en?(men||mpl):mpl,why:en?(wen||wpl):wpl});
+
+  if(zone==='c'){
+    if(tier<=3)return R('ALL-IN','shove',
+      'Z <10 BB jedyną strategią jest push/fold. Z tą ręką — zawsze all-in.',
+      'Twój stos jest zbyt mały na standardowy raise. Push generuje maksymalną presję i fold equity.',
+      'Under 10 BB push/fold is the only strategy. With this hand — always shove.',
+      'Your stack is too small for a standard raise. Shoving maximizes pressure and fold equity.');
+    if(tier===4&&(isL||isB))return R('ALL-IN','shove',
+      'Z <10 BB z dobrej pozycji — push.',
+      'Fold equity jest wystarczająca na BTN/CO/SB nawet z playable hand.',
+      'Under 10 BB from late position — shove.',
+      'Fold equity is sufficient from BTN/CO/SB even with a playable hand.');
+    return R('FOLD','fold',
+      'Za słaba ręka przy krytycznym stosie.',
+      'Czekaj na tier 1–4. Shovując słabe ręce masz <35% equity vs calling range.',
+      'Too weak at critical stack depth.',
+      'Wait for tier 1–4 hands. Shoving weak hands gives <35% equity vs calling range.');
+  }
+  if(zone==='s'){
+    if(tier<=2)return R('ALL-IN','shove',
+      '10–15 BB = push/fold zone. Z premium ręką — zawsze all-in.',
+      'Raise 2.5x zostawiałby Ci ~10 BB po cbecie — stack-off bez wyboru. Push maksymalizuje presję.',
+      '10–15 BB = push/fold zone. Premium hand — always shove.',
+      "A 2.5x raise leaves ~10 BB after a c-bet — you're pot-committed anyway. Shoving maximizes pressure.");
+    if(tier===3)return R('ALL-IN','shove',
+      'Strong hand przy krótkim stosie — push.',
+      'JJ, TT, AQ, KQs są zbyt mocne żeby fold, za słabe żeby slowplay przy tym stosie.',
+      'Strong hand at short stack — shove.',
+      'JJ, TT, AQ, KQs are too strong to fold and too weak to slowplay at this depth.');
+    if(tier===4&&(isL||isB))return R('ALL-IN / FOLD','marginal',
+      'Marginalna decyzja — push z late/blind, fold z early.',
+      'Fold equity + pozycja sprawiają że push jest +EV z CO/BTN/SB przy 10–15 BB.',
+      'Marginal spot — shove from late/blind, fold from early.',
+      'Fold equity + position make shoving +EV from CO/BTN/SB at 10–15 BB.');
+    return R('FOLD','fold',
+      'Fold przy krótkim stosie — czekaj na lepszą rękę.',
+      'Spekulatywne ręce potrzebują głębokiego stosu. Implied odds nie działają przy 10–15 BB.',
+      'Fold at short stack — wait for a better hand.',
+      "Speculative hands need deep stacks. Implied odds don't work at 10–15 BB.");
+  }
+  if(zone==='m'){
+    if(tier===1)return R('RAISE 3x','raise',
+      'Monster ręka — raise 3x buduje pot.',
+      'Większy sizing zachęca słabsze ręce do gry. Z 15–20 BB jesteś w commit zone na każdy 3-bet.',
+      'Monster hand — raise 3x to build the pot.',
+      "Larger sizing invites weaker hands in. At 15–20 BB you're in commit zone vs any 3-bet.");
+    if(tier===2)return R('RAISE 2.5x','raise',
+      'Premium ręka — standard open.',
+      'Z 15–20 BB na 3-bet masz ≥50% stosu zaangażowanego = commit zone.',
+      'Premium hand — standard open.',
+      "At 15–20 BB, facing a 3-bet you're ≥50% committed — commit zone.");
+    if(tier===3&&!isE)return R('RAISE 2.5x','raise',
+      'Strong hand z dobrej pozycji — open raise.',
+      'Z mid/late Twój range jest szerszy — masz więcej rąk które dominujesz.',
+      'Strong hand from good position — open raise.',
+      'From mid/late position your range is wider — you have more hands that dominate.');
+    if(tier===3&&isE)return R('RAISE 2.5x','marginal',
+      'Strong hand z early — otwórz ostrożnie.',
+      'Z UTG range jest widoczny. Na duży 3-bet możesz być dominated.',
+      'Strong hand from early position — open carefully.',
+      'Your UTG range is visible to all. Against a large 3-bet you could be dominated.');
+    if(tier===4&&(isL||isB))return R('RAISE 2.5x','raise',
+      'Playable z dobrej pozycji — steal.',
+      'Fold equity + position advantage daje +EV.',
+      'Playable hand from good position — steal.',
+      'Fold equity + position advantage makes this +EV.');
+    return R('FOLD','fold','Fold — zła pozycja lub za słaba ręka.',null,'Fold — bad position or hand too weak.',null);
+  }
+  if(tier===1)return R('RAISE 3x','raise',
+    'Monster ręka — buduj pot agresywnie.',
+    'Chcesz grać duże poty z najsilniejszą ręką. Większy sizing zachęca słabsze ręce.',
+    'Monster hand — build the pot aggressively.',
+    'You want big pots with the best hand. Larger sizing invites weaker hands in.');
+  if(tier===2)return R('RAISE 2.5x','raise',
+    'Premium ręka — standard open.',
+    'JJ, TT, AK, AQs mają silne equity. Raise daje inicjatywę i informację.',
+    'Premium hand — standard open.',
+    'JJ, TT, AK, AQs have strong equity. Raising gives you initiative and information.');
+  if(tier===3)return R('RAISE 2.5x','raise',
+    `Strong hand — open raise${isE?' (UTG: graj ostrożnie na 3-bet)':''}.`,
+    'Ręce tier 3 mają wartość przez equity i playability (draws, sets, straights).',
+    `Strong hand — open raise${isE?' (UTG: proceed carefully vs 3-bet)':''}.`,
+    'Tier 3 hands have value through equity and playability (draws, sets, straights).');
+  if(tier===4){
+    if(isE)return R('FOLD','fold',
+      'Playable hand z early position — fold przy 7–9 graczy.',
+      'Range advantage later positions jest zbyt duży. Playable ręce z UTG są -EV.',
+      'Playable hand from early position — fold at 7–9 players.',
+      'Position range advantage is too large. Playable hands from UTG are -EV.');
+    return R('RAISE 2.5x','raise',
+      'Playable z dobrej pozycji — open raise.',
+      'Position advantage postflop sprawia że implied odds są wystarczające.',
+      'Playable hand from good position — open raise.',
+      'Postflop position advantage makes implied odds sufficient.');
+  }
+  if(tier===5){
+    if(isL)return R('RAISE 2.5x','raise',
+      'Speculative hand — steal z BTN/CO.',
+      'Blindy foldują ~65–70% czasu. Steal jest +EV przez fold equity.',
+      'Speculative hand — steal from BTN/CO.',
+      'Blinds fold ~65–70% of the time. The steal is +EV through fold equity.');
+    if(pos&&pos.id==='BB')return R('CALL','marginal',
+      'Z BB — broń się, masz dobrą cenę.',
+      'Przy raise 2.5x masz 3:1 na wejście. Potrzebujesz tylko ~29% szans na wygraną.',
+      'From BB — defend, you have good odds.',
+      "Vs a 2.5x raise you have 3:1 on your call. You only need ~29% equity.");
+    return R('FOLD','fold',
+      'Spekulatywna ręka bez pozycji — fold.',
+      'Implied odds nie działają bez pozycji postflop.',
+      'Speculative hand out of position — fold.',
+      "Implied odds don't work without postflop position.");
+  }
+  return R('FOLD','fold','Słaba ręka — fold.',null,'Weak hand — fold.',null);
+}
+
+// ═══════════════════════════════════════════════════
+// RANGE MATRIX BUILDER
+// ═══════════════════════════════════════════════════
+function cellKey(i,j){
+  if(i===j)return RANKS[i]+RANKS[i];
+  if(i<j)return RANKS[i]+RANKS[j]+'s';
+  return RANKS[j]+RANKS[i]+'o';
+}
+function expandRange(arr){
+  const set=new Set();
+  if(!arr)return set;
+  arr.forEach(h=>{
+    const isPair=h.length===2&&h[0]===h[1]||/^[AKQJT9876543]{2}$/.test(h)&&h[0]===h[1];
+    const isSuited=h.endsWith('s');
+    const isOffsuit=h.endsWith('o');
+    if(isPair||(!isSuited&&!isOffsuit&&h.length===2)){
+      // pocket pair or ambiguous 2-char
+      if(h[0]===h[1])set.add(h);
+      else{ set.add(h+'s');set.add(h+'o'); }
+    }else{ set.add(h); }
+  });
+  return set;
+}
+function buildMatrix(primaryArr,secondaryArr,primaryColor,secondaryColor,highlightHand){
+  const pSet=expandRange(primaryArr);
+  const sSet=expandRange(secondaryArr);
+  const pPct=primaryArr?calcPct(primaryArr):'0';
+  const sPct=secondaryArr?calcPct(secondaryArr):'0';
+
+  let html='<div class="matrix-wrap"><div class="matrix-grid" style="grid-template-columns:18px repeat(13,1fr)">';
+  html+='<div></div>';
+  RANKS.forEach(r=>{ html+=`<div class="matrix-corner">${r}</div>`; });
+  RANKS.forEach((r1,i)=>{
+    html+=`<div class="matrix-corner">${r1}</div>`;
+    RANKS.forEach((r2,j)=>{
+      const k=cellKey(i,j);
+      const hn=highlightHand;
+      const isHL= hn&&(k===hn||(hn===r1+r2&&i===j));
+      const inP=pSet.has(k),inS=sSet.has(k);
+      let bg,border;
+      if(isHL){bg='#d4af37';border='#d4af37';}
+      else if(inP){bg=primaryColor.bg;border=primaryColor.brd;}
+      else if(inS){bg=secondaryColor.bg;border=secondaryColor.brd;}
+      else{bg='rgba(255,255,255,0.03)';border='rgba(255,255,255,0.03)';}
+      html+=`<div class="matrix-cell" data-hand="${k}" style="background:${bg};border:1px solid ${border}"></div>`;
+    });
+  });
+  html+='</div></div>';
+  // Legend
+  html+='<div class="matrix-legend">';
+  if(primaryArr){html+=`<div class="legend-item" style="background:${primaryColor.bg};border:1px solid ${primaryColor.brd}44"><div class="legend-dot" style="background:${primaryColor.bg};border:1px solid ${primaryColor.brd}"></div><span class="legend-text" style="color:${primaryColor.text}">${primaryColor.label} (${pPct}%)</span></div>`;}
+  if(secondaryArr){html+=`<div class="legend-item" style="background:${secondaryColor.bg};border:1px solid ${secondaryColor.brd}44"><div class="legend-dot" style="background:${secondaryColor.bg};border:1px solid ${secondaryColor.brd}"></div><span class="legend-text" style="color:${secondaryColor.text}">CALL (${sPct}%)</span></div>`;}
+  html+='<div class="legend-item" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)"><div class="legend-dot" style="background:rgba(255,255,255,.05)"></div><span class="legend-text" style="color:#6a7a6a">FOLD</span></div>';
+  html+='</div>';
+  return html;
+}
+function calcPct(arr){
+  if(!arr)return'0';
+  let total=0;
+  arr.forEach(h=>{
+    if(h.length===2&&h[0]===h[1])total+=6;
+    else if(h.endsWith('s'))total+=4;
+    else if(h.endsWith('o'))total+=12;
+    else if(h.length===2){total+=4;total+=12;}
+  });
+  return (total/13.26).toFixed(1);
+}
+
+const ACT_COLORS={
+  raise:   {bg:'rgba(46,213,115,0.45)',  brd:'#2ed573',  text:'#2ed573', label:'RAISE'},
+  threebet:{bg:'rgba(255,71,87,0.2)',    brd:'#ff4757',  text:'#ff6b7a', label:'3-BET'},
+  fourbet: {bg:'rgba(255,0,80,0.25)',    brd:'#ff0050',  text:'#ff3370', label:'4-BET'},
+  squeeze: {bg:'rgba(162,155,254,0.2)',  brd:'#a29bfe',  text:'#b8b4ff', label:'SQUEEZE'},
+  call:    {bg:'rgba(255,165,2,0.35)',   brd:'#ffa502',  text:'#ffc232', label:'CALL'},
+};
+
+// ═══════════════════════════════════════════════════
+// MODAL
+// ═══════════════════════════════════════════════════
+function openModal(slot){
+  state.activeModal=slot;
+  const other=slot===1?state.card2:state.card1;
+  const current=slot===1?state.card1:state.card2;
+  let html='';
+  SUITS.forEach(suit=>{
+    const red=isRed(suit);
+    html+=`<div class="modal-suit-row">`;
+    html+=`<div class="modal-suit-icon" style="color:${red?'#c0392b':'#7ab'}">${suit}</div>`;
+    RANKS.forEach(rank=>{
+      const isMe=current&&current.rank===rank&&current.suit===suit;
+      const isOther=other&&other.rank===rank&&other.suit===suit;
+      const cls=isMe?'selected':isOther?'taken':'';
+      const rankDisp=rank==='T'?'10':rank;
+      const col=isMe?'#1a1a1a':isOther?'#333':red?'#c0392b':'#1a1a1a';
+      html+=`<button class="modal-rank-btn ${cls}" style="color:${col}" onclick="selectCard(${slot},'${rank}','${suit}')">${rankDisp}</button>`;
+    });
+    html+='</div>';
+  });
+  document.getElementById('modal-suits').innerHTML=html;
+  document.getElementById('modal-overlay').classList.add('open');
+  document.getElementById('modal-box').classList.add('open');
+}
+function selectCard(slot,rank,suit){
+  const other=slot===1?state.card2:state.card1;
+  if(other&&other.rank===rank&&other.suit===suit)return;
+  if(slot===1)state.card1={rank,suit};
+  else state.card2={rank,suit};
+  closeModal();
+  render();
+}
+function closeModal(){
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.getElementById('modal-box').classList.remove('open');
+  state.activeModal=null;
+}
+function removeCard(slot){
+  if(slot===1)state.card1=null;else state.card2=null;
+  render();
+}
+
+// ═══════════════════════════════════════════════════
+// TABS
+// ═══════════════════════════════════════════════════
+const ALL_TABS=['advisor','rfi','glossary','about'];
+function switchTab(id,btn){
+  ALL_TABS.forEach(t=>{
+    document.getElementById('tab-'+t).style.display=(t===id)?'block':'none';
+  });
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  if(id==='rfi')renderRFI();
+  if(id==='glossary')renderGlossary();
+  if(id==='about')renderAbout();
+}
+
+// ═══════════════════════════════════════════════════
+// POSITIONS
+// ═══════════════════════════════════════════════════
+function getPosObjects(){
+  const ids=POS_BY_SIZE[state.players];
+  return ids.map(id=>POS_ALL.find(p=>p.id===id));
+}
+function getCurrentPos(){
+  const ps=getPosObjects();
+  return ps[Math.min(state.posIdx,ps.length-1)];
+}
+function setPlayers(n,btn){
+  state.players=n;
+  state.posIdx=Math.min(state.posIdx,POS_BY_SIZE[n].length-1);
+  document.querySelectorAll('.player-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderPositions();
+  render();
+}
+function renderPositions(){
+  const ps=getPosObjects();
+  const cur=getCurrentPos();
+  let html='';
+  ps.forEach((p,i)=>{
+    const pa=POS_TYPES[p.t];
+    const active=i===Math.min(state.posIdx,ps.length-1);
+    html+=`<button class="pos-btn${active?' active':''}" style="${active?`background:${pa.c}20;border-color:${pa.c};color:${pa.c};box-shadow:0 0 10px ${pa.c}30`:''}" onclick="selectPos(${i},this)">${p.l}</button>`;
+  });
+  document.getElementById('pos-grid').innerHTML=html;
+  renderPosInfo();
+}
+function selectPos(i){
+  state.posIdx=i;
+  renderPositions();
+  render();
+}
+function renderPosInfo(){
+  const p=getCurrentPos();
+  const pa=POS_TYPES[p.t];          // color only
+  const pt=T[state.lang].posTypes[p.t]; // translated label + desc
+  document.getElementById('pos-info-box').style.background=`${pa.c}18`;
+  document.getElementById('pos-info-box').style.border=`1px solid ${pa.c}30`;
+  document.getElementById('pos-info-box').innerHTML=`
+    <div class="pos-info-title">
+      <div class="pos-dot" style="background:${pa.c}"></div>
+      <span class="pos-info-name" style="color:${pa.c}">${p.f}</span>
+      <span class="pos-info-label" style="color:${pa.c};background:${pa.c}15;border:1px solid ${pa.c}30">${pt.l}</span>
+    </div>
+    <div class="pos-info-desc">${pt.desc}</div>`;
+}
+
+// ═══════════════════════════════════════════════════
+// CARD VISUALS
+// ═══════════════════════════════════════════════════
+function renderCardVisual(slot){
+  const c=slot===1?state.card1:state.card2;
+  const el=document.getElementById('cv'+slot);
+  const cr=document.getElementById('cr'+slot);
+  if(c){
+    const red=isRed(c.suit);
+    const textCol=red?'#c0392b':'#1a1a1a';
+    el.classList.add('filled');
+    el.innerHTML=`<span class="card-visual-rank" style="color:${textCol}">${c.rank==='T'?'10':c.rank}</span><span class="card-visual-suit" style="color:${textCol}">${c.suit}</span>`;
+    cr.style.display='block';
+  }else{
+    el.classList.remove('filled');
+    el.innerHTML='<span class="card-visual-plus">+</span>';
+    cr.style.display='none';
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// MAIN RENDER
+// ═══════════════════════════════════════════════════
+function render(){
+  renderCardVisual(1);
+  renderCardVisual(2);
+  const hint=document.getElementById('lbl-card-hint');
+  if(state.card1||state.card2)hint.style.display='none';else hint.style.display='block';
+
+  const s=parseFloat(document.getElementById('inp-stack').value);
+  const b=parseFloat(document.getElementById('inp-bb').value);
+  const a=parseFloat(document.getElementById('inp-avg').value);
+  const stackBBs=(s>0&&b>0)?s/b:null;
+  const avgBBs=(a>0&&b>0)?a/b:null;
+
+  // Stack gauge
+  const gaugeWrap=document.getElementById('stack-gauge-wrap');
+  if(stackBBs){
+    gaugeWrap.style.display='block';
+    document.getElementById('gauge-bb-val').textContent=stackBBs.toFixed(1)+' BB';
+    const gr=document.getElementById('gauge-ratio-wrap');
+    if(avgBBs){
+      gr.style.display='block';
+      const rv=document.getElementById('gauge-ratio-val');
+      const pct=(stackBBs/avgBBs*100).toFixed(0)+'%';
+      rv.textContent=pct;
+      rv.style.color=stackBBs/avgBBs>1.2?'#2ed573':stackBBs/avgBBs<0.7?'#ff4757':'#ffa502';
+    }else gr.style.display='none';
+    const zoneEl=document.getElementById('gauge-zone-badge');
+    const zones=[{max:10,l:'CRITICAL',c:'#ff4757'},{max:15,l:'SHORT',c:'#ff6348'},{max:20,l:'MEDIUM',c:'#ffa502'},{max:35,l:'NORMAL',c:'#2ed573'},{max:60,l:'DEEP',c:'#1e90ff'},{max:999,l:'VERY DEEP',c:'#a29bfe'}];
+    const z=zones.find(z=>stackBBs<=z.max)||zones[zones.length-1];
+    zoneEl.textContent=z.l; zoneEl.style.color=z.c; zoneEl.style.background=z.c+'15'; zoneEl.style.border=`1px solid ${z.c}44`;
+    const fill=Math.min(100,(stackBBs/80)*100);
+    document.getElementById('gauge-fill').style.width=fill+'%';
+  }else gaugeWrap.style.display='none';
+
+  // Tier & notation
+  const tier=evalHand(state.card1?.rank,state.card1?.suit,state.card2?.rank,state.card2?.suit);
+  const hn=getHandNotation(state.card1,state.card2);
+  const pos=getCurrentPos();
+
+  const hd=document.getElementById('hand-display');
+  if(tier&&hn){
+    hd.style.display='flex';
+    document.getElementById('hand-notation-text').textContent=hn;
+    const tb=document.getElementById('hand-tier-badge');
+    tb.textContent=TIER_INFO[tier].l; tb.style.color=TIER_INFO[tier].c; tb.style.background=TIER_INFO[tier].c+'15'; tb.style.border=`1px solid ${TIER_INFO[tier].c}44`;
+    const hh=document.getElementById('header-hand'); hh.style.display='block';
+    document.getElementById('header-hand-name').textContent=hn;
+    const htb=document.getElementById('header-tier-badge');
+    htb.textContent=TIER_INFO[tier].l; htb.style.color=TIER_INFO[tier].c; htb.style.background=TIER_INFO[tier].c+'15'; htb.style.border=`1px solid ${TIER_INFO[tier].c}44`;
+  }else{
+    hd.style.display='none';
+    document.getElementById('header-hand').style.display='none';
+  }
+
+  // Recommendation
+  const rec=getRec(tier,stackBBs,avgBBs,pos);
+  const ph=document.getElementById('rec-placeholder');
+  const rc=document.getElementById('rec-card');
+  if(rec){
+    ph.style.display='none'; rc.style.display='block';
+    const rcColors={shove:{bg:'rgba(255,71,87,0.12)',brd:'#ff4757',text:'#ff6b7a'},raise:{bg:'rgba(46,213,115,0.1)',brd:'#2ed573',text:'#5dde8a'},marginal:{bg:'rgba(255,165,2,0.1)',brd:'#ffa502',text:'#ffb52e'},fold:{bg:'rgba(99,110,114,0.1)',brd:'#636e72',text:'#8e9699'}};
+    const c=rcColors[rec.type];
+    rc.style.background=c.bg; rc.style.border=`1px solid ${c.brd}44`; rc.style.boxShadow=`0 0 20px ${c.brd}10`;
+    const ra=document.getElementById('rec-action-text');
+    ra.textContent=rec.action; ra.style.color=c.text; ra.style.textShadow=`0 0 14px ${c.brd}50`;
+    const T2=state.lang==='en'?{d:'DECISION',w:'WHY'}:{d:'DECYZJA',w:'DLACZEGO'};
+    const blocks=[[T2.d,rec.main,'#c8b87a',c.brd],rec.why&&[T2.w,rec.why,'#c8ddb8','#2a5a4a']].filter(Boolean);
+    document.getElementById('rec-blocks').innerHTML=blocks.map(([t,tx,tc,bc])=>`<div class="rec-block" style="border-left:3px solid ${bc||'rgba(212,175,55,0.3)'}"><div class="rec-block-title">${t}</div><div class="rec-block-text" style="color:${tc}">${tx}</div></div>`).join('');
+    document.getElementById('rec-tags').innerHTML=[pos.l,stackBBs&&`${stackBBs.toFixed(1)} BB`,avgBBs&&`Avg ${avgBBs.toFixed(1)} BB`,hn].filter(Boolean).map(t=>`<span class="rec-tag">${t}</span>`).join('');
+  }else{ph.style.display='block';rc.style.display='none';}
+}
+
+// ═══════════════════════════════════════════════════
+// RFI TAB
+// ═══════════════════════════════════════════════════
+function renderRFI(){
+  const hn=getHandNotation(state.card1,state.card2);
+  document.getElementById('rfi-hand-note').textContent=hn?(state.lang==='en'?`Your hand ${hn} highlighted in gold.`:`Twoja ręka ${hn} zaznaczona złotem.`):'';
+  // Buttons
+  const btns=document.getElementById('rfi-btns');
+  btns.innerHTML=Object.keys(RFI_DATA).map(pos=>`<button class="scenario-btn${state.rfiPos===pos?' active':''}" onclick="selectRFI('${pos}',this)">${pos}</button>`).join('');
+  // Matrix
+  const d=RFI_DATA[state.rfiPos];
+  document.getElementById('rfi-matrix').innerHTML=buildMatrix(d.raise,null,ACT_COLORS.raise,ACT_COLORS.call,hn);
+  // Bars
+  document.getElementById('rfi-bars').innerHTML=Object.entries(RFI_DATA).map(([pos,d])=>{
+    const pct=parseFloat(calcPct(d.raise));
+    return`<div class="range-bar-row"><div class="range-bar-label">${pos}</div><div class="range-bar-track"><div class="range-bar-fill" style="width:${Math.min(100,(pct/50)*100)}%;background:linear-gradient(90deg,rgba(46,213,115,.9),rgba(46,213,115,.55))"></div></div><div class="range-bar-pct">${calcPct(d.raise)}%</div></div>`;
+  }).join('');
+}
+function selectRFI(pos){
+  state.rfiPos=pos;
+  renderRFI();
+}
+
+// ═══════════════════════════════════════════════════
+// FACING TAB
+// ═══════════════════════════════════════════════════
+
+// ═══════════════════════════════════════════════════
+// GLOSSARY
+// ═══════════════════════════════════════════════════
+function filterGloss(){
+  const q=(document.getElementById('gloss-search')||{value:''}).value.toLowerCase();
+  const cat=state.glossFilter;
+  const lang=state.lang;
+  const cats=T[lang].gloss_cats;
+  const allCat=cats[0];
+  const filtered=GLOSSARY.filter(g=>{
+    const engCat=GLOSS_CAT_EN[g.cat]||g.cat;
+    const matchCat=cat===allCat||(lang==='en'?engCat===cat:g.cat===cat);
+    const ge=GLOSSARY_EN[g.term]||{};
+    const matchQ=!q||g.term.toLowerCase().includes(q)||g.en.toLowerCase().includes(q)||g.def.toLowerCase().includes(q)||(ge.def||'').toLowerCase().includes(q);
+    return matchCat&&matchQ;
+  });
+  // Sort alphabetically by display term (EN uses .en field, PL uses .term)
+  filtered.sort((a,b)=>{
+    const ka=lang==='en'?a.en:a.term;
+    const kb=lang==='en'?b.en:b.term;
+    return ka.localeCompare(kb,lang==='en'?'en':'pl',{sensitivity:'base'});
+  });
+  document.getElementById('gloss-count').textContent=lang==='en'?`${filtered.length} terms`:`${filtered.length} pojęć`;
+  const list=document.getElementById('gloss-list');
+  if(filtered.length===0){list.innerHTML=`<div class="gloss-empty">${lang==='en'?'No results found':'Nie znaleziono pojęcia'}<br><small style="font-size:9px;opacity:.5">${lang==='en'?'Try a different query':'Spróbuj innego zapytania'}</small></div>`;return;}
+  list.innerHTML=filtered.map(g=>{
+    const catColors={'Podstawy':'#2ed573','Pozycje':'#1e90ff','Preflop':'#ffa502','Strategia':'#ff4757','Ręce':'#a29bfe','Matematyka':'#74b9ff','Strategia turniejowa':'#d4af37','Różne':'#636e72'};
+    const cc=catColors[g.cat]||'#636e72';
+    const isOpen=state.glossOpen[g.term];
+    const lang=state.lang;
+    const ge=GLOSSARY_EN[g.term]||{};
+    const dispTerm=lang==='en'?g.en:g.term;
+    const dispDef=lang==='en'?(ge.def||g.def):g.def;
+    const dispEx=lang==='en'?(ge.ex||g.ex):g.ex;
+    const dispCat=lang==='en'?(GLOSS_CAT_EN[g.cat]||g.cat):g.cat;
+    const relLabel=lang==='en'?'Related: ':'Powiązane: ';
+    const relHtml=g.related?`<div class="gloss-related">${relLabel}${g.related.map(r=>`<a onclick="glossJump('${r}')">${r}</a>`).join(', ')}</div>`:'';
+    return`<div class="gloss-item" id="gloss-${encodeURIComponent(g.term)}">
+      <div class="gloss-header" onclick="toggleGloss('${g.term.replace(/'/g,"\\'")}')" >
+        <span class="gloss-term">${dispTerm}</span>
+        <span class="gloss-cat" style="color:${cc};background:${cc}15;border:1px solid ${cc}30">${dispCat}</span>
+        <span class="gloss-arrow" style="transform:rotate(${isOpen?'90deg':'0deg'})" id="arrow-${encodeURIComponent(g.term)}">▶</span>
+      </div>
+      <div class="gloss-body${isOpen?' open':''}" id="body-${encodeURIComponent(g.term)}">
+        <div class="gloss-def">${dispDef}</div>
+        ${dispEx?`<div class="gloss-example">${lang==='en'?'"':'„'}${dispEx}"</div>`:''}
+        ${relHtml}
+      </div>
+    </div>`;
+  }).join('');
+}
+function toggleGloss(term){
+  state.glossOpen[term]=!state.glossOpen[term];
+  const k=encodeURIComponent(term);
+  const body=document.getElementById('body-'+k);
+  const arrow=document.getElementById('arrow-'+k);
+  if(body)body.classList.toggle('open');
+  if(arrow)arrow.style.transform=state.glossOpen[term]?'rotate(90deg)':'rotate(0deg)';
+}
+function glossJump(term){
+  const si=document.getElementById('gloss-search');if(si)si.value=term;
+  state.glossFilter='Wszystkie';
+  document.querySelectorAll('.gloss-filter-btn').forEach(b=>{b.classList.remove('active');if(b.textContent==='Wszystkie')b.classList.add('active');});
+  filterGloss();
+  const k=encodeURIComponent(term);
+  state.glossOpen[term]=true;
+  setTimeout(()=>{
+    const el=document.getElementById('gloss-'+k);
+    if(el){el.scrollIntoView({behavior:'smooth',block:'center'});const body=document.getElementById('body-'+k);const arrow=document.getElementById('arrow-'+k);if(body)body.classList.add('open');if(arrow)arrow.style.transform='rotate(90deg)';}
+  },100);
+}
+function renderGlossary(){
+  // Filters
+  const cats=T[state.lang].gloss_cats;
+  document.getElementById('gloss-filters').innerHTML=cats.map(c=>`<button class="gloss-filter-btn${state.glossFilter===c?' active':''}" onclick="setGlossFilter('${c.replace(/'/g,"\\\'")}',this)">${c}</button>`).join('');
+  filterGloss();
+}
+function setGlossFilter(cat,btn){
+  state.glossFilter=cat;
+  document.querySelectorAll('.gloss-filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  filterGloss();
+}
+
+
+// ═══════════════════════════════════════════════════
+// TRANSLATIONS & I18N
+// ═══════════════════════════════════════════════════
+const GLOSS_CAT_EN={
+  'Podstawy':'Basics','Pozycje':'Positions','Preflop':'Preflop',
+  'Postflop':'Postflop','Strategia':'Strategy','Ręce':'Hands',
+  'Matematyka':'Mathematics','Strategia turniejowa':'Tournament','Różne':'Other'
+};
+const T={
+  pl:{
+    header_sub:"TEXAS HOLD'EM · PREFLOP GTO",
+    tabs:{advisor:'DORADCA',rfi:'OTWARCIA RFI',glossary:'📖 SŁOWNIK',about:'O NAS'},
+    players_label:'LICZBA GRACZY',
+    players_size_label:'STOŁY',
+    pos_label:'TWOJA POZYCJA',
+    stack_label:'TWOJE BB',
+    sec_table:'♠ Stół i Pozycja',
+    sec_stack:'♠ Analiza Stosu',
+    sec_cards:'♠ Twoje Karty',
+    inp_stack:'Twój stos',
+    inp_bb:'Big Blind',
+    inp_avg:'Śr. stos',
+    ph_stack:'np. 25000',
+    ph_bb:'np. 400',
+    ph_avg:'np. 40000',
+    avg_label:'VS ŚREDNIA',
+    card1:'KARTA 1',card2:'KARTA 2',
+    card_remove:'usuń',card_hint:'Kliknij + aby wybrać kartę',
+    placeholder:'Wybierz stos, pozycję i karty',
+    placeholder_sub:'aby otrzymać pełną analizę preflop',
+    rec_title:'♠ Rekomendacja Preflop',
+    choose_card:'WYBIERZ KARTĘ',modal_close:'ZAMKNIJ',
+    rfi_pos_label:'Wybierz pozycję',
+    rfi_title:'♠ Zakresy Otwarcia (RFI — Raise First In)',
+    rfi_desc:'Zakresy gdy nikt nie wszedł przed Tobą. Górny prawy trójkąt = suited, dolny lewy = offsuit, przekątna = pary.',
+    rfi_disclaimer:'⚠️ <strong style="color:#d4b870">Uwaga o dokładności:</strong> Zakresy bazują na szeroko publikowanych przybliżeniach GTO. Kierunkowe zasady są pewne — UTG gra ciasno (~13%), BTN szeroko (~43%). Dokładne granice poszczególnych rąk to uproszczenia binarne (graj / nie graj), podczas gdy prawdziwy solver generuje częstotliwości mieszane. Traktuj te tablice jako solidny punkt startowy, nie perfekcyjny GTO.',
+    rfi_hand_highlight:'zaznaczona złotem',
+    rfi_width_label:'SZEROKOŚĆ RANGE WG POZYCJI',
+    gloss_title:'♠ Słownik Pokerowy',
+    gloss_ph:'Szukaj pojęcia... (np. blind, equity, range)',
+    gloss_cats:['Wszystkie','Podstawy','Pozycje','Preflop','Postflop','Strategia','Ręce','Matematyka','Strategia turniejowa','Różne'],
+    footer:{terms:'Regulamin',privacy:'Polityka Prywatności',cookies:'Cookies'},
+    legal:{
+      title:'DOKUMENTY PRAWNE',
+      close:'✕ ZAMKNIJ',
+      tabs:{terms:'Regulamin',privacy:'Prywatność',cookies:'Cookies'},
+      terms:`<h3>§1 POSTANOWIENIA OGÓLNE</h3><p>Serwis RaiseWithMe jest bezpłatnym narzędziem edukacyjnym dotyczącym strategii gry w pokera Texas Hold'em. Serwis nie jest platformą hazardową i nie organizuje żadnych gier hazardowych w rozumieniu Ustawy o grach hazardowych z dnia 19 listopada 2009 r.</p><h3>§2 WARUNKI KORZYSTANIA</h3><ul><li>Z Serwisu mogą korzystać osoby, które ukończyły <strong>18 lat</strong>.</li><li>Korzystanie z Serwisu jest równoznaczne z akceptacją niniejszego Regulaminu.</li><li>Serwis ma charakter wyłącznie edukacyjny — nie gwarantuje wygranych i nie zastępuje profesjonalnego coachingu pokerowego.</li><li>Użytkownik korzysta z Serwisu zgodnie z obowiązującym prawem lokalnym.</li></ul><h3>§3 WYŁĄCZENIE ODPOWIEDZIALNOŚCI</h3><p>Informacje zawarte w Serwisie stanowią uproszczenia strategii GTO oparte na publicznie dostępnej literaturze pokerowej. Nie są to dokładne wyniki profesjonalnych solverów pokerowych. Operator nie ponosi odpowiedzialności za decyzje finansowe podejmowane przez użytkowników.</p><h3>§4 WŁASNOŚĆ INTELEKTUALNA</h3><p>Treści Serwisu, kod aplikacji oraz słownik są chronione prawem autorskim. Niedozwolone jest kopiowanie treści bez zgody Operatora.</p><h3>§5 ZMIANY I PRAWO WŁAŚCIWE</h3><p>Operator zastrzega prawo do zmiany Regulaminu. Niniejszy Regulamin podlega prawu polskiemu.</p>`,
+      privacy:`<h3>ADMINISTRATOR DANYCH</h3><p>Administratorem danych osobowych jest Operator Serwisu RaiseWithMe. Kontakt: <a href="mailto:contact@raisewith.me" style="color:var(--gold)">contact@raisewith.me</a></p><h3>ZAKRES ZBIERANYCH DANYCH</h3><p>Serwis nie zbiera danych osobowych bez Twojej zgody. Automatycznie rejestrowane są wyłącznie anonimowe dane analityczne (liczba odwiedzin). Preferencja językowa przechowywana jest lokalnie w przeglądarce (localStorage).</p><h3>REKLAMY (GOOGLE ADSENSE)</h3><p>Serwis może wyświetlać reklamy Google AdSense. Google może używać plików cookie i zbierać dane zgodnie z własną polityką prywatności: <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--gold)">policies.google.com/privacy</a>. Możesz zarządzać preferencjami reklam na <a href="https://adssettings.google.com" target="_blank" style="color:var(--gold)">adssettings.google.com</a>.</p><h3>PRAWA UŻYTKOWNIKA (RODO/GDPR)</h3><ul><li>Prawo dostępu do danych osobowych</li><li>Prawo do usunięcia danych („prawo do bycia zapomnianym")</li><li>Prawo do sprostowania danych</li><li>Prawo do ograniczenia przetwarzania</li></ul><p>Aby skorzystać z powyższych praw, skontaktuj się z Administratorem.</p>`,
+      cookies:`<h3>CZYM SĄ PLIKI COOKIE?</h3><p>Pliki cookie to małe pliki tekstowe zapisywane przez przeglądarkę. Serwis używa wyłącznie niezbędnych danych lokalnych.</p><h3>CO PRZECHOWUJEMY?</h3><ul><li><strong>Preferencja języka</strong> (localStorage: <code>raisewithme_lang</code>) — zapamiętuje wybrany język (PL/EN). Możesz to usunąć w ustawieniach przeglądarki.</li><li><strong>Google AdSense cookies</strong> — jeśli wyświetlamy reklamy, Google może ustawiać własne pliki cookie dla celów reklamowych. Szczegóły: <a href="https://policies.google.com/technologies/cookies" target="_blank" style="color:var(--gold)">policies.google.com</a>.</li></ul><h3>JAK ZARZĄDZAĆ COOKIES?</h3><p>Możesz wyłączyć obsługę cookie w ustawieniach przeglądarki lub zainstalować rozszerzenie blokujące śledzenie (np. uBlock Origin). Wyłączenie może wpłynąć na zapamiętywanie języka.</p>`
+    },
+    posTypes:{
+      early:{l:'Wczesna pozycja',desc:'Działasz przed większością graczy. Twój range jest widoczny dla wszystkich. Graj tylko najsilniejsze ręce — zakładaj, że ktoś za Tobą ma dobrego handa.'},
+      mid:  {l:'Środkowa pozycja',desc:'Widzisz już kilka foldów. Możesz rozszerzyć range o silne ręce suited i connectors. Wciąż jednak jesteś w niekorzystnej pozycji postflop.'},
+      late: {l:'Późna pozycja',desc:'Działasz po większości graczy. Masz pełną informację o ich akcjach. Możesz grać szeroki range, kraść blindy i izolować limperów.'},
+      blind:{l:'Blind',desc:'SB jest najgorsza pozycją postflop — zawsze działasz pierwszy. BB ma dobrą cenę do obrony ale bez inicjatywy. Graj defensywnie.'},
+    },
+    about:{
+      hero_title:'♠ RaiseWithMe',
+      hero_sub:'DORADCA PREFLOP GTO — STWORZONY Z POMOCĄ AI',
+      hero_text:'RaiseWithMe to bezpłatny doradca strategii preflop Texas Hold\'em, zbudowany w całości z pomocą nowoczesnej sztucznej inteligencji. Łączymy dostępność edukacji pokerowej z pełną transparentnością — mówimy wprost co wiemy, a czego jeszcze nie.',
+      features_title:'♠ FUNKCJE',
+      features:[
+        {icon:'🎯',title:'DORADCA',desc:'Podaj głębokość stosu, pozycję i karty — otrzymasz natychmiastową rekomendację preflop z uzasadnieniem strategicznym. Oparty na matematycznie udowodnionym push/fold i uproszczeniach GTO.'},
+        {icon:'📊',title:'OTWARCIA RFI',desc:'Interaktywne tablice 13×13 dla każdej pozycji (UTG → SB). Pokazują które ręce otworzyć gdy nikt nie wszedł przed Tobą. Oparte na szeroko publikowanych przybliżeniach GTO z wyraźnym disclaimerem o dokładności.'},
+        {icon:'📖',title:'SŁOWNIK',desc:'Ponad 100 pojęć pokerowych wyjaśnionych od zera — po polsku i angielsku. Od podstawowych terminów dla beginnera po zaawansowane koncepcje (GTO, ICM, polaryzacja). Każde hasło zawiera przykład i powiązane pojęcia.'},
+      ],
+      coming_title:'🚀 W PLANACH (WKRÓTCE)',
+      coming:[
+        {title:'VS OTWARCIE',desc:'Zakresy 3-bet / call / fold gdy ktoś otworzył przed Tobą (20 scenariuszy pozycyjnych). Aktualnie w trakcie weryfikacji danych.'},
+        {title:'VS 3-BET',desc:'Co robić gdy ktoś re-raisuje Twoje otwarcie — zakresy 4-bet / call / fold. Wymaga dokładnej walidacji przed publikacją.'},
+        {title:'SQUEEZE',desc:'Kiedy i z czym squeezować po otwarciu i wywołaniach. Złożone obliczenia pozycyjne w toku.'},
+      ],
+      ai_text:'Cały kod, dane, słownik i rekomendacje powstały z pomocą nowoczesnej sztucznej inteligencji. Działamy transparentnie: zakresy RFI są kierunkowo poprawne i zgodne z literaturą GTO, ale stanowią uproszczenia — nie dokładne wyniki solvera.',
+    }
+  },
+  en:{
+    header_sub:"TEXAS HOLD'EM · PREFLOP GTO",
+    tabs:{advisor:'ADVISOR',rfi:'RFI CHARTS',glossary:'📖 GLOSSARY',about:'ABOUT'},
+    players_label:'PLAYERS',
+    players_size_label:'TABLES',
+    pos_label:'YOUR POSITION',
+    stack_label:'YOUR BB',
+    sec_table:'♠ Table & Position',
+    sec_stack:'♠ Stack Analysis',
+    sec_cards:'♠ Your Cards',
+    inp_stack:'Your stack',
+    inp_bb:'Big Blind',
+    inp_avg:'Avg stack',
+    ph_stack:'e.g. 25000',
+    ph_bb:'e.g. 400',
+    ph_avg:'e.g. 40000',
+    avg_label:'VS AVG',
+    card1:'CARD 1',card2:'CARD 2',
+    card_remove:'remove',card_hint:'Click + to choose a card',
+    placeholder:'Select stack, position and cards',
+    placeholder_sub:'to get a full preflop analysis',
+    rec_title:'♠ Preflop Recommendation',
+    choose_card:'CHOOSE CARD',modal_close:'CLOSE',
+    rfi_pos_label:'Select position',
+    rfi_title:'♠ Opening Ranges (RFI — Raise First In)',
+    rfi_desc:'Ranges when no one has entered the pot. Top-right triangle = suited, bottom-left = offsuit, diagonal = pairs.',
+    rfi_disclaimer:'⚠️ <strong style="color:#d4b870">Accuracy note:</strong> Ranges are based on widely published GTO approximations. Directional rules are solid — UTG plays tight (~13%), BTN plays wide (~43%). Exact hand boundaries are binary simplifications (play / no play), while a true solver outputs mixed frequencies. Treat these charts as a strong starting point, not perfect GTO.',
+    rfi_hand_highlight:'highlighted in gold',
+    rfi_width_label:'RANGE WIDTH BY POSITION',
+    gloss_title:'♠ Poker Glossary',
+    gloss_ph:'Search a term... (e.g. blind, equity, range)',
+    gloss_cats:['All','Basics','Positions','Preflop','Postflop','Strategy','Hands','Mathematics','Tournament','Other'],
+    footer:{terms:'Terms of Service',privacy:'Privacy Policy',cookies:'Cookies'},
+    legal:{
+      title:'LEGAL DOCUMENTS',
+      close:'✕ CLOSE',
+      tabs:{terms:'Terms of Service',privacy:'Privacy Policy',cookies:'Cookies'},
+      terms:`<h3>§1 GENERAL PROVISIONS</h3><p>RaiseWithMe (the "Service") is a free educational tool for Texas Hold'em poker strategy. The Service is not a gambling platform and does not organize any gambling activities as defined by Polish gambling law.</p><h3>§2 CONDITIONS OF USE</h3><ul><li>The Service may only be used by persons aged <strong>18 and over</strong>.</li><li>Using the Service constitutes acceptance of these Terms of Service.</li><li>The Service is for educational purposes only — it does not guarantee winnings and is not a substitute for professional poker coaching.</li><li>Users must comply with applicable local laws regarding poker and gambling.</li></ul><h3>§3 DISCLAIMER OF LIABILITY</h3><p>Information in the Service represents simplified GTO strategy approximations based on publicly available poker literature. These are not exact outputs of professional poker solvers. The Operator assumes no liability for financial decisions made based on Service content.</p><h3>§4 INTELLECTUAL PROPERTY</h3><p>Service content, application code, and the glossary are protected by copyright. Copying content without the Operator's consent is prohibited.</p><h3>§5 AMENDMENTS & GOVERNING LAW</h3><p>The Operator reserves the right to amend these Terms. These Terms are governed by Polish law.</p>`,
+      privacy:`<h3>DATA CONTROLLER</h3><p>The data controller is the Operator of RaiseWithMe. Contact: <a href="mailto:contact@raisewith.me" style="color:var(--gold)">contact@raisewith.me</a></p><h3>DATA COLLECTED</h3><p>The Service does not collect personal data without your consent. Only anonymous analytics data (visit counts) may be automatically collected. Language preferences are stored locally in your browser (localStorage).</p><h3>ADVERTISING (GOOGLE ADSENSE)</h3><p>The Service may display Google AdSense advertisements. Google may use cookies and collect data per its own privacy policy: <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--gold)">policies.google.com/privacy</a>. Manage ad preferences at <a href="https://adssettings.google.com" target="_blank" style="color:var(--gold)">adssettings.google.com</a>.</p><h3>YOUR RIGHTS (GDPR)</h3><ul><li>Right of access to personal data</li><li>Right to erasure ("right to be forgotten")</li><li>Right to rectification</li><li>Right to restriction of processing</li></ul><p>To exercise any of the above rights, contact the Data Controller.</p>`,
+      cookies:`<h3>WHAT ARE COOKIES?</h3><p>Cookies are small text files stored by your browser. The Service uses only essential local storage.</p><h3>WHAT DO WE STORE?</h3><ul><li><strong>Language preference</strong> (localStorage: <code>raisewithme_lang</code>) — remembers your chosen language (PL/EN). You can clear this in your browser settings.</li><li><strong>Google AdSense cookies</strong> — if we display ads, Google may set its own cookies for advertising purposes. Details: <a href="https://policies.google.com/technologies/cookies" target="_blank" style="color:var(--gold)">policies.google.com</a>.</li></ul><h3>HOW TO MANAGE COOKIES?</h3><p>You can disable cookies in your browser settings or install a tracker blocker (e.g. uBlock Origin). Disabling may prevent language preference from being saved.</p>`
+    },
+    posTypes:{
+      early:{l:'Early Position',desc:'You act before most players. Your range is visible to everyone. Play only the strongest hands — assume someone behind you holds a strong hand.'},
+      mid:  {l:'Middle Position',desc:'You can already see a few folds. You can widen your range to include strong suited hands and connectors. Still at a postflop disadvantage.'},
+      late: {l:'Late Position',desc:'You act after most players with full information. You can play a wide range, steal blinds, and isolate limpers.'},
+      blind:{l:'Blind',desc:'Small Blind is the worst postflop position — you always act first. Big Blind has good odds to defend but lacks initiative. Play defensively.'},
+    },
+    about:{
+      hero_title:'♠ RaiseWithMe',
+      hero_sub:'PREFLOP GTO ADVISOR — BUILT ENTIRELY WITH AI',
+      hero_text:'RaiseWithMe is a free Texas Hold\'em preflop strategy advisor, built entirely with the help of modern artificial intelligence. Our goal: make GTO poker education accessible to every player, from beginner to advanced — with full transparency about what we know and what we don\'t.',
+      features_title:'♠ FEATURES',
+      features:[
+        {icon:'🎯',title:'ADVISOR',desc:'Enter your stack depth, position, and hole cards to receive an instant preflop recommendation with strategic reasoning. Based on mathematically proven push/fold theory and GTO approximations.'},
+        {icon:'📊',title:'RFI CHARTS',desc:'Interactive 13×13 hand matrices for every position (UTG → SB). Shows which hands to open-raise when no one has entered the pot. Based on widely published GTO approximations, with a clear accuracy disclaimer.'},
+        {icon:'📖',title:'GLOSSARY',desc:'Over 100 poker terms explained from scratch — in Polish and English. From basic concepts for beginners to advanced strategy (GTO, ICM, polarization). Each entry includes an example and related terms.'},
+      ],
+      coming_title:'🚀 COMING SOON',
+      coming:[
+        {title:'VS OPENING',desc:'3-bet / call / fold ranges facing an open raise (20 positional scenarios). Currently undergoing data verification.'},
+        {title:'VS 3-BET',desc:'How to respond when someone re-raises your opening — 4-bet / call / fold ranges. Requires careful validation before publishing.'},
+        {title:'SQUEEZE',desc:'When and with which hands to squeeze after an open and callers. Complex positional calculations in progress.'},
+      ],
+      ai_text:'The entire codebase, data, glossary, and recommendations were built using modern artificial intelligence. We operate transparently: RFI ranges are directionally correct and aligned with published GTO literature, but they are simplifications — not exact solver outputs.',
+    }
+  }
+};
+
+// ── GLOSSARY_EN: English definitions for all terms ──
+const GLOSSARY_EN={
+  'Preflop':{def:'The first betting round in Texas Hold\'em, before any community cards are dealt. Each player has two private cards and must decide to fold, call, or raise. Preflop decisions set the foundation for every hand.',ex:'I have Ace-King preflop and open-raise to 2.5x the Big Blind.'},
+  'Postflop':{def:'All betting rounds after the flop: the flop (3 cards), turn (4th), and river (5th). Generally more complex than preflop — depends on board texture and hand strength.',ex:'I played cautiously preflop, but hit a set on the flop and played aggressively postflop.'},
+  'Hole Cards':{def:'Your two private cards dealt at the start of each hand. Only you see them (until showdown). Also called "pocket cards."',ex:'My hole cards are Ace-King — a very strong preflop hand.'},
+  'Flop':{def:'The first three community cards dealt face-up simultaneously. All players can use them. A betting round follows.',ex:'Flop: Ace-King-Seven — I flopped two pair with AK.'},
+  'Turn':{def:'The fourth community card, dealt after the flop betting round. Can dramatically change hand equities.',ex:'The turn was an Ace — now I have trips!'},
+  'River':{def:'The fifth and final community card, followed by the last betting round and showdown. When it ruins your hand, you were "rivered."',ex:'The river brought the flush card for my opponent — I lost a strong hand.'},
+  'Community Cards':{def:'The five shared cards (flop + turn + river) placed face-up in the center. All players combine them with their hole cards to form their best five-card hand.',ex:'The board shows A-K-Q-J-T — someone might have a straight.'},
+  'Blind':{def:'A mandatory bet posted before cards are dealt by the two players left of the dealer, regardless of hand strength. Blinds ensure there is always something to play for.',ex:'I must post the blind before seeing my cards — it\'s a mandatory bet.'},
+  'Big Blind (BB)':{def:'The larger mandatory bet posted two seats left of the dealer. Also serves as the standard stack depth unit — e.g., a 10,000 chip stack at 400 BB = 25 BB.',ex:'My stack is 20 BB — I\'m at the push/fold boundary.'},
+  'Small Blind':{def:'The smaller mandatory bet (usually half the BB) posted directly left of the dealer. The worst postflop position — you always act first after the flop.',ex:'I\'m on the Small Blind — even with a strong hand I play carefully since I always act first postflop.'},
+  'Pot':{def:'The total chips bet by all players in the current hand, sitting in the center. The winner takes the entire pot.',ex:'There are 1200 chips in the pot — I bet 600, a half-pot bet.'},
+  'Showdown':{def:'When two or more players reveal cards at the end of the final betting round to determine the winner. Avoided if all opponents fold first.',ex:'We both reached showdown — he showed a pair of kings, I had two pair and won.'},
+  'Stos (Stack)':{def:'Your chip count at the table. Always measured in Big Blinds (BB) for strategic context. Stack depth determines which strategies are available.',ex:'I have 40 BB — a normal stack, I play standard strategy.'},
+  'Pozycja':{def:'Your seat relative to the dealer. Acting later gives a major advantage — you see opponents\' decisions before making your own. Position is one of poker\'s most fundamental concepts.',ex:'From the Button (last position) I see what everyone did — a huge strategic edge.'},
+  'BTN (Button)':{def:'The best seat — acts last postflop on every street. Can play the widest range (~43%) and has maximum information before acting.',ex:'From the Button I open a wide range — I have full information about everyone\'s actions.'},
+  'UTG (Under the Gun)':{def:'First to act preflop. The worst preflop position — you must decide without any information. Play only strong hands (~13%).',ex:'From UTG I only open the top 13% of hands — no speculative hands.'},
+  'CO (Cutoff)':{def:'The second-best position, one right of the Button. Can play ~29% of hands and steal frequently.',ex:'From the Cutoff I open wide — only the Button and blinds are left to act.'},
+  'HJ (Hijack)':{def:'Two seats right of the Button. A good position allowing ~24% of hands. Named for "hijacking" steal opportunities.',ex:'From the Hijack I open ~24% of hands — fairly wide but still selective.'},
+  'LJ (Lojack)':{def:'Three seats right of the Button. Mid-position, plays ~20% of hands.',ex:'From Lojack I play ~20% of hands — starting to expand the range.'},
+  'IP (In Position)':{def:'Acting after your opponent on every postflop street. Huge strategic advantage — you have more information before acting.',ex:'I\'m in position (acting after my opponent) — I see their check before deciding to bet.'},
+  'OOP (Out of Position)':{def:'Acting before your opponent postflop. Significant disadvantage — you must act without knowing what they\'ll do. Small Blind is always OOP postflop.',ex:'I\'m out of position from the Small Blind — I always act before my opponent, which is tough.'},
+  'RFI (Raise First In)':{def:'Opening with a raise when no one has entered the pot yet. Standard: raise instead of limping. Gives you initiative.',ex:'No one acted before me — I open-raise to 2.5x BB (RFI).'},
+  'Open Raise':{def:'The first raise of the hand when no one else has acted. Standard size: 2.5x BB. Gives you the aggressor role.',ex:'I open-raise to 2.5x BB with King-Queen suited.'},
+  'Fold':{def:'Discard your cards and exit the hand. You lose chips already bet, but risk nothing more. Professionals fold ~70–75% of hands preflop.',ex:'With 7-2 off-suit from early position — fold.'},
+  'Call':{def:'Match the current bet without raising. Justified when you have sufficient equity relative to the pot odds.',ex:'The previous player raised to 300, I call — I also pay 300.'},
+  'Limp':{def:'Entering the pot by just paying the BB without raising. Generally weak strategy — gives up initiative and invites many opponents in cheaply.',ex:'Just calling the BB (limping) with a small pair is a mistake — either raise or fold.'},
+  '3-Bet':{def:'Re-raising someone\'s open raise. Standard size: 3x their raise in position, 3.5–4x out of position. Represents a strong hand or a polarized bluff.',ex:'Player opened to 300, I re-raise to 900 — that\'s a 3-bet.'},
+  '4-Bet':{def:'Re-raising a 3-bet. Represents a very strong linear range (AA, KK) combined with bluffs using blockers (A5s, A4s).',ex:'Someone 3-bet me, I re-raise — that\'s a 4-bet.'},
+  'Squeeze':{def:'3-betting after an open raise and one or more callers. The callers\' weak capped range gives you extra fold equity against all players.',ex:'Player opens, another calls, I 3-bet from the blinds — that\'s a squeeze.'},
+  'Push/Fold':{def:'At ≤15 BB stacks, open-raising is sub-optimal. You either shove all-in (push) or fold — no other options. Mathematically proven Nash equilibrium charts determine which hands to push from each position.',ex:'At 12 BB I only push or fold — no other play makes sense.'},
+  'Steal':{def:'Open-raising from late position (CO/BTN/SB) primarily to win the blinds uncontested. Profitable because blinds fold ~60–70% of the time.',ex:'From the Button I steal with any two cards that have ~55% equity or better.'},
+  'Shallow Stack':{def:'A stack of 15–25 BB. Requires simplified strategy — many postflop decisions become automatic due to commitment ratios.',ex:'With a 20 BB shallow stack, hitting the flop with top pair means I\'m always committed.'},
+  'Range':{def:'The full set of hands a player can hold given their actions. Thinking in ranges (not specific hands) is fundamental to advanced poker.',ex:'UTG\'s opening range is ~13% of all hands.'},
+  'GTO (Game Theory Optimal)':{def:'A strategy that cannot be exploited regardless of opponent adjustments. In practice involves mixed frequencies. RaiseWithMe uses simplified binary GTO approximations based on published poker literature.',ex:'A GTO strategy plays AA ~73% raise and ~27% call preflop — not always the same action.'},
+  'ICM (Independent Chip Model)':{def:'A mathematical framework converting chip stacks into dollar equity in tournaments. Doubling your stack doesn\'t double your prize equity. Critical for bubble and final table decisions.',ex:'ICM says fold JJ all-in vs UTG at the bubble even though it\'s +chip EV — the $EV is negative.'},
+  'Bańka (Bubble)':{def:'The final elimination before prize money is paid out. The next player out wins nothing. ICM pressure is maximum here.',ex:'We\'re at the bubble — I\'m playing tighter even with average stack.'},
+  'EV (Expected Value)':{def:'The average profit or loss of a decision over many repetitions. Positive EV (+EV) decisions are profitable long-term. Poker is about making +EV decisions consistently.',ex:'Calling with 35% equity vs 25% pot odds is -EV — don\'t call.'},
+  'Outs':{def:'Cards remaining in the deck that will improve your hand to likely the best hand. Each out is worth ~2% equity per remaining street (Rule of 2 and 4).',ex:'I have a flush draw — 9 outs × 2 = ~18% to hit on the turn.'},
+  'Implied Odds':{def:'The potential future money you can win if you complete your draw. Adds to pot odds calculation. Deep stacks = better implied odds.',ex:'Pot odds say fold, but implied odds justify calling with a set-mining hand.'},
+  'SPR (Stack-to-Pot Ratio)':{def:'Stack size divided by pot size. Low SPR = you\'re committed with a wide range. High SPR = more postflop decisions required.',ex:'SPR of 2 means I\'m committed with top pair — I\'m not folding.'},
+  'C-Bet (Continuation Bet)':{def:'Betting on the flop after raising preflop, regardless of whether you improved. Maintains your story as the preflop aggressor.',ex:'I raised preflop, missed the flop, but still c-bet — representing a strong hand.'},
+  'Check-Raise (C/R)':{def:'Checking first, then raising when an opponent bets. Builds pots with strong hands; also used as a bluff on favorable boards.',ex:'I check the flop with a set, opponent bets, I raise — check-raise for value.'},
+  'Value Bet':{def:'Betting with a hand you believe is best, hoping worse hands call. The goal is to extract maximum value from inferior holdings.',ex:'I value bet my two pair on the river — I expect a pair to call.'},
+  'Bluff':{def:'Betting or raising with a weak hand to make opponents fold better hands. Profitability: (bet size / total pot) determines minimum required fold percentage.',ex:'I bluff the river with nothing — representing the flush that just completed.'},
+  'Semi-Bluff':{def:'Bluffing with a drawing hand that can improve. Two ways to win: opponent folds now, or you hit your draw.',ex:'I semi-bluff with a flush draw — if called I still have 9 outs.'},
+  'Suited Connector':{def:'Two cards of the same suit with consecutive ranks (e.g., 7♠6♠). Strong speculative hand with flush and straight draw potential. Needs deep stacks and position.',ex:'7♠6♠ from the Button — classic suited connector. I need ~7:1 implied odds to play profitably.'},
+  'Pocket Pair':{def:'Two cards of the same rank in your hole cards. Small pairs (22–66) have set-mining value; big pairs (TT+) have strong standalone equity.',ex:'I have 9♠9♦ — a pocket pair. I\'m looking to flop a set or play as an overpair.'},
+  'Bloker':{def:'A card in your hand that reduces the probability of an opponent holding a specific strong hand. Having an Ace "blocks" Ace-Ace. Used to build 3-bet and 4-bet bluff ranges.',ex:'I have A5s — the Ace blocks AA and AK in opponent\'s range. Good 3-bet bluff.'},
+  'Nuts':{def:'The absolute best possible hand given the board. "Nut flush draw" = drawing to the best possible flush (with the Ace of that suit).',ex:'Board is K-Q-J-T-A rainbow — I have the nuts with any 9 for Broadway straight. Wait — the Ace on board means Broadway is the nuts.'},
+  'Draw':{def:'A hand needing one or more additional community cards to become strong. Flush draws (9 outs) and open-ended straight draws (8 outs) are most powerful.',ex:'I have a flush draw — I\'m on a draw and need one more heart.'},
+  'Set':{def:'Three of a kind using a pocket pair + one board card. Sets are deeply disguised and extremely powerful — one of the most profitable hand types.',ex:'I have 8♠8♦, the flop brings 8♥ — I have a set! Hidden strength.'},
+  'Fold Equity':{def:'The added value of a bet/raise from the probability opponents will fold. Short stacks rely heavily on fold equity when shoving.',ex:'With 8 BB I shove A-Q. Even if opponent folds, I win the blinds. That value is fold equity.'},
+  'Equity':{def:'Your percentage share of the pot based on probability of winning. AA vs KK preflop: AA has ~82% equity.',ex:'I have a flush draw — my equity (win probability) vs a made pair is ~35%.'},
+  'Pot Odds':{def:'The ratio of the call cost to total pot size. Formula: call ÷ (pot + call) = minimum required equity. If your equity exceeds pot odds, the call is profitable.',ex:'Pot 200, call 50 → 50÷250 = 20% needed. I have ~35% flush draw equity — profitable call.'},
+  'Cooler':{def:'A situation where two strong hands meet and the loser couldn\'t realistically have avoided it. Example: QQ vs KK, or set-over-set. Not a strategic mistake — just bad luck.',ex:'My nines full lost to kings full — we both played it well, that was a cooler.'},
+  'Bad Beat':{def:'Losing a very strong hand to one that had statistically much lower odds of winning. Example: AA (82%) loses to 7-2 (18%) when the opponent rivers a full house. A normal part of poker variance.',ex:'My aces were crushing until he rivered a full house with 7-2. Classic bad beat.'},
+  'Variance':{def:'Natural short-term result fluctuations caused by randomness. Even with correct decisions you can lose for many sessions. Good poker minimizes mistakes — results even out long-term.',ex:'I\'ve been playing well all week but losing — that\'s variance. Good decisions will pay off over time.'},
+  'Royal Flush':{def:'The strongest hand in Texas Hold\'em — A-K-Q-J-T of the same suit. Unbeatable. Occurs roughly once in every 30,000 hands.',ex:'I have A♠K♠ on a Q♠J♠T♠ board — Royal Flush in spades! The absolute nuts.'},
+  'Straight Flush':{def:'Five consecutive cards of the same suit. Second strongest hand. Beaten only by a higher Straight Flush or Royal Flush.',ex:'I have 6♣5♣ on a 9♣8♣7♣ board — Straight Flush to the nine.'},
+  'Czwórka (Quads)':{def:'Four cards of the same rank. Nearly unbeatable in most situations. Loses only to a Straight Flush or Royal Flush.',ex:'I have 77, the board shows 7♠7♦A♣ — I have quads (four sevens)!'},
+  'Full House':{def:'Three of a kind plus a pair. Ranked by the three-of-a-kind first: AAAKK beats KKKAA. Beaten by Quads and above.',ex:'I have AA, board shows K-K-A — Full House (three Aces and a pair of Kings).'},
+  'Flush':{def:'Five cards of the same suit, not consecutive. Ranked by highest card. Nut Flush uses an Ace. Loses to Full House, Quads, Straight Flush, Royal Flush.',ex:'I have A♦K♦, board has three diamonds — I flopped the Nut Flush.'},
+  'Straight':{def:'Five consecutive ranks, any suits. Ace plays high (A-K-Q-J-T = Broadway) or low (A-2-3-4-5 = Wheel). Loses to Flush and above.',ex:'I have J♠T♣ on a K♦Q♥A♦ board — I have Broadway Straight (Ace to King).'},
+  'Trójka (Trips / Set)':{def:'Three cards of the same rank. Set (pocket pair + board card) is more concealed and valuable than Trips (one hole card + paired board).',ex:'I have 88, flop brings an 8 — I have a Set. Hidden strength.'},
+  'Dwie Pary':{def:'Two different pairs simultaneously. Ranked by higher pair first.',ex:'I have AK, flop A-K-7 — I have Two Pair (aces and kings).'},
+  'Para':{def:'Two cards of the same rank. "Top pair" = paired the highest board card. Most common showdown hand type.',ex:'I have A♠J♦, flop J♥-7♣-2♦ — I have Top Pair (jacks) with Top Kicker (ace).'},
+  'High Card':{def:'No made hand — ranked by highest card. Rarely wins at showdown.',ex:'I have A♠K♦ on a 2-5-8-J-Q rainbow board — I play High Card (ace).'},
+  'Kicker':{def:'The unpaired card(s) used to break ties when two players have the same primary hand. "Top kicker" = the highest possible kicker.',ex:'We both have a pair of aces, but I have A-K vs his A-Q — my King kicker wins.'},
+  'Overpair':{def:'A pocket pair higher than all board cards. Example: KK on a J-8-2 board. Strong but vulnerable to sets and two pair.',ex:'I have QQ, flop 9-6-2 — I have an overpair. No board card threatens my queens.'},
+  'Top Pair':{def:'Pairing the highest board card with one of your hole cards. One of the most common made hands on the flop.',ex:'I have A♠J♦, flop J♥-7-2 — I have Top Pair (jacks) with Top Kicker (ace). Solid hand.'},
+  'Dry Board':{def:'A flop with little connectivity — few flush or straight draw possibilities. Example: A♠-7♣-2♦. C-bets are more effective here since opponents rarely connected.',ex:'Flop A♠-7♣-2♦ — dry board. I c-bet large since there are no draws to protect against.'},
+  'Wet Board':{def:'A flop with many draw possibilities — flushes, straights, or both. Example: J♠-T♠-9♦. Play fast with made hands — opponents can improve.',ex:'Flop J♠-T♠-9♦ — very wet board. I bet my set immediately; draw cards can beat me.'},
+  'Flush Draw':{def:'Four cards to a flush, one card short. 9 outs (~35% to complete by the river). One of the strongest draws.',ex:'I have A♠K♠, flop 7♠-4♠-J♦ — I have the Nut Flush Draw (ace of spades). 9 outs.'},
+  'Straight Draw':{def:'Four cards to a straight. Open-ended (OESD) = 8 outs (can complete from either end). Gutshot = 4 outs (only one rank completes it).',ex:'I have 8-7, flop 6-5-A — I have an OESD. A 9 or 4 completes the straight. 8 outs.'},
+  'Gutshot':{def:'An inside straight draw where only one rank completes the straight. Only 4 outs — about half as strong as an OESD.',ex:'I have J-9 on a T-8-2 board — gutshot. I need a Queen. Only 4 outs.'},
+  '3-Bet Pot':{def:'A pot that resulted from a preflop 3-bet — typically 2–3x larger than a standard pot. Requires different postflop strategy: larger c-bets, more commitment with strong hands, lower SPR.',ex:'I\'m in a 3-bet pot with JJ on a 9-6-2 flop. Low SPR — I bet big and don\'t slow down.'},
+  'Float':{def:'Calling a bet on the flop with a weak hand, intending to take the pot when the opponent checks the turn or river. Works best in position.',ex:'I call the c-bet with middle pair, planning to raise when my opponent checks the turn — a float play.'},
+  'Barrel':{def:'Continuing to bet on successive streets. "Second barrel" = turn bet. "Third barrel" = river bet. Effective barrels require a convincing narrative.',ex:'I c-bet the flop, then fire a second barrel on the turn — representing a strong hand over two streets.'},
+  'Range Advantage':{def:'When one player has a higher concentration of strong hands on a given board texture. The player with range advantage can bet more frequently and at larger sizes.',ex:'I raised preflop, so I have range advantage on an A-K-Q board. I c-bet wide.'},
+  'Nuts na Turnie':{def:'The best possible hand after the fourth community card (turn) is dealt. Key concept for value betting — if you have the nuts, extract maximum chips before the river.',ex:'On the turn I have a Straight Flush Draw + Pair — practically the nuts. Slowplay or raise for value?'},
+  'Protect':{def:'Betting or raising to force drawing hands to pay for their improvement cards, or to fold. Example: having Top Pair on a wet board.',ex:'I have Top Pair on J♠-T♠-7♦ — I bet big to make the flush draw pay for their draw.'},
+  'MTT (Multi-Table Tournament)':{def:'A multi-table tournament where hundreds or thousands of players compete simultaneously. Players are moved between tables as eliminations occur. The last player with chips wins.',ex:'I\'m playing an online MTT with 500 players. Starting stack 10,000, blind levels every 15 minutes.'},
+  'Sit & Go (SnG)':{def:'A tournament that starts automatically when a set number of players register (usually 9 or 6). No scheduled start time. Typically lasts 30–90 minutes.',ex:'I\'m playing a 9-max SnG. It starts when 9 players join. Top 3 spots pay.'},
+  'Chip EV vs $EV':{def:'In tournaments, chip value (Chip EV) doesn\'t equal prize money ($EV). Doubling your stack doesn\'t double your winnings — prizes concentrate at the top. ICM converts Chip EV to $EV.',ex:'Going all-in is +55% Chip EV — but at the bubble the $EV is negative. ICM says fold.'},
+  'Final Table':{def:'The last table of a tournament, typically 9 or 6 players. Prizes jump dramatically. ICM pressure is very high — chip leaders can attack, short stacks play extremely tight.',ex:'I made the Final Table! I\'m 7th of 9 — playing push/fold and waiting for weak stacks.'},
+  'Re-entry':{def:'The option to re-enter a tournament after being eliminated, for an additional buy-in fee. Unlike a rebuy, you can only re-enter after being eliminated. Re-entry tournaments often have larger prize pools.',ex:'I was eliminated in the first hour — I use the re-entry option and play a second bullet.'},
+  'Polaryzacja':{def:'A strategy mixing only very strong value hands with bluffs — no medium-strength hands in between. Hard to exploit because opponents can\'t tell if you have the nuts or nothing.',ex:'My 3-bet range is polar: AA/KK (value) + A5s (bluff). No TT or JJ in this range.'},
+  'Merged Range':{def:'The opposite of polarized — a range of medium-strength hands all with similar value. Used against wide callers where bluffing is inefficient.',ex:'Vs a calling station I use a merged river range — only value, no bluffs.'},
+  'Slowplay':{def:'Playing a strong hand passively (checking/calling) to disguise its strength and build the pot on later streets. Risk: giving opponent a free card to improve.',ex:'I flop a set and just check — slowplay. I want the opponent to bet the turn so I can raise.'},
+  'Trap (Pułapka)':{def:'Deliberately playing passively with a monster hand to induce opponent bets. Example: calling a 3-bet with AA instead of 4-betting.',ex:'Someone is bluffing aggresively, I have a Full House — just check and call. Trap set.'},
+  'Exploitation':{def:'Deviating from GTO to maximally punish specific opponent mistakes. More profitable than GTO against bad players, but vulnerable to counter-adjustments.',ex:'This player never bluffs on the river — I fold everything below two pair. Pure exploitation.'},
+  'Thin Value Bet':{def:'Betting with a hand marginally better than opponent\'s likely calling range. Risky — you might be beat. Correct when enough worse hands will call.',ex:'I make a thin value bet with middle pair on a low river — I think opponent has a weak pair or high card.'},
+  'Airball':{def:'A complete miss on the flop — no pair, no draw, nothing. Pure bluffs with airballs require high fold equity to be profitable.',ex:'I opened K♠Q♦, flop 7♣-4♥-2♠ — complete airball. I c-bet hoping for a fold.'},
+  'Cash Game':{def:'A format where chips have direct cash value. Players can join or leave at any time. No eliminations. Win rate is measured in BB per 100 hands (bb/100).',ex:'I play $1/$2 cash game — BB is $2. I buy in for $200 (100 BB) and can leave at any time.'},
+  'Win Rate':{def:'A profit metric expressed as Big Blinds per 100 hands (bb/100). A positive win rate means you\'re a winning player. Requires large samples (50k+ hands) for statistical validity.',ex:'My win rate over 100,000 hands is 4 bb/100 — I\'m a winning player at this level.'},
+  'Stake':{def:'The blind level at a table (e.g., $1/$2, $2/$5, $5/$10). Higher stakes = more money and generally tougher competition.',ex:'I play $1/$2 stakes. My bankroll is $600 (300 BB) — appropriate for this level.'},
+  'Bankroll Management':{def:'Strategy for choosing stake levels relative to your bankroll to minimize risk of ruin. Rule of thumb: 20–30 buy-ins for cash game, 50–100 for tournaments.',ex:'I have $1,000 bankroll — I won\'t play $1/$2 (only 5 buy-ins). I\'ll start at $0.25/$0.50.'},
+  '3-Bet Pot (postflop)':{def:'Postflop play in a pot that resulted from a preflop 3-bet is fundamentally different — the pot is 3–4x larger and SPR is low. Play aggressively with a wide range of strong hands.',ex:'I\'m in a 3-bet pot with JJ on a 9-6-2 flop. Low SPR — I bet big and don\'t mess around.'},
+  'Tell':{def:'An unconscious behavior or statistical pattern that reveals a player\'s hand strength. Online: betting size patterns. Live: physical signals like shaking hands or timing.',ex:'I notice this player always tanks before bluffing — that\'s his tell. I call faster.'},
+  'Read':{def:'Your assessment of an opponent\'s likely hand range based on their actions, history, and tendencies. A good read enables profitable exploitation.',ex:'My read: opponent has AK or KK — always re-raises preflop, then checked the ace-high flop. I bet.'},
+  'Reg':{def:'Short for "regular" — a consistent, typically winning player at the stakes. Regs know fundamentals and are harder to exploit than recreational players.',ex:'The table is full of regs — this is tough. Better find a fishier table.'},
+  'Fish':{def:'Slang for a weak, recreational player making many mistakes. Not pejorative in the poker community — everyone starts as a fish. Sit to a fish\'s left to have position on them.',ex:'There\'s a fish at the table — I sit to his left to have position on him.'},
+  'Range Advantage':{def:'When one player has a higher concentration of strong hands for a given board texture. The player with range advantage can bet more frequently and at larger sizes.',ex:'I raised preflop so I have range advantage on an A-K-Q board. I c-bet frequently.'},
+};
+
+// ══════════════════════════════════════════════════════════════════
+// LANGUAGE FUNCTIONS
+// ══════════════════════════════════════════════════════════════════
+function setLang(lang){
+  state.lang=lang;
+  try{localStorage.setItem('raisewithme_lang',lang);}catch(e){}
+  const isEn=lang==='en';
+  const $=id=>document.getElementById(id);
+  const set=(id,val)=>{const el=$(id);if(el)el.textContent=val;};
+  const tog=(id,on)=>{const el=$(id);if(el)el.classList.toggle('active',on);};
+  tog('lang-pl-btn',!isEn); tog('lang-en-btn',isEn);
+  document.title=isEn?"RaiseWithMe — Free Preflop GTO Advisor | Texas Hold\'em Strategy":"RaiseWithMe — Darmowy Doradca Preflop GTO | Texas Hold\'em";
+  document.querySelector('meta[name="description"]').setAttribute('content',isEn?'Free preflop GTO advisor for Texas Hold\'em. Instant raise/fold recommendations by position, stack depth and hole cards. RFI charts, push/fold, 100+ glossary. No sign-up.':'Darmowy doradca strategii preflop GTO do Texas Hold\'em. Rekomendacje raise/fold na podstawie pozycji, głębokości stosu i kart. Tablice RFI, push/fold, słownik 100+ pojęć. Bez rejestracji.');
+  const root=$('html-root');if(root)root.lang=lang;
+  const Tc=T[lang];
+  // tabs
+  ['advisor','rfi','glossary','about'].forEach(t=>set('tab-btn-'+t,Tc.tabs[t]));
+  // modal
+  set('modal-title-txt',Tc.choose_card);
+  set('modal-close-txt',Tc.modal_close);
+  // footer
+  set('footer-terms',Tc.footer.terms);
+  set('footer-privacy',Tc.footer.privacy);
+  set('footer-cookies',Tc.footer.cookies);
+  // static labels
+  const lmap={
+    'lbl-players':Tc.players_label,
+    'lbl-position':Tc.pos_label,
+    'lbl-stack':Tc.stack_label,
+    'lbl-avg':Tc.avg_label,
+    'lbl-card1':Tc.card1,
+    'lbl-card2':Tc.card2,
+    'lbl-card-hint':Tc.card_hint,
+    'sec-table-title':Tc.sec_table,
+    'sec-stack-title':Tc.sec_stack,
+    'sec-cards-title':Tc.sec_cards,
+    'lbl-inp-stack':Tc.inp_stack,
+    'lbl-inp-bb':Tc.inp_bb,
+    'lbl-inp-avg':Tc.inp_avg,
+    'rfi-title-txt':Tc.rfi_title,
+    'gloss-title-txt':Tc.gloss_title,
+    'rfi-width-label-txt':Tc.rfi_width_label,
+    'rfi-pos-label-txt':Tc.rfi_pos_label,
+  };
+  Object.entries(lmap).forEach(([id,txt])=>{const el=document.getElementById(id);if(el)el.textContent=txt;});
+  const setHTML=(id,val)=>{const el=$(id);if(el)el.innerHTML=val;};
+  const setPH=(id,val)=>{const el=$(id);if(el)el.placeholder=val;};
+  setPH('inp-stack',Tc.ph_stack);
+  setPH('inp-bb',Tc.ph_bb);
+  setPH('inp-avg',Tc.ph_avg);
+  setPH('gloss-search',Tc.gloss_ph);
+  setHTML('rfi-desc-txt', Tc.rfi_desc+' <span id="rfi-hand-note" style="color:var(--gold)"></span>');
+  setHTML('rfi-disclaimer-txt', Tc.rfi_disclaimer);
+  // card remove buttons
+  document.querySelectorAll('.card-remove').forEach(b=>b.textContent=Tc.card_remove);
+  // placeholder
+  const ph=document.getElementById('rec-placeholder');
+  if(ph)ph.innerHTML=`${Tc.placeholder}<small>${Tc.placeholder_sub}</small>`;
+  // rec title
+  const rt=document.getElementById('rec-title-txt');
+  if(rt)rt.textContent=Tc.rec_title;
+  // glossary filter reset to first cat
+  state.glossFilter=Tc.gloss_cats[0];
+  // re-render active tab
+  const activeTab=ALL_TABS.find(t=>document.getElementById('tab-'+t).style.display!=='none')||'advisor';
+  if(activeTab==='rfi')renderRFI();
+  else if(activeTab==='glossary'){renderGlossary();}
+  else if(activeTab==='about')renderAbout();
+  else{renderPositions();render();}
+}
+
+// ══════════════════════════════════════════════════════════════════
+// ABOUT TAB
+// ══════════════════════════════════════════════════════════════════
+function renderAbout(){
+  const a=T[state.lang].about;
+  const featsHtml=a.features.map(f=>`
+    <div class="about-feature">
+      <div class="about-icon">${f.icon}</div>
+      <div>
+        <div class="about-feat-title">${f.title}</div>
+        <div class="about-feat-desc">${f.desc}</div>
+      </div>
+    </div>`).join('');
+  const comingHtml=a.coming.map(c=>`
+    <div class="about-coming-item"><strong>${c.title}</strong> — ${c.desc}</div>`).join('');
+  document.getElementById('about-content').innerHTML=`
+    <div class="about-hero">
+      <div class="about-title">${a.hero_title}</div>
+      <div class="about-sub">${a.hero_sub}</div>
+      <div class="about-hero-text">${a.hero_text}</div>
+    </div>
+    <div class="card">
+      <div class="card-title">${a.features_title}</div>
+      ${featsHtml}
+    </div>
+    <div class="card">
+      <div class="about-coming">
+        <div class="about-coming-title">${a.coming_title}</div>
+        ${comingHtml}
+      </div>
+    </div>
+    <div class="card">
+      <div class="about-ai"><p>${a.ai_text}</p></div>
+    </div>`;
+}
+
+// ══════════════════════════════════════════════════════════════════
+// LEGAL MODAL
+// ══════════════════════════════════════════════════════════════════
+function openLegal(section){
+  state.legalSection=section||'terms';
+  renderLegal();
+  document.getElementById('legal-overlay').style.display='block';
+  document.body.style.overflow='hidden';
+}
+function closeLegal(){
+  document.getElementById('legal-overlay').style.display='none';
+  document.body.style.overflow='';
+}
+function closeLegalOnOverlay(e){
+  if(e.target===document.getElementById('legal-overlay'))closeLegal();
+}
+function renderLegal(){
+  const Tl=T[state.lang].legal;
+  document.getElementById('legal-modal-title').textContent=Tl.title;
+  document.getElementById('legal-close-txt').textContent=Tl.close;
+  const tabs=[
+    {key:'terms',label:Tl.tabs.terms},
+    {key:'privacy',label:Tl.tabs.privacy},
+    {key:'cookies',label:Tl.tabs.cookies},
+  ];
+  document.getElementById('legal-tabs').innerHTML=tabs.map(t=>`<button class="legal-tab-btn${state.legalSection===t.key?' active':''}" onclick="switchLegal('${t.key}')">${t.label}</button>`).join('');
+  document.getElementById('legal-content-area').innerHTML=Tl[state.legalSection];
+}
+function switchLegal(section){
+  state.legalSection=section;
+  renderLegal();
+}
+
+
+// ═══════════════════════════════════════════════════
+// MATRIX TOOLTIP
+// ═══════════════════════════════════════════════════
+(function(){
+  const tip=document.getElementById('matrix-tip');
+  document.addEventListener('mouseover',function(e){
+    const cell=e.target.closest('.matrix-cell');
+    if(!cell||!cell.dataset.hand)return;
+    tip.textContent=cell.dataset.hand;
+    tip.style.display='block';
+    positionTip(e);
+  });
+  document.addEventListener('mousemove',function(e){
+    if(tip.style.display==='block') positionTip(e);
+  });
+  document.addEventListener('mouseout',function(e){
+    if(!e.target.closest('.matrix-cell')) tip.style.display='none';
+  });
+  function positionTip(e){
+    const x=e.clientX, y=e.clientY;
+    const tw=tip.offsetWidth||80;
+    // flip below cursor if near top of screen
+    if(y < 120){
+      tip.style.transform='translate(-50%, 16px)';
+    } else {
+      tip.style.transform='translate(-50%, -110%)';
+    }
+    const left=Math.min(Math.max(x, tw/2+8), window.innerWidth - tw/2 - 8);
+    tip.style.left=left+'px';
+    tip.style.top=y+'px';
+  }
+})();
+// ═══════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════
+setLang(state.lang);
+renderPositions();
+render();
+</script>
+<!-- FOOTER -->
+<div class="footer" id="app-footer">
+  <div class="footer-links">
+    <button class="footer-link" id="footer-terms" onclick="openLegal('terms')">Regulamin</button>
+    <button class="footer-link" id="footer-privacy" onclick="openLegal('privacy')">Polityka Prywatności</button>
+    <button class="footer-link" id="footer-cookies" onclick="openLegal('cookies')">Cookies</button>
+  </div>
+  <div class="footer-copy" id="footer-copy">© 2025 RaiseWithMe · EDUCATIONAL TOOL · NOT A GAMBLING PLATFORM · 18+</div>
+</div>
+
+<!-- LEGAL MODAL -->
+<div class="legal-overlay" id="legal-overlay" onclick="closeLegalOnOverlay(event)">
+  <div class="legal-box">
+    <button class="legal-close-btn" id="legal-close-txt" onclick="closeLegal()">✕ ZAMKNIJ</button>
+    <div class="legal-modal-title" id="legal-modal-title">REGULAMIN</div>
+    <div class="legal-tabs" id="legal-tabs"></div>
+    <div class="legal-content" id="legal-content-area"></div>
+  </div>
+</div>
+
+</body>
+</html>
