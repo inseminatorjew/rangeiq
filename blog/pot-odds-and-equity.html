@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Pot Odds & Equity Calculator Guide — Poker Math Made Easy | RaiseWithMe</title>
+<meta name="description" content="Learn pot odds, equity, implied odds, outs, and the Rule of 2 and 4. Essential poker math explained with real hand examples. Free poker odds guide for beginners."/>
+<meta name="robots" content="index, follow"/>
+<meta name="keywords" content="pot odds poker, equity poker, implied odds, poker outs, rule of 2 and 4, poker math, poker odds calculator, poker probability, how to calculate pot odds"/>
+<link rel="canonical" href="https://raisewith.me/blog/pot-odds-and-equity.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://raisewith.me/blog/pot-odds-and-equity.html"/>
+<meta property="og:title" content="Pot Odds & Equity Calculator Guide — Poker Math Made Easy | RaiseWithMe"/>
+<meta property="og:description" content="Learn pot odds, equity, implied odds, outs, and the Rule of 2 and 4. Essential poker math explained with real hand examples. Free poker odds guide for beginners."/>
+<meta property="og:site_name" content="RaiseWithMe"/>
+<meta property="og:image" content="https://raisewith.me/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@RaiseWithMe"/>
+<meta name="twitter:title" content="Pot Odds & Equity Calculator Guide — Poker Math Made Easy | RaiseWithMe"/>
+<meta name="twitter:description" content="Learn pot odds, equity, implied odds, outs, and the Rule of 2 and 4. Essential poker math explained with real hand examples. Free poker odds guide for beginners."/>
+<meta name="twitter:image" content="https://raisewith.me/og-image.png"/>
+<meta name="theme-color" content="#0e2a1c"/>
+<link rel="alternate" hreflang="en" href="https://raisewith.me/blog/pot-odds-and-equity.html?lang=en"/>
+<link rel="alternate" hreflang="pl" href="https://raisewith.me/blog/pot-odds-and-equity.html?lang=pl"/>
+<link rel="alternate" hreflang="de" href="https://raisewith.me/blog/pot-odds-and-equity.html?lang=de"/>
+<link rel="alternate" hreflang="es" href="https://raisewith.me/blog/pot-odds-and-equity.html?lang=es"/>
+<link rel="alternate" hreflang="pt" href="https://raisewith.me/blog/pot-odds-and-equity.html?lang=pt"/>
+<link rel="alternate" hreflang="zh" href="https://raisewith.me/blog/pot-odds-and-equity.html?lang=zh"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"Pot Odds and Equity — The Mathematics That Wins for You",
+  "author":{"@type":"Organization","name":"RaiseWithMe","url":"https://raisewith.me/"},
+  "publisher":{"@type":"Organization","name":"RaiseWithMe","url":"https://raisewith.me/"},
+  "mainEntityOfPage":"https://raisewith.me/blog/pot-odds-and-equity.html",
+  "description":"Learn pot odds, equity, implied odds, and the Rule of 2 and 4. Essential poker math explained with examples."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"RaiseWithMe","item":"https://raisewith.me/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://raisewith.me/?tab=articles"},
+    {"@type":"ListItem","position":3,"name":"Pot Odds & Equity Calculator Guide — Poker Math Made Easy","item":"https://raisewith.me/blog/pot-odds-and-equity.html"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0e2a1c;--bg2:#132e18;--bg3:rgba(255,255,255,0.07);
+  --border:#254828;--border2:#335a33;
+  --gold:#d4af37;--gold2:#b8940b;--gold-dim:#c8b070;
+  --text:#f0e0b0;--text2:#dcc88a;--text3:#d0e4c8;
+  --green:#2ed573;--red:#ff4757;
+  --font-display:'Cinzel',serif;--font-body:'Lora','Georgia',serif;
+}
+html,body{height:100%;overflow-x:hidden}
+body{background:var(--bg);background-image:radial-gradient(ellipse at 50% 0%,#143d24 0%,var(--bg) 70%);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:rgba(0,0,0,.4);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.header-title{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--gold);letter-spacing:3px;text-decoration:none}
+.header-title:hover{text-decoration:none}
+.back-btn{font-family:var(--font-display);font-size:9px;letter-spacing:2px;color:var(--gold-dim);border:1px solid var(--border2);padding:6px 14px;border-radius:6px;text-decoration:none;transition:all .2s}
+.back-btn:hover{border-color:var(--gold);color:var(--gold);text-decoration:none}
+.lang-select{background:#132e18;border:1px solid var(--gold);border-radius:6px;padding:4px 28px 4px 10px;font-family:var(--font-display);font-size:10px;letter-spacing:1px;color:var(--gold);cursor:pointer;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23d4af37'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
+.main{max-width:740px;margin:0 auto;padding:24px 18px 80px}
+.article-hero{text-align:center;margin-bottom:24px;padding:28px 20px;background:linear-gradient(135deg,rgba(212,175,55,.07) 0%,rgba(46,213,115,.04) 100%);border:1px solid rgba(212,175,55,.18);border-radius:12px}
+.article-hero.featured{border-color:rgba(255,71,87,.4);background:linear-gradient(135deg,rgba(255,71,87,.06) 0%,rgba(255,165,2,.04) 100%)}
+.article-badge{display:inline-block;padding:3px 14px;border-radius:20px;font-family:var(--font-display);font-size:8px;letter-spacing:2px;margin-bottom:10px}
+.article-badge.featured{background:rgba(255,71,87,.15);border:1px solid rgba(255,71,87,.4);color:#ff6b7a}
+.article-badge.normal{background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.3);color:var(--gold)}
+.hero-title{font-family:var(--font-display);font-size:18px;color:var(--gold);letter-spacing:2px;line-height:1.4;margin-bottom:8px}
+.featured .hero-title{color:#ff6b7a}
+.hero-meta{font-family:var(--font-display);font-size:9px;letter-spacing:2px;color:#7a9a7a}
+.content{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:24px 20px}
+.content h3{font-family:var(--font-display);font-size:11px;letter-spacing:2px;color:#e0c080;margin:20px 0 10px;text-transform:uppercase}
+.content h3:first-child{margin-top:0}
+.content p{font-family:var(--font-body);font-size:14px;color:#d0e4cc;line-height:1.85;margin-bottom:12px}
+.content ul{margin:8px 0 14px 20px}
+.content li{font-family:var(--font-body);font-size:14px;color:#c8dcc0;line-height:1.75;margin-bottom:6px}
+.content strong{color:#e8d8a0}
+.ad-container{margin:20px 0;text-align:center;min-height:100px}
+.footer{text-align:center;padding:22px 16px 32px;border-top:1px solid var(--border);margin-top:24px}
+.footer-copy{font-family:var(--font-display);font-size:8px;letter-spacing:2px;color:#7a9a7a}
+.cta-box{margin-top:20px;padding:18px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.25);border-radius:10px;text-align:center}
+.cta-box p{font-family:var(--font-body);font-size:13px;color:#d0c898;margin-bottom:10px}
+.cta-btn{display:inline-block;padding:10px 24px;border:1px solid var(--gold);border-radius:8px;font-family:var(--font-display);font-size:10px;letter-spacing:2px;color:var(--gold);text-decoration:none;transition:all .2s}
+.cta-btn:hover{background:rgba(212,175,55,.15);text-decoration:none}
+.other-articles{margin-top:24px}
+.other-articles-title{font-family:var(--font-display);font-size:10px;letter-spacing:2px;color:var(--gold-dim);margin-bottom:12px}
+.other-link{display:block;padding:10px 14px;margin-bottom:6px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;font-family:var(--font-display);font-size:11px;color:var(--gold);letter-spacing:1px;text-decoration:none;transition:border-color .2s}
+.other-link:hover{border-color:var(--gold);text-decoration:none}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6345547954748002" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="header">
+  <a href="https://raisewith.me/" target="_top" class="header-title">♠ RaiseWithMe</a>
+  <div style="display:flex;align-items:center;gap:10px">
+    <select class="lang-select" id="lang-select" onchange="setLang(this.value)">
+      <option value="en">🇬🇧 English</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="es">🇪🇸 Español</option>
+      <option value="pt">🇵🇹 Português</option>
+      <option value="zh">🇨🇳 中文</option>
+      <option value="pl">🇵🇱 Polski</option>
+    </select>
+    <a href="https://raisewith.me/" target="_top" class="back-btn" id="back-btn">← BACK TO APP</a>
+  </div>
+</div>
+<div class="main">
+  <div class="article-hero" id="article-hero">
+    <div class="article-badge normal" id="article-badge">Mathematics</div>
+    <h1 class="hero-title" id="hero-title">Pot Odds and Equity — The Mathematics That Wins for You</h1>
+    <div class="hero-meta" id="hero-meta">Mathematics · 7 min read</div>
+  </div>
+
+  <div class="ad-container">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6345547954748002" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+  <div class="content" id="article-content">
+    <h3>What Are Pot Odds?</h3><p>Pot odds are the ratio of the pot size to the amount you must pay to stay in the hand. If the pot contains 100 chips and you must pay 50 to call, your pot odds are 3:1. You need to win at least 25% of the time for the call to be profitable.</p><h3>What is Equity?</h3><p>Equity is your percentage share of the pot based on hand strength. If you have 40% equity, you will statistically win 40% of the pot over the long run.</p><h3>How to Combine Them?</h3><p>The rule is simple: <strong>if your equity is higher than the required pot odds, the call is profitable</strong>.</p><ul><li>The pot contains 200 and the opponent bets 100. After your call the pot will be 400.</li><li>You must pay 100 out of 400 = you need 25% equity.</li><li>Flush draw (9 outs) on the turn = ~19%. Not enough — fold.</li><li>Flush draw + overcard (12 outs) = ~26%. The call is profitable.</li></ul><h3>Implied Odds</h3><p><strong>Implied odds</strong> account for money you can win in future betting rounds if you hit your hand. They work best when you have position and your draw is hidden.</p><h3>Practical Application</h3><p>Memorize the Rule of 2 and 4: multiply outs by 2 on the turn or by 4 on the flop for approximate equity. Flush draw (9 outs) on the turn = 9x2 = ~18%. On the flop = 9x4 = ~36%.</p>
+  </div>
+
+  <div class="ad-container">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6345547954748002" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+  <div class="cta-box">
+    <p id="cta-text">Use our free preflop advisor to practice what you learned!</p>
+    <a href="https://raisewith.me/" target="_top" class="cta-btn" target="_top" id="cta-btn">♠ OPEN RAISEWITHME</a>
+  </div>
+
+  <div class="other-articles">
+    <div class="other-articles-title" id="other-title">MORE ARTICLES</div>
+    <div id="other-links"></div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-copy">© 2025 RaiseWithMe · EDUCATIONAL TOOL · NOT A GAMBLING PLATFORM · 18+</div>
+</div>
+<script>
+var TITLES={"en": "Pot Odds and Equity — The Mathematics That Wins for You", "pl": "Pot Odds i Equity — matematyka, która wygrywa za Ciebie", "de": "Pot Odds und Equity — die Mathematik, die für Sie gewinnt", "es": "Pot Odds y Equity — las matemáticas que ganan por ti", "pt": "Pot Odds e Equity — a matemática que ganha por você", "zh": "底池赔率和权益——为你赢钱的数学"};
+var BADGES={"en": "Mathematics", "pl": "Matematyka", "de": "Mathematik", "es": "Matemáticas", "pt": "Matemática", "zh": "数学"};
+var BODIES={"en": "<h3>What Are Pot Odds?</h3><p>Pot odds are the ratio of the pot size to the amount you must pay to stay in the hand. If the pot contains 100 chips and you must pay 50 to call, your pot odds are 3:1. You need to win at least 25% of the time for the call to be profitable.</p><h3>What is Equity?</h3><p>Equity is your percentage share of the pot based on hand strength. If you have 40% equity, you will statistically win 40% of the pot over the long run.</p><h3>How to Combine Them?</h3><p>The rule is simple: <strong>if your equity is higher than the required pot odds, the call is profitable</strong>.</p><ul><li>The pot contains 200 and the opponent bets 100. After your call the pot will be 400.</li><li>You must pay 100 out of 400 = you need 25% equity.</li><li>Flush draw (9 outs) on the turn = ~19%. Not enough — fold.</li><li>Flush draw + overcard (12 outs) = ~26%. The call is profitable.</li></ul><h3>Implied Odds</h3><p><strong>Implied odds</strong> account for money you can win in future betting rounds if you hit your hand. They work best when you have position and your draw is hidden.</p><h3>Practical Application</h3><p>Memorize the Rule of 2 and 4: multiply outs by 2 on the turn or by 4 on the flop for approximate equity. Flush draw (9 outs) on the turn = 9x2 = ~18%. On the flop = 9x4 = ~36%.</p>", "pl": "<h3>Czym są Pot Odds?</h3><p>Pot Odds to stosunek wielkości puli do kwoty, którą musisz zapłacić żeby zostać w ręce. Jeśli w puli jest 100 chipów i musisz zapłacić 50 żeby sprawdzić — Twoje pot odds wynoszą 3:1 (150 do 50 po Twoim callu). Oznacza to, że musisz wygrywać tę rękę przynajmniej w 25% przypadków żeby call był opłacalny.</p><h3>Czym jest Equity?</h3><p>Equity to Twój procentowy udział w puli na podstawie siły Twojej ręki. Jeśli masz 40% equity, oznacza to że statystycznie wygrasz 40% puli w dłuższej perspektywie. Equity zmienia się z każdą kartą wspólną.</p><h3>Jak łączyć Pot Odds i Equity?</h3><p>Zasada jest prosta: <strong>jeśli Twoje equity jest wyższe niż wymagane pot odds — call jest opłacalny</strong>. Przykład:</p><ul><li>W puli jest 200, przeciwnik stawia 100. Po Twoim callu pula wyniesie 400.</li><li>Musisz zapłacić 100 z 400 = potrzebujesz 25% equity.</li><li>Masz flush draw (9 outów) na turnie = ~19% equity. Za mało — fold.</li><li>Ale jeśli masz flush draw + overcard (12 outów) = ~26% equity. Call jest opłacalny.</li></ul><h3>Implied Odds</h3><p>Pot odds to nie cała historia. <strong>Implied odds</strong> uwzględniają pieniądze, które możesz wygrać w przyszłych rundach licytacji jeśli trafisz swoją rękę. Są szczególnie ważne przy drawing hands — nawet jeśli bezpośrednie pot odds nie uzasadniają calla, implied odds mogą go uzasadniać jeśli przeciwnik prawdopodobnie zapłaci dużo gdy trafisz.</p><p>Implied odds działają najlepiej gdy masz pozycję (możesz kontrolować wielkość puli) i gdy Twój draw jest ukryty (przeciwnik nie spodziewa się go).</p><h3>Praktyczne zastosowanie</h3><p>Nie musisz liczyć dokładnych procentów przy stole. Zapamiętaj regułę 2 i 4: pomnóż liczbę outów przez 2 na turnie (jedna karta do przyjścia) lub przez 4 na flopie (dwie karty). To daje przybliżone equity. Flush draw (9 outów) na turnie = 9x2 = ~18%. Na flopie = 9x4 = ~36%.</p>", "de": "<h3>Was sind Pot Odds?</h3><p>Pot Odds sind das Verhältnis der Potgröße zum Betrag, den Sie zahlen müssen. Bei 100 Chips im Pot und 50 zum Callen sind Ihre Pot Odds 3:1. Sie müssen mindestens 25% der Zeit gewinnen, damit der Call profitabel ist.</p><h3>Was ist Equity?</h3><p>Equity ist Ihr prozentualer Anteil am Pot basierend auf Ihrer Handstärke. 40% Equity bedeutet, dass Sie statistisch 40% des Pots langfristig gewinnen.</p><h3>Wie verbindet man beides?</h3><p><strong>Wenn Ihre Equity höher ist als die erforderlichen Pot Odds — ist der Call profitabel</strong>.</p><ul><li>Im Pot sind 200, Gegner setzt 100. Nach Ihrem Call wäre der Pot 400.</li><li>Sie zahlen 100 von 400 = Sie brauchen 25% Equity.</li><li>Flush Draw (9 Outs) am Turn = ~19%. Nicht genug — Fold.</li><li>Flush Draw + Overcard (12 Outs) = ~26%. Call ist profitabel.</li></ul><h3>Implied Odds</h3><p>Implied Odds berücksichtigen Geld, das Sie in zukünftigen Setzrunden gewinnen können. Merken Sie sich die 2-und-4-Regel: Outs x 2 am Turn, Outs x 4 am Flop = ungefähre Equity.</p>", "es": "<h3>¿Qué son los Pot Odds?</h3><p>Los pot odds son la relación entre el tamaño del bote y lo que debes pagar. Con 100 fichas en el bote y 50 para igualar, tus pot odds son 3:1. Necesitas ganar al menos 25% del tiempo para que el call sea rentable.</p><h3>¿Qué es Equity?</h3><p>Equity es tu porcentaje del bote basado en la fuerza de tu mano. 40% de equity significa que estadísticamente ganarás 40% del bote a largo plazo.</p><h3>¿Cómo combinar ambos?</h3><p><strong>Si tu equity es mayor que los pot odds requeridos — el call es rentable</strong>.</p><ul><li>En el bote hay 200, el oponente apuesta 100. Tras tu call el bote será 400.</li><li>Pagas 100 de 400 = necesitas 25% de equity.</li><li>Flush draw (9 outs) en el turn = ~19%. No alcanza — fold.</li><li>Flush draw + overcard (12 outs) = ~26%. El call es rentable.</li></ul><h3>Implied Odds</h3><p>Recuerda la regla del 2 y 4: outs x 2 en el turn, outs x 4 en el flop = equity aproximada.</p>", "pt": "<h3>O que são Pot Odds?</h3><p>Pot odds são a relação entre o tamanho do pote e o valor que você precisa pagar. Com 100 fichas no pote e 50 para pagar, seus pot odds são 3:1. Você precisa ganhar pelo menos 25% das vezes para o call ser lucrativo.</p><h3>O que é Equity?</h3><p>Equity é sua porcentagem do pote baseada na força da sua mão. 40% de equity significa que estatisticamente você ganha 40% do pote a longo prazo.</p><h3>Como combinar ambos?</h3><p><strong>Se sua equity é maior que os pot odds necessários — o call é lucrativo</strong>.</p><ul><li>No pote há 200, oponente aposta 100. Após seu call o pote será 400.</li><li>Você paga 100 de 400 = precisa de 25% de equity.</li><li>Flush draw (9 outs) no turn = ~19%. Não basta — fold.</li><li>Flush draw + overcard (12 outs) = ~26%. Call é lucrativo.</li></ul><h3>Implied Odds</h3><p>Lembre da regra do 2 e 4: outs x 2 no turn, outs x 4 no flop = equity aproximada.</p>", "zh": "<h3>什么是底池赔率？</h3><p>底池赔率是底池大小与你需要支付金额的比率。底池有100筹码，需要50跟注，你的底池赔率是3:1。你至少需要25%的胜率才能使跟注有利可图。</p><h3>什么是权益？</h3><p>权益是基于你手牌强度的底池百分比。40%的权益意味着你从统计上长期赢得底池的40%。</p><h3>如何结合两者？</h3><p><strong>如果你的权益高于所需的底池赔率——跟注是有利可图的</strong>。</p><ul><li>底池200，对手下注100。你跟注后底池为400。</li><li>你支付400中的100 = 需要25%的权益。</li><li>同花听牌（9个补牌）在转牌 = ~19%。不够——弃牌。</li><li>同花听牌+高牌（12个补牌）= ~26%。跟注有利可图。</li></ul><h3>隐含赔率</h3><p>记住2和4法则：转牌时补牌x2，翻牌时补牌x4 = 近似权益。</p>"};
+var CATS={"en": "Mathematics", "pl": "Matematyka", "de": "Mathematik", "es": "Matemáticas", "pt": "Matemática", "zh": "数学"};
+var TIMES={"en": "7 min read", "pl": "7 min czytania", "de": "7 Min. Lesezeit", "es": "7 min de lectura", "pt": "7 min de leitura", "zh": "阅读时间7分钟"};
+var BACK={"en": "← BACK TO APP", "pl": "← WRÓĆ DO APLIKACJI", "de": "← ZURÜCK ZUR APP", "es": "← VOLVER A LA APP", "pt": "← VOLTAR AO APP", "zh": "← 返回应用"};
+var CTA_TEXT={"en": "Use our free preflop advisor to practice what you learned!", "pl": "Wypróbuj nasz darmowy doradca preflop i przećwicz to czego się nauczyłeś!", "de": "Nutzen Sie unseren kostenlosen Preflop-Berater!", "es": "¡Usa nuestro asesor preflop gratuito!", "pt": "Use nosso conselheiro preflop gratuito!", "zh": "使用我们的免费翻牌前顾问来练习！"};
+var CTA_BTN={"en": "♠ OPEN RAISEWITHME", "pl": "♠ OTWÓRZ RAISEWITHME", "de": "♠ RAISEWITHME ÖFFNEN", "es": "♠ ABRIR RAISEWITHME", "pt": "♠ ABRIR RAISEWITHME", "zh": "♠ 打开RAISEWITHME"};
+var OTHER_TITLE={"en": "MORE ARTICLES", "pl": "WIĘCEJ ARTYKUŁÓW", "de": "WEITERE ARTIKEL", "es": "MÁS ARTÍCULOS", "pt": "MAIS ARTIGOS", "zh": "更多文章"};
+var SEO_TITLES={"en": "Pot Odds & Equity Calculator Guide — Poker Math Made Easy | RaiseWithMe", "pl": "Pot Odds i Equity — matematyka pokera prosto wyjaśniona | RaiseWithMe", "de": "Pot Odds & Equity — Poker-Mathematik einfach erklärt | RaiseWithMe", "es": "Pot Odds y Equity — matemáticas del poker explicadas | RaiseWithMe", "pt": "Pot Odds e Equity — matemática do poker explicada | RaiseWithMe", "zh": "底池赔率与权益——扑克数学简单解释 | RaiseWithMe"};
+var SEO_DESCS={"en": "Learn pot odds, equity, implied odds, outs, and the Rule of 2 and 4. Essential poker math explained with real hand examples. Free poker odds guide for beginners.", "pl": "Poznaj pot odds, equity, implied odds, outy i regułę 2 i 4. Matematyka pokerowa wyjaśniona na przykładach z prawdziwych rąk. Darmowy poradnik szans pokerowych.", "de": "Lernen Sie Pot Odds, Equity, Implied Odds, Outs und die 2-und-4-Regel. Poker-Mathematik mit realen Handbeispielen erklärt.", "es": "Aprende pot odds, equity, implied odds, outs y la regla del 2 y 4. Matemáticas del poker explicadas con ejemplos reales.", "pt": "Aprenda pot odds, equity, implied odds, outs e a regra do 2 e 4. Matemática do poker explicada com exemplos reais.", "zh": "学习底池赔率、权益、隐含赔率、补牌和2和4法则。用真实手牌示例解释扑克数学。"};
+var lang=(new URLSearchParams(window.location.search).get('lang'))||localStorage.getItem('raisewithme_lang')||'en';
+function setLang(l){
+  lang=l;
+  try{localStorage.setItem('raisewithme_lang',l);}catch(e){}
+  document.getElementById('lang-select').value=l;
+  document.getElementById('html-root').lang=l;
+  document.title=SEO_TITLES[l]||SEO_TITLES.en;
+  var metaDesc=document.querySelector('meta[name="description"]');if(metaDesc)metaDesc.setAttribute('content',SEO_DESCS[l]||SEO_DESCS.en);
+  document.getElementById('hero-title').textContent=TITLES[l]||TITLES.en;
+  document.getElementById('hero-meta').textContent=(CATS[l]||CATS.en)+' · '+(TIMES[l]||TIMES.en);
+  document.getElementById('article-content').innerHTML=BODIES[l]||BODIES.en;
+  document.getElementById('back-btn').textContent=BACK[l]||BACK.en;
+  document.getElementById('cta-text').textContent=CTA_TEXT[l]||CTA_TEXT.en;
+  document.getElementById('cta-btn').textContent=CTA_BTN[l]||CTA_BTN.en;
+  document.getElementById('other-title').textContent=OTHER_TITLE[l]||OTHER_TITLE.en;
+  if(BADGES[l])document.getElementById('article-badge').textContent=BADGES[l];
+  renderOtherLinks();
+  try{var url=new URL(window.location);url.searchParams.set('lang',l);history.replaceState(null,'',url);}catch(e){}
+}
+var OTHER_ARTICLES=[{"slug": "dark-side-of-poker", "titles": {"en": "The Dark Side of Poker — On Defeats, Losses, and Addiction", "pl": "Ciemna strona pokera — o porażkach, stratach i uzależnieniu", "de": "Die dunkle Seite des Pokers — über Niederlagen, Verluste und Sucht", "es": "El lado oscuro del poker — sobre derrotas, pérdidas y adicción", "pt": "O lado sombrio do poker — sobre derrotas, perdas e vício", "zh": "扑克的阴暗面——关于失败、亏损与成瘾"}}, {"slug": "what-is-gto-strategy", "titles": {"en": "What is GTO Strategy in Poker?", "pl": "Czym jest strategia GTO w pokerze?", "de": "Was ist GTO-Strategie im Poker?", "es": "¿Qué es la estrategia GTO en poker?", "pt": "O que é estratégia GTO no poker?", "zh": "什么是扑克中的GTO策略？"}}, {"slug": "position-in-poker", "titles": {"en": "Position in Poker — The Most Important Element", "pl": "Pozycja w pokerze — najważniejszy element", "de": "Position im Poker — das wichtigste Element", "es": "Posición en poker — el elemento más importante", "pt": "Posição no poker — o elemento mais importante", "zh": "扑克中的位置——最重要元素"}}, {"slug": "push-fold-strategy", "titles": {"en": "Push/Fold Strategy for Tournaments", "pl": "Strategia Push/Fold w turniejach", "de": "Push/Fold-Strategie für Turniere", "es": "Estrategia Push/Fold para torneos", "pt": "Estratégia Push/Fold para torneios", "zh": "推注/弃牌策略"}}, {"slug": "bankroll-management", "titles": {"en": "Bankroll Management — Survival Foundation", "pl": "Zarządzanie bankrollem — fundament przetrwania", "de": "Bankroll Management — Überlebensfundament", "es": "Gestión de bankroll — fundamento de supervivencia", "pt": "Gestão de bankroll — fundamento da sobrevivência", "zh": "资金管理——生存基础"}}];
+function renderOtherLinks(){
+  var el=document.getElementById('other-links');
+  if(!el)return;
+  el.innerHTML=OTHER_ARTICLES.map(function(a){
+    var title=a.titles[lang]||a.titles.en;
+    return'<a class="other-link" href="/blog/'+a.slug+'.html?lang='+lang+'" target="_top">'+title+'</a>';
+  }).join('');
+}
+setLang(lang);
+renderOtherLinks();
+</script>
+</body>
+</html>

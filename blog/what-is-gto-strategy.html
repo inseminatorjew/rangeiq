@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>What is GTO in Poker? Game Theory Optimal Strategy Explained | RaiseWithMe</title>
+<meta name="description" content="Learn what GTO (Game Theory Optimal) means in poker. Understand balanced vs exploitative play, how solvers work, and how to start applying GTO preflop strategy. Free guide with examples."/>
+<meta name="robots" content="index, follow"/>
+<meta name="keywords" content="GTO poker, game theory optimal, poker strategy, GTO vs exploitative, poker solver, preflop GTO, balanced poker strategy, co to jest GTO, strategia GTO poker"/>
+<link rel="canonical" href="https://raisewith.me/blog/what-is-gto-strategy.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://raisewith.me/blog/what-is-gto-strategy.html"/>
+<meta property="og:title" content="What is GTO in Poker? Game Theory Optimal Strategy Explained | RaiseWithMe"/>
+<meta property="og:description" content="Learn what GTO (Game Theory Optimal) means in poker. Understand balanced vs exploitative play, how solvers work, and how to start applying GTO preflop strategy. Free guide with examples."/>
+<meta property="og:site_name" content="RaiseWithMe"/>
+<meta property="og:image" content="https://raisewith.me/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@RaiseWithMe"/>
+<meta name="twitter:title" content="What is GTO in Poker? Game Theory Optimal Strategy Explained | RaiseWithMe"/>
+<meta name="twitter:description" content="Learn what GTO (Game Theory Optimal) means in poker. Understand balanced vs exploitative play, how solvers work, and how to start applying GTO preflop strategy. Free guide with examples."/>
+<meta name="twitter:image" content="https://raisewith.me/og-image.png"/>
+<meta name="theme-color" content="#0e2a1c"/>
+<link rel="alternate" hreflang="en" href="https://raisewith.me/blog/what-is-gto-strategy.html?lang=en"/>
+<link rel="alternate" hreflang="pl" href="https://raisewith.me/blog/what-is-gto-strategy.html?lang=pl"/>
+<link rel="alternate" hreflang="de" href="https://raisewith.me/blog/what-is-gto-strategy.html?lang=de"/>
+<link rel="alternate" hreflang="es" href="https://raisewith.me/blog/what-is-gto-strategy.html?lang=es"/>
+<link rel="alternate" hreflang="pt" href="https://raisewith.me/blog/what-is-gto-strategy.html?lang=pt"/>
+<link rel="alternate" hreflang="zh" href="https://raisewith.me/blog/what-is-gto-strategy.html?lang=zh"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"What is GTO Strategy in Poker and Why Should You Know It?",
+  "author":{"@type":"Organization","name":"RaiseWithMe","url":"https://raisewith.me/"},
+  "publisher":{"@type":"Organization","name":"RaiseWithMe","url":"https://raisewith.me/"},
+  "mainEntityOfPage":"https://raisewith.me/blog/what-is-gto-strategy.html",
+  "description":"Learn what GTO (Game Theory Optimal) strategy is in poker, how it differs from exploitative play, and how to start applying it at the table."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"RaiseWithMe","item":"https://raisewith.me/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://raisewith.me/?tab=articles"},
+    {"@type":"ListItem","position":3,"name":"What is GTO in Poker? Game Theory Optimal Strategy Explained","item":"https://raisewith.me/blog/what-is-gto-strategy.html"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0e2a1c;--bg2:#132e18;--bg3:rgba(255,255,255,0.07);
+  --border:#254828;--border2:#335a33;
+  --gold:#d4af37;--gold2:#b8940b;--gold-dim:#c8b070;
+  --text:#f0e0b0;--text2:#dcc88a;--text3:#d0e4c8;
+  --green:#2ed573;--red:#ff4757;
+  --font-display:'Cinzel',serif;--font-body:'Lora','Georgia',serif;
+}
+html,body{height:100%;overflow-x:hidden}
+body{background:var(--bg);background-image:radial-gradient(ellipse at 50% 0%,#143d24 0%,var(--bg) 70%);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:rgba(0,0,0,.4);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.header-title{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--gold);letter-spacing:3px;text-decoration:none}
+.header-title:hover{text-decoration:none}
+.back-btn{font-family:var(--font-display);font-size:9px;letter-spacing:2px;color:var(--gold-dim);border:1px solid var(--border2);padding:6px 14px;border-radius:6px;text-decoration:none;transition:all .2s}
+.back-btn:hover{border-color:var(--gold);color:var(--gold);text-decoration:none}
+.lang-select{background:#132e18;border:1px solid var(--gold);border-radius:6px;padding:4px 28px 4px 10px;font-family:var(--font-display);font-size:10px;letter-spacing:1px;color:var(--gold);cursor:pointer;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23d4af37'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
+.main{max-width:740px;margin:0 auto;padding:24px 18px 80px}
+.article-hero{text-align:center;margin-bottom:24px;padding:28px 20px;background:linear-gradient(135deg,rgba(212,175,55,.07) 0%,rgba(46,213,115,.04) 100%);border:1px solid rgba(212,175,55,.18);border-radius:12px}
+.article-hero.featured{border-color:rgba(255,71,87,.4);background:linear-gradient(135deg,rgba(255,71,87,.06) 0%,rgba(255,165,2,.04) 100%)}
+.article-badge{display:inline-block;padding:3px 14px;border-radius:20px;font-family:var(--font-display);font-size:8px;letter-spacing:2px;margin-bottom:10px}
+.article-badge.featured{background:rgba(255,71,87,.15);border:1px solid rgba(255,71,87,.4);color:#ff6b7a}
+.article-badge.normal{background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.3);color:var(--gold)}
+.hero-title{font-family:var(--font-display);font-size:18px;color:var(--gold);letter-spacing:2px;line-height:1.4;margin-bottom:8px}
+.featured .hero-title{color:#ff6b7a}
+.hero-meta{font-family:var(--font-display);font-size:9px;letter-spacing:2px;color:#7a9a7a}
+.content{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:24px 20px}
+.content h3{font-family:var(--font-display);font-size:11px;letter-spacing:2px;color:#e0c080;margin:20px 0 10px;text-transform:uppercase}
+.content h3:first-child{margin-top:0}
+.content p{font-family:var(--font-body);font-size:14px;color:#d0e4cc;line-height:1.85;margin-bottom:12px}
+.content ul{margin:8px 0 14px 20px}
+.content li{font-family:var(--font-body);font-size:14px;color:#c8dcc0;line-height:1.75;margin-bottom:6px}
+.content strong{color:#e8d8a0}
+.ad-container{margin:20px 0;text-align:center;min-height:100px}
+.footer{text-align:center;padding:22px 16px 32px;border-top:1px solid var(--border);margin-top:24px}
+.footer-copy{font-family:var(--font-display);font-size:8px;letter-spacing:2px;color:#7a9a7a}
+.cta-box{margin-top:20px;padding:18px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.25);border-radius:10px;text-align:center}
+.cta-box p{font-family:var(--font-body);font-size:13px;color:#d0c898;margin-bottom:10px}
+.cta-btn{display:inline-block;padding:10px 24px;border:1px solid var(--gold);border-radius:8px;font-family:var(--font-display);font-size:10px;letter-spacing:2px;color:var(--gold);text-decoration:none;transition:all .2s}
+.cta-btn:hover{background:rgba(212,175,55,.15);text-decoration:none}
+.other-articles{margin-top:24px}
+.other-articles-title{font-family:var(--font-display);font-size:10px;letter-spacing:2px;color:var(--gold-dim);margin-bottom:12px}
+.other-link{display:block;padding:10px 14px;margin-bottom:6px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;font-family:var(--font-display);font-size:11px;color:var(--gold);letter-spacing:1px;text-decoration:none;transition:border-color .2s}
+.other-link:hover{border-color:var(--gold);text-decoration:none}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6345547954748002" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="header">
+  <a href="https://raisewith.me/" target="_top" class="header-title">♠ RaiseWithMe</a>
+  <div style="display:flex;align-items:center;gap:10px">
+    <select class="lang-select" id="lang-select" onchange="setLang(this.value)">
+      <option value="en">🇬🇧 English</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="es">🇪🇸 Español</option>
+      <option value="pt">🇵🇹 Português</option>
+      <option value="zh">🇨🇳 中文</option>
+      <option value="pl">🇵🇱 Polski</option>
+    </select>
+    <a href="https://raisewith.me/" target="_top" class="back-btn" id="back-btn">← BACK TO APP</a>
+  </div>
+</div>
+<div class="main">
+  <div class="article-hero" id="article-hero">
+    <div class="article-badge normal" id="article-badge">Strategy</div>
+    <h1 class="hero-title" id="hero-title">What is GTO Strategy in Poker and Why Should You Know It?</h1>
+    <div class="hero-meta" id="hero-meta">Strategy · 8 min read</div>
+  </div>
+
+  <div class="ad-container">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6345547954748002" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+  <div class="content" id="article-content">
+    <h3>Introduction to GTO</h3><p>GTO (Game Theory Optimal) is an approach to poker based on game theory. It means playing in a mathematically balanced way so that no opponent can systematically beat you. It is not a specific list of moves, but rather a framework for thinking about poker.</p><h3>Why is GTO Important?</h3><p>Imagine you always play identically with the same hand. An experienced opponent will quickly notice and start exploiting you. GTO solves this problem by mixing actions (raise, call, fold) at appropriate frequencies. This makes your game <strong>unreadable</strong>.</p><h3>GTO vs Exploitation</h3><ul><li><strong>GTO</strong> — you play balanced regardless of the opponent. Safe, but does not maximize profit against weak players.</li><li><strong>Exploitation</strong> — you deliberately deviate from GTO to exploit a specific opponent's mistakes. More profitable, but risky if the opponent adjusts.</li></ul><p>The best players combine both: GTO as a foundation, then adjust to opponent tendencies.</p><h3>How to Start with GTO?</h3><p>For most players, the most important thing is mastering <strong>preflop GTO</strong> — knowing which hands to open from which position, with what raise size, and how to react to 3-bets. This is exactly what RaiseWithMe offers: simplified but directionally correct GTO ranges for every position and stack depth.</p><p>Remember: GTO does not require perfection. Even approximate application will give you a massive edge over players who play by feel.</p>
+  </div>
+
+  <div class="ad-container">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6345547954748002" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+  <div class="cta-box">
+    <p id="cta-text">Use our free preflop advisor to practice what you learned!</p>
+    <a href="https://raisewith.me/" target="_top" class="cta-btn" target="_top" id="cta-btn">♠ OPEN RAISEWITHME</a>
+  </div>
+
+  <div class="other-articles">
+    <div class="other-articles-title" id="other-title">MORE ARTICLES</div>
+    <div id="other-links"></div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-copy">© 2025 RaiseWithMe · EDUCATIONAL TOOL · NOT A GAMBLING PLATFORM · 18+</div>
+</div>
+<script>
+var TITLES={"en": "What is GTO Strategy in Poker and Why Should You Know It?", "pl": "Czym jest strategia GTO w pokerze i dlaczego warto ją znać?", "de": "Was ist GTO-Strategie im Poker und warum sollte man sie kennen?", "es": "¿Qué es la estrategia GTO en poker y por qué debes conocerla?", "pt": "O que é estratégia GTO no poker e por que você deve conhecê-la?", "zh": "什么是扑克中的GTO策略？为什么你应该了解它？"};
+var BADGES={"en": "Strategy", "pl": "Strategia", "de": "Strategie", "es": "Estrategia", "pt": "Estratégia", "zh": "策略"};
+var BODIES={"en": "<h3>Introduction to GTO</h3><p>GTO (Game Theory Optimal) is an approach to poker based on game theory. It means playing in a mathematically balanced way so that no opponent can systematically beat you. It is not a specific list of moves, but rather a framework for thinking about poker.</p><h3>Why is GTO Important?</h3><p>Imagine you always play identically with the same hand. An experienced opponent will quickly notice and start exploiting you. GTO solves this problem by mixing actions (raise, call, fold) at appropriate frequencies. This makes your game <strong>unreadable</strong>.</p><h3>GTO vs Exploitation</h3><ul><li><strong>GTO</strong> — you play balanced regardless of the opponent. Safe, but does not maximize profit against weak players.</li><li><strong>Exploitation</strong> — you deliberately deviate from GTO to exploit a specific opponent's mistakes. More profitable, but risky if the opponent adjusts.</li></ul><p>The best players combine both: GTO as a foundation, then adjust to opponent tendencies.</p><h3>How to Start with GTO?</h3><p>For most players, the most important thing is mastering <strong>preflop GTO</strong> — knowing which hands to open from which position, with what raise size, and how to react to 3-bets. This is exactly what RaiseWithMe offers: simplified but directionally correct GTO ranges for every position and stack depth.</p><p>Remember: GTO does not require perfection. Even approximate application will give you a massive edge over players who play by feel.</p>", "pl": "<h3>Wprowadzenie do GTO</h3><p>GTO (Game Theory Optimal) to podejście do pokera oparte na teorii gier. Chodzi o granie w sposób matematycznie zrównoważony — tak, żeby żaden przeciwnik nie mógł Cię systematycznie pokonywać, niezależnie od tego jaką strategię zastosuje. To nie jest konkretna lista ruchów, ale raczej framework myślenia o pokerze.</p><h3>Dlaczego GTO jest ważne?</h3><p>Wyobraź sobie, że zawsze grasz identycznie z tą samą ręką. Doświadczony przeciwnik szybko to zauważy i zacznie Cię eksploatować. GTO rozwiązuje ten problem przez mieszanie akcji (raise, call, fold) z odpowiednimi częstotliwościami. Dzięki temu Twoja gra jest <strong>nieczytelna</strong> — nie da się jej łatwo wykorzystać.</p><h3>GTO vs Eksploatacja</h3><p>W praktyce większość graczy nie gra idealnego GTO. Dlatego istnieją dwa podejścia:</p><ul><li><strong>GTO</strong> — grasz zbalansowanie, niezależnie od przeciwnika. Bezpieczne, ale nie maksymalizujesz zysku przeciw słabym graczom.</li><li><strong>Eksploatacja</strong> — celowo odchodzisz od GTO, żeby wykorzystać błędy konkretnego przeciwnika. Bardziej zyskowne, ale ryzykowne jeśli przeciwnik się dostosuje.</li></ul><p>Najlepsi gracze na świecie łączą oba podejścia: znają GTO jako fundament, a następnie dostosowują się do tendencji przeciwników.</p><h3>Jak zacząć z GTO?</h3><p>Dla większości graczy najważniejsze jest opanowanie <strong>preflop GTO</strong> — czyli wiedzieć które ręce otwierać z jakiej pozycji, z jakim rozmiarem raise'u, i jak reagować na 3-bety. To właśnie oferuje RaiseWithMe: uproszczone, ale kierunkowo poprawne zakresy GTO dla każdej pozycji i głębokości stosu.</p><p>Pamiętaj: GTO nie wymaga perfekcji. Nawet przybliżone stosowanie zasad GTO da Ci ogromną przewagę nad graczami, którzy grają na czuja.</p>", "de": "<h3>Einführung in GTO</h3><p>GTO (Game Theory Optimal) ist ein Poker-Ansatz basierend auf Spieltheorie. Es geht darum, mathematisch ausbalanciert zu spielen — so dass kein Gegner Sie systematisch schlagen kann. Es ist keine konkrete Liste von Zügen, sondern ein Denkrahmen für Poker.</p><h3>Warum ist GTO wichtig?</h3><p>Stellen Sie sich vor, Sie spielen immer identisch mit derselben Hand. Ein erfahrener Gegner erkennt das schnell und beginnt Sie auszunutzen. GTO löst dieses Problem durch das Mischen von Aktionen (Raise, Call, Fold) mit entsprechenden Häufigkeiten. Dadurch wird Ihr Spiel <strong>unlesbar</strong>.</p><h3>GTO vs. Exploitation</h3><ul><li><strong>GTO</strong> — ausbalanciert spielen, unabhängig vom Gegner. Sicher, aber nicht gewinnmaximierend gegen schwache Spieler.</li><li><strong>Exploitation</strong> — gezielt von GTO abweichen, um Fehler eines bestimmten Gegners auszunutzen. Profitabler, aber riskant bei Anpassung.</li></ul><p>Die besten Spieler verbinden beide Ansätze: GTO als Fundament, dann Anpassung an Gegnertendenzen.</p><h3>Wie anfangen?</h3><p>Am wichtigsten ist <strong>Preflop-GTO</strong> — wissen welche Hände man aus welcher Position eröffnet. Genau das bietet RaiseWithMe.</p>", "es": "<h3>Introducción a GTO</h3><p>GTO (Game Theory Optimal) es un enfoque de poker basado en la teoría de juegos. Se trata de jugar de forma matemáticamente equilibrada para que ningún oponente pueda vencerte sistemáticamente. No es una lista concreta de jugadas, sino un marco de pensamiento.</p><h3>¿Por qué es importante GTO?</h3><p>Imagina que siempre juegas igual con la misma mano. Un oponente experimentado lo notará y comenzará a explotarte. GTO resuelve esto mezclando acciones con frecuencias apropiadas, haciendo tu juego <strong>ilegible</strong>.</p><h3>GTO vs Explotación</h3><ul><li><strong>GTO</strong> — juegas equilibradamente sin importar el oponente. Seguro, pero no maximiza ganancias contra jugadores débiles.</li><li><strong>Explotación</strong> — te desvías de GTO para aprovechar errores específicos. Más rentable, pero arriesgado si el oponente se adapta.</li></ul><p>Los mejores jugadores combinan ambos enfoques: GTO como base, luego ajuste a tendencias del oponente.</p><h3>¿Cómo empezar?</h3><p>Lo más importante es dominar el <strong>preflop GTO</strong>. RaiseWithMe ofrece rangos GTO simplificados pero direccionalmente correctos para cada posición y profundidad de stack.</p>", "pt": "<h3>Introdução ao GTO</h3><p>GTO (Game Theory Optimal) é uma abordagem ao poker baseada na teoria dos jogos. Trata-se de jogar de forma matematicamente equilibrada para que nenhum oponente possa vencê-lo sistematicamente. Não é uma lista concreta de jogadas, mas um quadro de pensamento.</p><h3>Por que GTO é importante?</h3><p>Imagine que você sempre joga igual com a mesma mão. Um oponente experiente vai perceber e começar a explorá-lo. GTO resolve isso misturando ações com frequências apropriadas, tornando seu jogo <strong>ilegível</strong>.</p><h3>GTO vs Exploração</h3><ul><li><strong>GTO</strong> — joga equilibradamente independente do oponente. Seguro, mas não maximiza ganhos contra jogadores fracos.</li><li><strong>Exploração</strong> — desvia do GTO para aproveitar erros específicos. Mais lucrativo, mas arriscado se o oponente se adaptar.</li></ul><p>Os melhores jogadores combinam ambas: GTO como fundamento, depois ajuste às tendências do oponente.</p><h3>Como começar?</h3><p>O mais importante é dominar o <strong>preflop GTO</strong>. RaiseWithMe oferece ranges GTO simplificados mas direcionalmente corretos para cada posição e profundidade de stack.</p>", "zh": "<h3>GTO简介</h3><p>GTO（Game Theory Optimal，博弈论最优）是一种基于博弈论的扑克方法。它的核心是以数学平衡的方式游戏——使得任何对手都无法系统性地击败你，无论他们采用什么策略。</p><h3>为什么GTO很重要？</h3><p>想象你总是以相同方式玩同一手牌。经验丰富的对手会很快注意到并开始利用你。GTO通过以适当频率混合动作（加注、跟注、弃牌）来解决这个问题，使你的游戏<strong>不可读</strong>。</p><h3>GTO vs 剥削</h3><ul><li><strong>GTO</strong> — 无论对手如何，都保持平衡游戏。安全，但不能最大化对弱玩家的利润。</li><li><strong>剥削</strong> — 有意偏离GTO以利用特定对手的错误。更有利可图，但如果对手适应则有风险。</li></ul><p>最好的玩家结合两种方法：GTO作为基础，然后根据对手倾向进行调整。</p><h3>如何开始？</h3><p>最重要的是掌握<strong>翻牌前GTO</strong>——知道从每个位置应该打开哪些牌。RaiseWithMe提供简化但方向正确的GTO范围。</p>"};
+var CATS={"en": "Strategy", "pl": "Strategia", "de": "Strategie", "es": "Estrategia", "pt": "Estratégia", "zh": "策略"};
+var TIMES={"en": "8 min read", "pl": "8 min czytania", "de": "8 Min. Lesezeit", "es": "8 min de lectura", "pt": "8 min de leitura", "zh": "阅读时间8分钟"};
+var BACK={"en": "← BACK TO APP", "pl": "← WRÓĆ DO APLIKACJI", "de": "← ZURÜCK ZUR APP", "es": "← VOLVER A LA APP", "pt": "← VOLTAR AO APP", "zh": "← 返回应用"};
+var CTA_TEXT={"en": "Use our free preflop advisor to practice what you learned!", "pl": "Wypróbuj nasz darmowy doradca preflop i przećwicz to czego się nauczyłeś!", "de": "Nutzen Sie unseren kostenlosen Preflop-Berater!", "es": "¡Usa nuestro asesor preflop gratuito!", "pt": "Use nosso conselheiro preflop gratuito!", "zh": "使用我们的免费翻牌前顾问来练习！"};
+var CTA_BTN={"en": "♠ OPEN RAISEWITHME", "pl": "♠ OTWÓRZ RAISEWITHME", "de": "♠ RAISEWITHME ÖFFNEN", "es": "♠ ABRIR RAISEWITHME", "pt": "♠ ABRIR RAISEWITHME", "zh": "♠ 打开RAISEWITHME"};
+var OTHER_TITLE={"en": "MORE ARTICLES", "pl": "WIĘCEJ ARTYKUŁÓW", "de": "WEITERE ARTIKEL", "es": "MÁS ARTÍCULOS", "pt": "MAIS ARTIGOS", "zh": "更多文章"};
+var SEO_TITLES={"en": "What is GTO in Poker? Game Theory Optimal Strategy Explained | RaiseWithMe", "pl": "Co to jest GTO w pokerze? Strategia Game Theory Optimal | RaiseWithMe", "de": "Was ist GTO im Poker? Game Theory Optimal Strategie erklärt | RaiseWithMe", "es": "¿Qué es GTO en poker? Estrategia Game Theory Optimal explicada | RaiseWithMe", "pt": "O que é GTO no poker? Estratégia Game Theory Optimal explicada | RaiseWithMe", "zh": "什么是扑克GTO？博弈论最优策略详解 | RaiseWithMe"};
+var SEO_DESCS={"en": "Learn what GTO (Game Theory Optimal) means in poker. Understand balanced vs exploitative play, how solvers work, and how to start applying GTO preflop strategy. Free guide with examples.", "pl": "Czym jest strategia GTO (Game Theory Optimal) w pokerze? Poznaj różnicę między grą zbalansowaną a eksploatacyjną. Dowiedz się jak zacząć stosować GTO preflop. Darmowy poradnik z przykładami.", "de": "Was bedeutet GTO (Game Theory Optimal) im Poker? Verstehen Sie den Unterschied zwischen balanciertem und exploitativem Spiel. Kostenloser Leitfaden mit Beispielen.", "es": "¿Qué significa GTO (Game Theory Optimal) en poker? Entiende la diferencia entre juego equilibrado y explotativo. Guía gratuita con ejemplos.", "pt": "O que significa GTO (Game Theory Optimal) no poker? Entenda a diferença entre jogo equilibrado e exploratório. Guia gratuito com exemplos.", "zh": "GTO（博弈论最优）在扑克中意味着什么？了解平衡打法与剥削打法的区别。免费指南附示例。"};
+var lang=(new URLSearchParams(window.location.search).get('lang'))||localStorage.getItem('raisewithme_lang')||'en';
+function setLang(l){
+  lang=l;
+  try{localStorage.setItem('raisewithme_lang',l);}catch(e){}
+  document.getElementById('lang-select').value=l;
+  document.getElementById('html-root').lang=l;
+  document.title=SEO_TITLES[l]||SEO_TITLES.en;
+  var metaDesc=document.querySelector('meta[name="description"]');if(metaDesc)metaDesc.setAttribute('content',SEO_DESCS[l]||SEO_DESCS.en);
+  document.getElementById('hero-title').textContent=TITLES[l]||TITLES.en;
+  document.getElementById('hero-meta').textContent=(CATS[l]||CATS.en)+' · '+(TIMES[l]||TIMES.en);
+  document.getElementById('article-content').innerHTML=BODIES[l]||BODIES.en;
+  document.getElementById('back-btn').textContent=BACK[l]||BACK.en;
+  document.getElementById('cta-text').textContent=CTA_TEXT[l]||CTA_TEXT.en;
+  document.getElementById('cta-btn').textContent=CTA_BTN[l]||CTA_BTN.en;
+  document.getElementById('other-title').textContent=OTHER_TITLE[l]||OTHER_TITLE.en;
+  if(BADGES[l])document.getElementById('article-badge').textContent=BADGES[l];
+  renderOtherLinks();
+  try{var url=new URL(window.location);url.searchParams.set('lang',l);history.replaceState(null,'',url);}catch(e){}
+}
+var OTHER_ARTICLES=[{"slug": "dark-side-of-poker", "titles": {"en": "The Dark Side of Poker — On Defeats, Losses, and Addiction", "pl": "Ciemna strona pokera — o porażkach, stratach i uzależnieniu", "de": "Die dunkle Seite des Pokers — über Niederlagen, Verluste und Sucht", "es": "El lado oscuro del poker — sobre derrotas, pérdidas y adicción", "pt": "O lado sombrio do poker — sobre derrotas, perdas e vício", "zh": "扑克的阴暗面——关于失败、亏损与成瘾"}}, {"slug": "position-in-poker", "titles": {"en": "Position in Poker — The Most Important Element", "pl": "Pozycja w pokerze — najważniejszy element", "de": "Position im Poker — das wichtigste Element", "es": "Posición en poker — el elemento más importante", "pt": "Posição no poker — o elemento mais importante", "zh": "扑克中的位置——最重要元素"}}, {"slug": "push-fold-strategy", "titles": {"en": "Push/Fold Strategy for Tournaments", "pl": "Strategia Push/Fold w turniejach", "de": "Push/Fold-Strategie für Turniere", "es": "Estrategia Push/Fold para torneos", "pt": "Estratégia Push/Fold para torneios", "zh": "推注/弃牌策略"}}, {"slug": "pot-odds-and-equity", "titles": {"en": "Pot Odds and Equity — Poker Mathematics", "pl": "Pot Odds i Equity — matematyka pokera", "de": "Pot Odds und Equity — Poker-Mathematik", "es": "Pot Odds y Equity — matemáticas del poker", "pt": "Pot Odds e Equity — matemática do poker", "zh": "底池赔率和权益——扑克数学"}}, {"slug": "bankroll-management", "titles": {"en": "Bankroll Management — Survival Foundation", "pl": "Zarządzanie bankrollem — fundament przetrwania", "de": "Bankroll Management — Überlebensfundament", "es": "Gestión de bankroll — fundamento de supervivencia", "pt": "Gestão de bankroll — fundamento da sobrevivência", "zh": "资金管理——生存基础"}}];
+function renderOtherLinks(){
+  var el=document.getElementById('other-links');
+  if(!el)return;
+  el.innerHTML=OTHER_ARTICLES.map(function(a){
+    var title=a.titles[lang]||a.titles.en;
+    return'<a class="other-link" href="/blog/'+a.slug+'.html?lang='+lang+'" target="_top">'+title+'</a>';
+  }).join('');
+}
+setLang(lang);
+renderOtherLinks();
+</script>
+</body>
+</html>
