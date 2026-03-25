@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Main App -->
+  <url>
+    <loc>https://raisewith.me/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://raisewith.me/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://raisewith.me/?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raisewith.me/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raisewith.me/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://raisewith.me/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://raisewith.me/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raisewith.me/"/>
+  </url>
+
+  <!-- Blog: Responsible Gaming (Dark Side of Poker) -->
+  <url>
+    <loc>https://raisewith.me/blog/dark-side-of-poker.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://raisewith.me/blog/dark-side-of-poker.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://raisewith.me/blog/dark-side-of-poker.html?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raisewith.me/blog/dark-side-of-poker.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raisewith.me/blog/dark-side-of-poker.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://raisewith.me/blog/dark-side-of-poker.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://raisewith.me/blog/dark-side-of-poker.html?lang=zh"/>
+  </url>
+
+  <!-- Blog: GTO Strategy -->
+  <url>
+    <loc>https://raisewith.me/blog/what-is-gto-strategy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://raisewith.me/blog/what-is-gto-strategy.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://raisewith.me/blog/what-is-gto-strategy.html?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raisewith.me/blog/what-is-gto-strategy.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raisewith.me/blog/what-is-gto-strategy.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://raisewith.me/blog/what-is-gto-strategy.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://raisewith.me/blog/what-is-gto-strategy.html?lang=zh"/>
+  </url>
+
+  <!-- Blog: Position in Poker -->
+  <url>
+    <loc>https://raisewith.me/blog/position-in-poker.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://raisewith.me/blog/position-in-poker.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://raisewith.me/blog/position-in-poker.html?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raisewith.me/blog/position-in-poker.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raisewith.me/blog/position-in-poker.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://raisewith.me/blog/position-in-poker.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://raisewith.me/blog/position-in-poker.html?lang=zh"/>
+  </url>
+
+  <!-- Blog: Push/Fold Strategy -->
+  <url>
+    <loc>https://raisewith.me/blog/push-fold-strategy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://raisewith.me/blog/push-fold-strategy.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://raisewith.me/blog/push-fold-strategy.html?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raisewith.me/blog/push-fold-strategy.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raisewith.me/blog/push-fold-strategy.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://raisewith.me/blog/push-fold-strategy.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://raisewith.me/blog/push-fold-strategy.html?lang=zh"/>
+  </url>
+
+  <!-- Blog: Pot Odds and Equity -->
+  <url>
+    <loc>https://raisewith.me/blog/pot-odds-and-equity.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://raisewith.me/blog/pot-odds-and-equity.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://raisewith.me/blog/pot-odds-and-equity.html?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raisewith.me/blog/pot-odds-and-equity.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raisewith.me/blog/pot-odds-and-equity.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://raisewith.me/blog/pot-odds-and-equity.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://raisewith.me/blog/pot-odds-and-equity.html?lang=zh"/>
+  </url>
+
+  <!-- Blog: Bankroll Management -->
+  <url>
+    <loc>https://raisewith.me/blog/bankroll-management.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://raisewith.me/blog/bankroll-management.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://raisewith.me/blog/bankroll-management.html?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raisewith.me/blog/bankroll-management.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raisewith.me/blog/bankroll-management.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://raisewith.me/blog/bankroll-management.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://raisewith.me/blog/bankroll-management.html?lang=zh"/>
+  </url>
+
+</urlset>
